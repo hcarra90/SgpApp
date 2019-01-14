@@ -1,0 +1,103 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Entity", "Layer.Entity\Layer.Entity.csproj", "{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.DAO", "Layer.DAO\Layer.DAO.csproj", "{627F3628-8662-4E5C-8093-855F7D311DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Business", "Layer.Business\Layer.Business.csproj", "{047E2D7E-2C0F-4146-B747-207A5C29E035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Functions", "Layer.Functions\Layer.Functions.csproj", "{5842A399-5F7F-4B06-960A-419FCAB02923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Win", "Layer.Win\Layer.Win.csproj", "{1FE86491-DF27-4BD8-BCF9-057E8B03553F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.API", "Layer.API\Layer.API.csproj", "{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.WpfUi", "Layer.WpfUi\Layer.WpfUi.csproj", "{48BB2587-14EF-45D6-A9BF-D55A507475E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		WebApi|Any CPU = WebApi|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB2920E-4448-4D4B-BFD5-AC17CA2BC90B}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{627F3628-8662-4E5C-8093-855F7D311DF2}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{047E2D7E-2C0F-4146-B747-207A5C29E035}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{5842A399-5F7F-4B06-960A-419FCAB02923}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE86491-DF27-4BD8-BCF9-057E8B03553F}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{BD22BCA8-9F7F-43A1-8BFB-36282CDA9F9F}.WebApi|Any CPU.Build.0 = Release|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.WebApi|Any CPU.ActiveCfg = Release|Any CPU
+		{48BB2587-14EF-45D6-A9BF-D55A507475E2}.WebApi|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B03E9FC-7FAF-4940-B77F-B52FD8667607}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://agrosoftware.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Layer.Business\\Layer.Business.csproj
+		SccProjectName1 = Layer.Business
+		SccLocalPath1 = Layer.Business
+		SccProjectUniqueName2 = Layer.DAO\\Layer.DAO.csproj
+		SccProjectName2 = Layer.DAO
+		SccLocalPath2 = Layer.DAO
+		SccProjectUniqueName3 = Layer.Entity\\Layer.Entity.csproj
+		SccProjectName3 = Layer.Entity
+		SccLocalPath3 = Layer.Entity
+		SccProjectUniqueName4 = Layer.Functions\\Layer.Functions.csproj
+		SccProjectName4 = Layer.Functions
+		SccLocalPath4 = Layer.Functions
+		SccProjectUniqueName5 = Layer.Win\\Layer.Win.csproj
+		SccProjectName5 = Layer.Win
+		SccLocalPath5 = Layer.Win
+		SccProjectUniqueName6 = Layer.API\\Layer.API.csproj
+		SccProjectName6 = Layer.API
+		SccLocalPath6 = Layer.API
+		SccProjectUniqueName7 = Layer.WpfUi\\Layer.WpfUi.csproj
+		SccProjectName7 = Layer.WpfUi
+		SccLocalPath7 = Layer.WpfUi
+	EndGlobalSection
+EndGlobal

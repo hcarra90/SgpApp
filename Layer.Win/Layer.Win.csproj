@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FE86491-DF27-4BD8-BCF9-057E8B03553F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Layer.Win</RootNamespace>
+    <AssemblyName>SGP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://ftppub.everleap.com/site/wwwroot/Publicacion/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.massainursery.cl/Publicacion/</InstallUrl>
+    <ProductName>SGP</ProductName>
+    <PublisherName>Massai</PublisherName>
+    <SuiteName>SGP</SuiteName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>Publicacion.html</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>53</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconMdi.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DD839EEF21EFC9DA3F71CEB59D02E70C9E1428C8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Layer.Win_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.91.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.91.0\lib\net452\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.SharpZebra, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Com.SharpZebra.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\FrmCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmCarga.Designer.cs">
+      <DependentUpon>FrmCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsulta.Designer.cs">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmEficiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmEficiencia.Designer.cs">
+      <DependentUpon>FrmEficiencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmPackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmPackingList.Designer.cs">
+      <DependentUpon>FrmPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cosecha\FrmMovCosecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cosecha\FrmMovCosecha.Designer.cs">
+      <DependentUpon>FrmMovCosecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desgrane\FrmMovDesgrane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desgrane\FrmMovDesgrane.Designer.cs">
+      <DependentUpon>FrmMovDesgrane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Floracion\FrmFloracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Floracion\FrmFloracion.Designer.cs">
+      <DependentUpon>FrmFloracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMenu.Designer.cs">
+      <DependentUpon>MDIMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\FrmMovPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\FrmMovPacking.Designer.cs">
+      <DependentUpon>FrmMovPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\FrmPeso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\FrmPeso.Designer.cs">
+      <DependentUpon>FrmPeso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rogging\FrmRogging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rogging\FrmRogging.Designer.cs">
+      <DependentUpon>FrmRogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secado\FrmMovSecado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secado\FrmMovSecado.Designer.cs">
+      <DependentUpon>FrmMovSecado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\FrmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmCaja.Designer.cs">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\FrmEnvioCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmEnvioCaja.Designer.cs">
+      <DependentUpon>FrmEnvioCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\FrmShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmShipment.Designer.cs">
+      <DependentUpon>FrmShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\FrmShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmShipping.Designer.cs">
+      <DependentUpon>FrmShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siembra\FrmNuevaLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmNuevaLocation.Designer.cs">
+      <DependentUpon>FrmNuevaLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siembra\FrmSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmSplit.Designer.cs">
+      <DependentUpon>FrmSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siembra\FrmTemplateEntryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmTemplateEntryList.Designer.cs">
+      <DependentUpon>FrmTemplateEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siembra\FrmUploadEntryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmUploadEntryList.Designer.cs">
+      <DependentUpon>FrmUploadEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siembra\FrmUploadInfoFieldBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmUploadInfoFieldBook.Designer.cs">
+      <DependentUpon>FrmUploadInfoFieldBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringExt.cs" />
+    <EmbeddedResource Include="Administrador\FrmCarga.resx">
+      <DependentUpon>FrmCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsulta.resx">
+      <DependentUpon>FrmConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmEficiencia.resx">
+      <DependentUpon>FrmEficiencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmPackingList.resx">
+      <DependentUpon>FrmPackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cosecha\FrmMovCosecha.resx">
+      <DependentUpon>FrmMovCosecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desgrane\FrmMovDesgrane.resx">
+      <DependentUpon>FrmMovDesgrane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Floracion\FrmFloracion.resx">
+      <DependentUpon>FrmFloracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMenu.resx">
+      <DependentUpon>MDIMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\FrmMovPacking.resx">
+      <DependentUpon>FrmMovPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\FrmPeso.resx">
+      <DependentUpon>FrmPeso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rogging\FrmRogging.resx">
+      <DependentUpon>FrmRogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secado\FrmMovSecado.resx">
+      <DependentUpon>FrmMovSecado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmCaja.resx">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmEnvioCaja.resx">
+      <DependentUpon>FrmEnvioCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmShipment.resx">
+      <DependentUpon>FrmShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmShipping.resx">
+      <DependentUpon>FrmShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmNuevaLocation.resx">
+      <DependentUpon>FrmNuevaLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmSplit.resx">
+      <DependentUpon>FrmSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmTemplateEntryList.resx">
+      <DependentUpon>FrmTemplateEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmUploadEntryList.resx">
+      <DependentUpon>FrmUploadEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmUploadInfoFieldBook.resx">
+      <DependentUpon>FrmUploadInfoFieldBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Layer.Win_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Layer.Business\Layer.Business.csproj">
+      <Project>{047e2d7e-2c0f-4146-b747-207a5c29e035}</Project>
+      <Name>Layer.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Layer.Entity\Layer.Entity.csproj">
+      <Project>{5cb2920e-4448-4d4b-bfd5-ac17ca2bc90b}</Project>
+      <Name>Layer.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Layer.Functions\Layer.Functions.csproj">
+      <Project>{5842a399-5f7f-4b06-960a-419fcab02923}</Project>
+      <Name>Layer.Functions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Encabezado_1.txt" />
+    <Content Include="IconMdi.ico" />
+    <Content Include="Images\bad.png" />
+    <None Include="Resources\girasol_32.png" />
+    <None Include="Resources\girasol_24.png" />
+    <None Include="Resources\split_32.png" />
+    <None Include="Resources\upload_32.png" />
+    <None Include="Resources\semillas_32.png" />
+    <None Include="Resources\proceso_32.png" />
+    <None Include="Resources\carpeta.2_32.png" />
+    <None Include="Resources\carpeta_32.png" />
+    <None Include="Resources\rogging_32.png" />
+    <None Include="Resources\almacen_32.png" />
+    <None Include="Resources\trazar.png" />
+    <None Include="Resources\noticias.png" />
+    <None Include="Resources\send_24.png" />
+    <None Include="Resources\email_24.png" />
+    <None Include="Resources\excel_24.png" />
+    <None Include="Resources\excel_16.png" />
+    <None Include="Resources\shipment_code.png" />
+    <None Include="Resources\caja.png" />
+    <None Include="Resources\escobilla_24.png" />
+    <None Include="Resources\salida.png" />
+    <None Include="Resources\impresora_24.png" />
+    <None Include="Resources\impresora.png" />
+    <None Include="Resources\cancelar_16.png" />
+    <None Include="Resources\escobilla_16.png" />
+    <None Include="Resources\limpiar_16.png" />
+    <None Include="Resources\lupa_16.png" />
+    <None Include="Resources\lupa_24.png" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\binoculares.png" />
+    <None Include="Resources\lente.png" />
+    <None Include="Resources\desgrane_321.png" />
+    <None Include="Resources\tracking_32.png" />
+    <None Include="Resources\consulta_32.png" />
+    <None Include="Resources\envio_32.png" />
+    <None Include="Resources\shipping_32.png" />
+    <None Include="Resources\packing_32.png" />
+    <None Include="Resources\desgrane_32.png" />
+    <None Include="Resources\secado_32.png" />
+    <None Include="Resources\valla_32.png" />
+    <None Include="Resources\valla_24.png" />
+    <None Include="Resources\invernadero.png" />
+    <None Include="Resources\valla.png" />
+    <None Include="Resources\puesta-del-sol.png" />
+    <None Include="Resources\pala.png" />
+    <None Include="Resources\maiz.png" />
+    <None Include="Resources\sun-allergy_icon-icons.com_49206.png" />
+    <None Include="Resources\if_Food_C245_2427889.png" />
+    <None Include="Resources\if_icon-close-round_211651.png" />
+    <None Include="Resources\if_information-balloon_sticker_68555.png" />
+    <None Include="Resources\if_information-balloon_red_69131.png" />
+    <None Include="Resources\corn-filled.png" />
+    <None Include="Resources\Corn-512.png" />
+    <None Include="Resources\713586.png" />
+    <None Include="Resources\entrar-massai.png" />
+    <None Include="Resources\logo-massai1.png" />
+    <None Include="Resources\icon minimizar.png" />
+    <None Include="Resources\icon cerrar2.png" />
+    <None Include="Resources\Tracking.png" />
+    <None Include="Resources\PackingList.png" />
+    <None Include="Resources\shippingBox.png" />
+    <None Include="Resources\fillBox.png" />
+    <None Include="Resources\CornBox.png" />
+    <None Include="Resources\CornDry.png" />
+    <None Include="Resources\Harvest.png" />
+    <None Include="Resources\desgrane.png" />
+    <None Include="Images\combine.png" />
+    <Content Include="Images\good.png" />
+    <Content Include="Images\info.png" />
+    <None Include="Resources\goo.bmp" />
+    <None Include="Images\envio.ico" />
+    <None Include="Images\Tracking.ico" />
+    <None Include="Images\reporte.ico" />
+    <None Include="Images\shipping.ico" />
+    <None Include="Images\packing.ico" />
+    <None Include="Images\corn.ico" />
+    <None Include="Images\Dryer.ico" />
+    <None Include="Images\vegetales.ico" />
+    <None Include="Images\IconMdi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

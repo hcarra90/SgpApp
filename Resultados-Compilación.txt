@@ -1,0 +1,43 @@
+﻿1>------ Operación Compilar iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
+1>C:\Desarrollo\Codigo\Sgp\Layer.Win\Consulta\FrmConsulta.Designer.cs(1591,64,1591,72): warning CS0108: 'FrmConsulta.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+1>C:\Desarrollo\Codigo\Sgp\Layer.Win\Secado\FrmMovSecado.Designer.cs(456,64,456,72): warning CS0108: 'FrmMovSecado.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+1>C:\Desarrollo\Codigo\Sgp\Layer.Win\Consulta\FrmEficiencia.cs(27,16,27,22): warning CS0414: El campo 'FrmEficiencia.titulo' está asignado pero su valor nunca se usa
+1>  Layer.Win -> C:\Desarrollo\Codigo\Sgp\Layer.Win\bin\Debug\SGP.exe
+Compilando Layer.Win...
+2>------ Publicación iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
+Conectando con 'ftp://ftppub.everleap.com/site/wwwroot/Publicacion/'...
+Publicando archivos...
+Comprobando Publicacion.html... (1 de 30)
+Comprobando setup.exe... (2 de 30)
+Comprobando SGP.application... (3 de 30)
+Comprobando ClosedXML.dll.deploy... (4 de 30)
+Comprobando Com.SharpZebra.dll.deploy... (5 de 30)
+Comprobando DocumentFormat.OpenXml.dll.deploy... (6 de 30)
+Comprobando Encabezado_1.txt.deploy... (7 de 30)
+Comprobando EntityFramework.dll.deploy... (8 de 30)
+Comprobando EntityFramework.SqlServer.dll.deploy... (9 de 30)
+Comprobando ExcelNumberFormat.dll.deploy... (10 de 30)
+Comprobando FastMember.Signed.dll.deploy... (11 de 30)
+Comprobando IconMdi.ico.deploy... (12 de 30)
+Comprobando Layer.Business.dll.deploy... (13 de 30)
+Comprobando Layer.DAO.dll.deploy... (14 de 30)
+Comprobando Layer.Entity.dll.deploy... (15 de 30)
+Comprobando Layer.Functions.dll.deploy... (16 de 30)
+Comprobando LiveCharts.dll.deploy... (17 de 30)
+Comprobando LiveCharts.WinForms.dll.deploy... (18 de 30)
+Comprobando LiveCharts.Wpf.dll.deploy... (19 de 30)
+Comprobando Microsoft.VisualBasic.PowerPacks.dll.deploy... (20 de 30)
+Comprobando SGP.application... (21 de 30)
+Comprobando SGP.exe.config.deploy... (22 de 30)
+Comprobando SGP.exe.deploy... (23 de 30)
+Comprobando SGP.exe.manifest... (24 de 30)
+Comprobando System.IO.FileSystem.Primitives.dll.deploy... (25 de 30)
+Comprobando System.IO.Packaging.dll.deploy... (26 de 30)
+Comprobando Microsoft.VisualBasic.PowerPacks.resources.dll.deploy... (27 de 30)
+Comprobando bad.png.deploy... (28 de 30)
+Comprobando good.png.deploy... (29 de 30)
+Comprobando info.png.deploy... (30 de 30)
+Publicación correcta.
+http://www.massainursery.cl/Publicacion/Publicacion.html
+========== Compilar: 1 correctos, 0 incorrectos, 4 actualizados, 0 omitidos ==========
+========== Publicación: 1 procesados, 0 no procesados, 0 omitidos ==========

@@ -1,0 +1,19 @@
+﻿Restaurando paquetes para C:\Desarrollo\Codigo\Sgp\Layer.API\Layer.API.csproj...
+  GET https://api.nuget.org/v3-flatcontainer/entityframework/index.json
+  OK https://api.nuget.org/v3-flatcontainer/entityframework/index.json 1005 ms 
+  GET https://api.nuget.org/v3-flatcontainer/entityframework/6.2.0/entityframework.6.2.0.nupkg
+  OK https://api.nuget.org/v3-flatcontainer/entityframework/6.2.0/entityframework.6.2.0.nupkg 733 ms 
+Instalando EntityFramework 6.2.0.
+Instalando el paquete NuGet EntityFramework 6.2.0.
+Ejecutando restauración...
+Se escribirá el archivo de bloqueo en el disco. Ruta de acceso: C:\Desarrollo\Codigo\Sgp\Layer.API\obj\project.assets.json
+Restauración realizada en 5,86 sec para C:\Desarrollo\Codigo\Sgp\Layer.API\Layer.API.csproj.
+'EntityFramework 6.2.0' se instaló correctamente en Layer.API
+Ejecutando archivo de script 'C:\Users\hcarr\.nuget\packages\entityframework\6.2.0\tools\init.ps1'...
+Tiempo transcurrido: 00:00:00.1196646
+========== Finalizado ==========
+
+La ejecución de acciones de NuGet tardó 4,95 sec
+Tiempo transcurrido: 00:00:10.9493161
+========== Finalizado ==========
+
