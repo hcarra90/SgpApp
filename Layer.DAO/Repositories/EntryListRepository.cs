@@ -15,6 +15,7 @@ namespace Layer.DAO.Repositories
         readonly DataContext db;
         private static UnitOfWork unitOfWork = new UnitOfWork();
         private static Repository<EntryList> repository;
+        private static Repository<InfoLoc> repositoryL;
         #endregion
 
         #region Constructores
@@ -119,6 +120,20 @@ namespace Layer.DAO.Repositories
             var result = euidsG.Where(p => euidsC.Any(p2 => p2.euid == p.euid)).ToList();
 
             return result.Count > 0;
+        }
+
+        public List<string> GetEuidByJaula(string jaula,int idEmpresa)
+        {
+            repository = unitOfWork.Repository<EntryList>();
+            repositoryL = unitOfWork.Repository<InfoLoc>();
+
+            var euids= (from el in repository.Table
+                        from il in repositoryL.Table
+                        where el.Location == il.LocationCuartel
+                        && il.Jaula == jaula
+                        select el.Euid).ToList();
+
+            return euids;
         }
 
         public void Insert(EntryList obj)

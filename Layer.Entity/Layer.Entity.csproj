@@ -84,6 +84,7 @@
     <Compile Include="Dto\InfoFieldBookDto.cs" />
     <Compile Include="Dto\InfoLocDto.cs" />
     <Compile Include="Dto\MovimientoCosechaDto.cs" />
+    <Compile Include="Dto\MovimientoFloracionDto.cs" />
     <Compile Include="Dto\MovimientoRoggingDto.cs" />
     <Compile Include="Dto\PackingPorDiaDto.cs" />
     <Compile Include="Dto\RegionDto.cs" />

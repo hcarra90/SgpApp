@@ -44,6 +44,11 @@ namespace Layer.Business
         {
             repository.Insert(obj);
         }
+
+        public static List<string> GetEuidByJaula(string jaula, int idEmpresa)
+        {
+            return repository.GetEuidByJaula(jaula, idEmpresa);
+        }
         #endregion
     }
 }

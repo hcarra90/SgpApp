@@ -10,6 +10,7 @@ namespace Layer.DAO.Interface
     public interface IEntryListRepository : IGenericRepository<EntryList>
     {
         bool EuidExist(string euid);
+        List<string> GetEuidByJaula(string jaula, int idEmpresa);
         bool ValidateEuids(List<EntryList> data);
         List<EntryList> GetEuid(string cadena, string opcion);
         string GetMaxEuid();
