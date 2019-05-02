@@ -39,8 +39,6 @@ namespace Layer.Win.Secado
 
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(btnVer, "Ver Detalle Proceso");
-
             txtBox.Focus();
         }
 

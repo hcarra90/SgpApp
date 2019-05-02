@@ -358,14 +358,36 @@ namespace Layer.DAO
             }
         }
 
-        DbSet<MovimientoFloracion> movimientoFloracion;
-        public DbSet<MovimientoFloracion> MovimientoFloracion
+        DbSet<MovimientoNota> movimientoNota;
+        public DbSet<MovimientoNota> MovimientoNota
         {
             get
             {
-                if (movimientoFloracion == null)
-                    movimientoFloracion = base.Set<MovimientoFloracion>();
-                return movimientoFloracion;
+                if (movimientoNota == null)
+                    movimientoNota = base.Set<MovimientoNota>();
+                return movimientoNota;
+            }
+        }
+
+        DbSet<ProgramaExport> programaExport;
+        public DbSet<ProgramaExport> ProgramaExport
+        {
+            get
+            {
+                if (programaExport == null)
+                    programaExport = base.Set<ProgramaExport>();
+                return programaExport;
+            }
+        }
+
+        DbSet<MovimientoDespacho> movimientoDespacho;
+        public DbSet<MovimientoDespacho> MovimientoDespacho
+        {
+            get
+            {
+                if (movimientoDespacho == null)
+                    movimientoDespacho = base.Set<MovimientoDespacho>();
+                return movimientoDespacho;
             }
         }
         #endregion
@@ -406,7 +428,9 @@ namespace Layer.DAO
             modelBuilder.Entity<TipoAgro>().ToTable("TipoAgro");
             modelBuilder.Entity<TipoContrato>().ToTable("TipoContrato");
             modelBuilder.Entity<Nota>().ToTable("Nota");
-            modelBuilder.Entity<MovimientoFloracion>().ToTable("MovimientoFloracion");
+            modelBuilder.Entity<MovimientoNota>().ToTable("MovimientoNota");
+            modelBuilder.Entity<ProgramaExport>().ToTable("ProgramaExport");
+            modelBuilder.Entity<MovimientoDespacho>().ToTable("MovimientoDespacho");
             #endregion
 
             #region Relaciones Clases
@@ -528,10 +552,15 @@ namespace Layer.DAO
                     .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
 
             //Nota
-            modelBuilder.Entity<MovimientoFloracion>()
+            modelBuilder.Entity<MovimientoNota>()
                     .HasRequired(c => c.Nota)
                     .WithMany()
                     .HasForeignKey(t => t.id_nota).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ProgramaExport>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
             #endregion
         }
         #endregion

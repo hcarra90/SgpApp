@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Layer.Entity
 {
-    [Table("MovimientoFloracion")]
-    public class MovimientoFloracion:BaseEntity
+    [Table("MovimientoNota")]
+    public class MovimientoNota:BaseEntity
     {
         [Required]
         [Column("id_movimiento_floracion")]
@@ -23,8 +23,14 @@ namespace Layer.Entity
         [ForeignKey("id_nota")]
         public virtual Nota Nota { get; set; }
 
+        [Column("valor_nota")]
+        public decimal? Valor { get; set; }
+
+        [Column("descripcion_nota")]
+        public string Descripcion { get; set; }
+
         [Required]
-        [Column("usuario_floracion")]
+        [Column("usuario_nota")]
         public string Usuario { get; set; }
     }
 }

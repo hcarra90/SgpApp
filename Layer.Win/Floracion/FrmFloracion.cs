@@ -55,12 +55,19 @@ namespace Layer.Win.Floracion
         {
             DateTime fechafinal = new DateTime(dtpFechaNota.Value.Year, dtpFechaNota.Value.Month, dtpFechaNota.Value.Day, dtpFechaNota.Value.Hour, dtpFechaNota.Value.Minute,0);
 
-            var movFlora = new MovimientoFloracion
+            var movFlora = new MovimientoNota
             {
                 Fecha = fechafinal,
                 id_nota = (int)cboNota.SelectedValue,
-                Usuario = usuarioValido.nombre_usuario
+                Usuario = usuarioValido.nombre_usuario,
+                Descripcion=txtDescripcion.Text
             };
+
+            if (txtValor.Text.IsNumeric())
+            {
+                movFlora.Valor = decimal.Parse(txtValor.Text);
+            }
+
 
             if (tipo == 1)
             {
@@ -171,11 +178,33 @@ namespace Layer.Win.Floracion
             }
         }
 
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                //var Euid = EntryList.GetBin(txtBin.Text.ToUpper()); ;
+                if ((txtEuid.Text !="" || txtJaula.Text.Trim() != "") && NotaSeleccionada != null && txtValor.Text.IsNumeric())
+                {
+                    GrabaInformacion(2);
+                }
+                else
+                {
+                    MessageBox.Show("Datos Inválidos", "Módulo Floración", MessageBoxButtons.OK, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
+                    txtJaula.Text = "";
+                    txtJaula.Focus();
+                }
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();
         }
-        #endregion
 
         private void grdDetalle_MouseClick(object sender, MouseEventArgs e)
         {
@@ -197,5 +226,12 @@ namespace Layer.Win.Floracion
                 BorrarEuid(id);
             }
         }
+
+        private void btnProcesar_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        
     }
 }

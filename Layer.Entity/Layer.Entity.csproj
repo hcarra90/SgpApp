@@ -84,7 +84,8 @@
     <Compile Include="Dto\InfoFieldBookDto.cs" />
     <Compile Include="Dto\InfoLocDto.cs" />
     <Compile Include="Dto\MovimientoCosechaDto.cs" />
-    <Compile Include="Dto\MovimientoFloracionDto.cs" />
+    <Compile Include="Dto\MovimientoDespachoDto.cs" />
+    <Compile Include="Dto\MovimientoNotaDto.cs" />
     <Compile Include="Dto\MovimientoRoggingDto.cs" />
     <Compile Include="Dto\PackingPorDiaDto.cs" />
     <Compile Include="Dto\RegionDto.cs" />
@@ -135,11 +136,13 @@
     <Compile Include="Movimientos\MovimientoCaja.cs" />
     <Compile Include="Movimientos\MovimientoCosecha.cs" />
     <Compile Include="Movimientos\MovimientoDesgrane.cs" />
-    <Compile Include="Movimientos\MovimientoFloracion.cs" />
+    <Compile Include="Movimientos\MovimientoNota.cs" />
     <Compile Include="Movimientos\MovimientoPacking.cs" />
     <Compile Include="Movimientos\MovimientoRogging.cs" />
     <Compile Include="Movimientos\MovimientoSecado.cs" />
     <Compile Include="Movimientos\MovimientoShipping.cs" />
+    <Compile Include="Packing\MovimientoDespacho.cs" />
+    <Compile Include="Packing\ProgramaExport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login\Usuario.cs" />
     <Compile Include="ResultadoCarga.cs" />

@@ -35,7 +35,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>Publicacion.html</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>53</ApplicationRevision>
+    <ApplicationRevision>61</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -73,7 +73,13 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClosedXML, Version=0.91.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
@@ -121,6 +127,7 @@
     <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -214,6 +221,12 @@
     </Compile>
     <Compile Include="Packing\FrmMovPacking.Designer.cs">
       <DependentUpon>FrmMovPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\FrmPackingUva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\FrmPackingUva.Designer.cs">
+      <DependentUpon>FrmPackingUva.cs</DependentUpon>
     </Compile>
     <Compile Include="Packing\FrmPeso.cs">
       <SubType>Form</SubType>
@@ -329,6 +342,9 @@
     <EmbeddedResource Include="Packing\FrmMovPacking.resx">
       <DependentUpon>FrmMovPacking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Packing\FrmPackingUva.resx">
+      <DependentUpon>FrmPackingUva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Packing\FrmPeso.resx">
       <DependentUpon>FrmPeso.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,8 +391,8 @@
     <EmbeddedResource Include="Siembra\FrmUploadInfoFieldBook.resx">
       <DependentUpon>FrmUploadInfoFieldBook.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Layer.Win_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -413,6 +429,28 @@
     <Content Include="Encabezado_1.txt" />
     <Content Include="IconMdi.ico" />
     <Content Include="Images\bad.png" />
+    <None Include="Resources\camion_64.png" />
+    <None Include="Resources\supermercado_641.png" />
+    <None Include="Resources\cosecha.2_641.png" />
+    <None Include="Resources\planta_641.png" />
+    <None Include="Resources\almacen_64.png" />
+    <None Include="Resources\supermercado_64.png" />
+    <None Include="Resources\planta_64.png" />
+    <None Include="Resources\cosecha.2_64.png" />
+    <None Include="Resources\uva_64.png" />
+    <None Include="Resources\girasol_64.png" />
+    <None Include="Resources\guadana_64.png" />
+    <None Include="Resources\Desgrane_64.png" />
+    <None Include="Resources\secado_64.png" />
+    <None Include="Resources\cosecha_64.png" />
+    <None Include="Resources\upload_64.png" />
+    <None Include="Resources\nota_64.png" />
+    <None Include="Resources\portapapeles_64.png" />
+    <None Include="Resources\disposicion_64.png" />
+    <None Include="Resources\maquetacion_64.png" />
+    <None Include="Resources\plantilla_64.png" />
+    <None Include="Resources\book_64.png" />
+    <None Include="Resources\uva_32.png" />
     <None Include="Resources\girasol_32.png" />
     <None Include="Resources\girasol_24.png" />
     <None Include="Resources\split_32.png" />

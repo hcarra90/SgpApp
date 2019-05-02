@@ -22,9 +22,16 @@ namespace Layer.Win.Siembra
         string pathFile = "";
         List<InfoFieldBook> datos = new List<InfoFieldBook>();
         List<SplitEuidDto> SplitEuid = new List<SplitEuidDto>();
+        InfoFieldBook infoF = new InfoFieldBook();
         int progreso = 0, porciento = 0, totalEmpleadosProcesar = 0;
+        int modificados = 0, insertados = 0;
+        int euidNoProcesables = 0;
+        List<InfoFieldBook> nuevos = new List<InfoFieldBook>();
+        List<InfoFieldBook> existentes = new List<InfoFieldBook>();
 
         BackgroundWorker bg = new BackgroundWorker();
+
+        public object itemF { get; private set; }
 
 
         #endregion
@@ -66,10 +73,10 @@ namespace Layer.Win.Siembra
         {
             try
             {
-                using (var client = new WebClient())
-                {
-                    client.DownloadFile("http://www.massainursery.cl/Files/InfoFieldBook.xlsx.xlsx", "C:\\Templates\\InfoFieldBook.xlsx");
-                }
+                //using (var client = new WebClient())
+                //{
+                //    client.DownloadFile("http://www.massainursery.cl/Files/InfoFieldBook.xlsx.xlsx", "C:\\Templates\\InfoFieldBook.xlsx");
+                //}
 
             }
             catch (Exception ex)
@@ -93,6 +100,69 @@ namespace Layer.Win.Siembra
                 try
                 {
                     datos = FuncionesExcel.GetData(pathFile);
+                    //Validación Inicial
+                    foreach (var item in datos)
+                    {
+                        infoF = InfoFieldBookBusiness.GetIndEuid(item.indEuid, item.euid);
+                        if (infoF != null)
+                        {
+                            //infoF.Id = infoF.Id;
+                            //infoF.cc = item.cc;
+                            //infoF.client = item.client;
+                            //infoF.codInternacion = item.codInternacion;
+                            //infoF.CodPermanencia = item.CodPermanencia;
+                            //infoF.codReception = item.codReception;
+                            //infoF.country = item.country;
+                            //infoF.crop = item.crop;
+                            //infoF.ent = item.ent;
+                            //infoF.EntName = item.EntName;
+                            //infoF.EntRole = item.EntRole;
+                            //infoF.gmoEvent = item.gmoEvent;
+                            //infoF.GranosHilera = item.GranosHilera;
+                            //infoF.instructions = item.instructions;
+                            //infoF.location = item.location;
+                            //infoF.LotId = item.LotId;
+                            //infoF.opExpName = item.opExpName;
+                            //infoF.order = item.order;
+                            //infoF.Owner = item.Owner;
+                            //infoF.plt = item.plt;
+                            //infoF.ResImportation = item.ResImportation;
+                            //infoF.rng = item.rng;
+                            //infoF.sag = item.sag;
+                            //infoF.year = item.year;
+
+                            infoF.breedersCode1 = item.breedersCode1;
+                            infoF.breedersCode2 = item.breedersCode2;
+                            infoF.breedersCode3 = item.breedersCode3;
+                            infoF.breedersCode4 = item.breedersCode4;
+                            infoF.BreedersInstructions1 = item.BreedersInstructions1;
+                            infoF.BreedersInstructions2 = item.BreedersInstructions2;
+                            infoF.BreedersInstructions3 = item.BreedersInstructions3;
+                            infoF.BreedersInstructions4 = item.BreedersInstructions4;
+                            infoF.fechaModificacion = (DateTime?)DateTime.Now;
+                            infoF.projecLead = item.projecLead;
+                            infoF.projectCode = item.projectCode;
+                            infoF.shelling = item.shelling;
+                            infoF.shipTo = item.shipTo;
+                            infoF.targears = item.targears;
+                            infoF.targetKern = item.targetKern;
+                            infoF.targetWg = item.targetWg;
+                            infoF.obs = item.obs;
+                            existentes.Add(infoF);
+
+                            modificados++;
+                        }
+                        else
+                        {
+                            infoF = new InfoFieldBook();
+                            infoF = item;
+                            infoF.fechaCarga = DateTime.Now;
+                            nuevos.Add(infoF);
+
+                            insertados++;
+                        }
+                    }
+
                     grdDetalle.AutoGenerateColumns = false;
                     grdDetalle.DataSource = datos;
                     grdDetalle.ClearSelection();
@@ -129,6 +199,9 @@ namespace Layer.Win.Siembra
             lblEuids.Text = ".";
             lblActual.Text = ".";
             lbltotal.Text = ".";
+            lblNuevos.Text = ".";
+            lblModificados.Text = ".";
+            grpResumen.Visible = false;
         }
 
         private void GrabaDatos()
@@ -219,11 +292,67 @@ namespace Layer.Win.Siembra
 
             foreach (var item in datos)
             {
-                InfoFieldBookBusiness.GrabaInformacion(item);
+                infoF = InfoFieldBookBusiness.GetIndEuid(item.indEuid, item.euid);
+                if (infoF != null)
+                {
+                    //infoF.Id = infoF.Id;
+                    //infoF.cc = item.cc;
+                    //infoF.client = item.client;
+                    //infoF.codInternacion = item.codInternacion;
+                    //infoF.CodPermanencia = item.CodPermanencia;
+                    //infoF.codReception = item.codReception;
+                    //infoF.country = item.country;
+                    //infoF.crop = item.crop;
+                    //infoF.ent = item.ent;
+                    //infoF.EntName = item.EntName;
+                    //infoF.EntRole = item.EntRole;
+                    //infoF.gmoEvent = item.gmoEvent;
+                    //infoF.GranosHilera = item.GranosHilera;
+                    //infoF.instructions = item.instructions;
+                    //infoF.location = item.location;
+                    //infoF.LotId = item.LotId;
+                    //infoF.opExpName = item.opExpName;
+                    //infoF.order = item.order;
+                    //infoF.Owner = item.Owner;
+                    //infoF.plt = item.plt;
+                    //infoF.ResImportation = item.ResImportation;
+                    //infoF.rng = item.rng;
+                    //infoF.sag = item.sag;
+                    //infoF.year = item.year;
+
+                    infoF.breedersCode1 = item.breedersCode1;
+                    infoF.breedersCode2 = item.breedersCode2;
+                    infoF.breedersCode3 = item.breedersCode3;
+                    infoF.breedersCode4 = item.breedersCode4;
+                    infoF.BreedersInstructions1 = item.BreedersInstructions1;
+                    infoF.BreedersInstructions2 = item.BreedersInstructions2;
+                    infoF.BreedersInstructions3 = item.BreedersInstructions3;
+                    infoF.BreedersInstructions4 = item.BreedersInstructions4;
+                    infoF.fechaModificacion = (DateTime?)DateTime.Now;
+                    infoF.projecLead = item.projecLead;
+                    infoF.projectCode = item.projectCode;
+                    infoF.shelling = item.shelling;
+                    infoF.shipTo = item.shipTo;
+                    infoF.targears = item.targears;
+                    infoF.targetKern = item.targetKern;
+                    infoF.targetWg = item.targetWg;
+                    infoF.obs = item.obs;
+
+                    modificados++;
+                }
+                else
+                {
+                    infoF = new InfoFieldBook();
+                    infoF = item;
+                    infoF.fechaCarga = DateTime.Now;
+                    insertados++;
+                }
+                InfoFieldBookBusiness.GrabaInformacion(infoF);
 
                 progreso++; //Aumentando el progreso 
                 porciento = Convert.ToInt16((((double)progreso / (double)totalEmpleadosProcesar) * 100.00)); //Calculo del porcentaje
                 bg.ReportProgress(porciento);
+                
             }
         }
 
@@ -241,6 +370,8 @@ namespace Layer.Win.Siembra
             lbltotal.Text = totalEmpleadosProcesar.ToString();
             lblActual.Text = progreso.ToString();
 
+            lblNuevos.Text = insertados.ToString();
+            lblModificados.Text = modificados.ToString();
 
             if (e.ProgressPercentage > 100)
             {
@@ -265,6 +396,7 @@ namespace Layer.Win.Siembra
             grdDetalle.DataSource = datos;
             grdDetalle.ClearSelection();
             btnExportar.Enabled = true;
+            grpResumen.Visible = true;
         }
         #endregion
     }

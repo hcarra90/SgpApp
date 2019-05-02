@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdOpciones = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
@@ -43,9 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grdDetalle = new System.Windows.Forms.DataGridView();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.lblEuids = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IndEuid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +72,7 @@
             this.GmoEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodInternacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodReception = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,10 +85,19 @@
             this.Owner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodPermanencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LotId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.lblEuids = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grpResumen = new System.Windows.Forms.GroupBox();
+            this.lblNuevos = new System.Windows.Forms.Label();
+            this.lblModificados = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.grdOpciones.SuspendLayout();
             this.grpProgreso.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).BeginInit();
+            this.grpResumen.SuspendLayout();
             this.SuspendLayout();
             // 
             // grdOpciones
@@ -128,12 +135,14 @@
             // 
             // btnCarga
             // 
+            this.btnCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
             this.btnCarga.Location = new System.Drawing.Point(5, 20);
             this.btnCarga.Name = "btnCarga";
             this.btnCarga.Size = new System.Drawing.Size(62, 23);
             this.btnCarga.TabIndex = 0;
             this.btnCarga.Text = "Buscar";
-            this.btnCarga.UseVisualStyleBackColor = true;
+            this.btnCarga.UseVisualStyleBackColor = false;
             this.btnCarga.Click += new System.EventHandler(this.btnCarga_Click);
             // 
             // grpProgreso
@@ -146,7 +155,7 @@
             this.grpProgreso.Controls.Add(this.label2);
             this.grpProgreso.Location = new System.Drawing.Point(296, 2);
             this.grpProgreso.Name = "grpProgreso";
-            this.grpProgreso.Size = new System.Drawing.Size(377, 56);
+            this.grpProgreso.Size = new System.Drawing.Size(486, 56);
             this.grpProgreso.TabIndex = 9;
             this.grpProgreso.TabStop = false;
             this.grpProgreso.Visible = false;
@@ -154,30 +163,30 @@
             // lbltotal
             // 
             this.lbltotal.AutoSize = true;
-            this.lbltotal.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotal.Location = new System.Drawing.Point(269, 36);
             this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(16, 13);
+            this.lbltotal.Size = new System.Drawing.Size(10, 13);
             this.lbltotal.TabIndex = 17;
             this.lbltotal.Text = ".";
             // 
             // lblPorcentaje
             // 
             this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorcentaje.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.Location = new System.Drawing.Point(20, 36);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(13, 12);
+            this.lblPorcentaje.Size = new System.Drawing.Size(10, 13);
             this.lblPorcentaje.TabIndex = 3;
             this.lblPorcentaje.Text = ".";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(234, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(22, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "De";
             // 
@@ -185,27 +194,27 @@
             // 
             this.prgGraba.Location = new System.Drawing.Point(13, 10);
             this.prgGraba.Name = "prgGraba";
-            this.prgGraba.Size = new System.Drawing.Size(351, 23);
+            this.prgGraba.Size = new System.Drawing.Size(467, 23);
             this.prgGraba.Step = 1;
             this.prgGraba.TabIndex = 1;
             // 
             // lblActual
             // 
             this.lblActual.AutoSize = true;
-            this.lblActual.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActual.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActual.Location = new System.Drawing.Point(195, 36);
             this.lblActual.Name = "lblActual";
-            this.lblActual.Size = new System.Drawing.Size(16, 13);
+            this.lblActual.Size = new System.Drawing.Size(10, 13);
             this.lblActual.TabIndex = 15;
             this.lblActual.Text = ".";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(111, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cargando";
             // 
@@ -214,7 +223,7 @@
             this.groupBox1.Controls.Add(this.grdDetalle);
             this.groupBox1.Location = new System.Drawing.Point(5, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(668, 348);
+            this.groupBox1.Size = new System.Drawing.Size(777, 348);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle Archivo";
@@ -226,14 +235,14 @@
             this.grdDetalle.AllowUserToOrderColumns = true;
             this.grdDetalle.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grdDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
@@ -265,6 +274,7 @@
             this.GmoEvent,
             this.Sag,
             this.CodInternacion,
+            this.CodReception,
             this.Client,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
@@ -282,50 +292,18 @@
             this.grdDetalle.Name = "grdDetalle";
             this.grdDetalle.ReadOnly = true;
             this.grdDetalle.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 8.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdDetalle.RowHeadersVisible = false;
             this.grdDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDetalle.Size = new System.Drawing.Size(662, 328);
+            this.grdDetalle.Size = new System.Drawing.Size(771, 328);
             this.grdDetalle.TabIndex = 3;
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.Enabled = false;
-            this.btnExportar.Location = new System.Drawing.Point(611, 418);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(62, 23);
-            this.btnExportar.TabIndex = 15;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            this.btnExportar.Visible = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            // 
-            // lblEuids
-            // 
-            this.lblEuids.AutoSize = true;
-            this.lblEuids.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEuids.Location = new System.Drawing.Point(305, 415);
-            this.lblEuids.Name = "lblEuids";
-            this.lblEuids.Size = new System.Drawing.Size(18, 26);
-            this.lblEuids.TabIndex = 14;
-            this.lblEuids.Text = ".";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 415);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 26);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "N° Individual Euids Procesados: ";
             // 
             // Num
             // 
@@ -542,6 +520,13 @@
             this.CodInternacion.Name = "CodInternacion";
             this.CodInternacion.ReadOnly = true;
             // 
+            // CodReception
+            // 
+            this.CodReception.DataPropertyName = "CodReception";
+            this.CodReception.HeaderText = "CodReception";
+            this.CodReception.Name = "CodReception";
+            this.CodReception.ReadOnly = true;
+            // 
             // Client
             // 
             this.Client.DataPropertyName = "client";
@@ -567,7 +552,7 @@
             // 
             // ResImportacion
             // 
-            this.ResImportacion.DataPropertyName = "ResImportacion";
+            this.ResImportacion.DataPropertyName = "ResImportation";
             this.ResImportacion.HeaderText = "ResImportacion";
             this.ResImportacion.Name = "ResImportacion";
             this.ResImportacion.ReadOnly = true;
@@ -631,17 +616,105 @@
             this.LotId.ReadOnly = true;
             this.LotId.Width = 70;
             // 
+            // btnExportar
+            // 
+            this.btnExportar.Enabled = false;
+            this.btnExportar.Location = new System.Drawing.Point(611, 418);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(62, 23);
+            this.btnExportar.TabIndex = 15;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Visible = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // lblEuids
+            // 
+            this.lblEuids.AutoSize = true;
+            this.lblEuids.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEuids.Location = new System.Drawing.Point(305, 415);
+            this.lblEuids.Name = "lblEuids";
+            this.lblEuids.Size = new System.Drawing.Size(18, 26);
+            this.lblEuids.TabIndex = 14;
+            this.lblEuids.Text = ".";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 415);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 26);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "N° Individual Euids Procesados: ";
+            // 
+            // grpResumen
+            // 
+            this.grpResumen.Controls.Add(this.lblNuevos);
+            this.grpResumen.Controls.Add(this.lblModificados);
+            this.grpResumen.Controls.Add(this.label5);
+            this.grpResumen.Controls.Add(this.label3);
+            this.grpResumen.Location = new System.Drawing.Point(296, 2);
+            this.grpResumen.Name = "grpResumen";
+            this.grpResumen.Size = new System.Drawing.Size(136, 56);
+            this.grpResumen.TabIndex = 5;
+            this.grpResumen.TabStop = false;
+            this.grpResumen.Text = "Resumen";
+            this.grpResumen.Visible = false;
+            // 
+            // lblNuevos
+            // 
+            this.lblNuevos.AutoSize = true;
+            this.lblNuevos.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevos.Location = new System.Drawing.Point(81, 37);
+            this.lblNuevos.Name = "lblNuevos";
+            this.lblNuevos.Size = new System.Drawing.Size(8, 11);
+            this.lblNuevos.TabIndex = 25;
+            this.lblNuevos.Text = ".";
+            // 
+            // lblModificados
+            // 
+            this.lblModificados.AutoSize = true;
+            this.lblModificados.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificados.Location = new System.Drawing.Point(81, 15);
+            this.lblModificados.Name = "lblModificados";
+            this.lblModificados.Size = new System.Drawing.Size(8, 11);
+            this.lblModificados.TabIndex = 24;
+            this.lblModificados.Text = ".";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 11);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Nuevos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 11);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Modificados";
+            // 
             // FrmUploadInfoFieldBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.ClientSize = new System.Drawing.Size(790, 450);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.lblEuids);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpProgreso);
             this.Controls.Add(this.grdOpciones);
+            this.Controls.Add(this.grpResumen);
             this.Font = new System.Drawing.Font("Calibri", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -655,6 +728,8 @@
             this.grpProgreso.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).EndInit();
+            this.grpResumen.ResumeLayout(false);
+            this.grpResumen.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,6 +782,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GmoEvent;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sag;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodInternacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodReception;
         private System.Windows.Forms.DataGridViewTextBoxColumn Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -719,5 +795,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Owner;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodPermanencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn LotId;
+        private System.Windows.Forms.GroupBox grpResumen;
+        private System.Windows.Forms.Label lblNuevos;
+        private System.Windows.Forms.Label lblModificados;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }

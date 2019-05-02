@@ -114,6 +114,11 @@ namespace Layer.Business
         {
             return repository.ValidateIndEuids(data);
         }
+
+        public static void InsertBulk(List<InfoFieldBook> entities)
+        {
+            repository.InsertBulk(entities);
+        }
         #endregion
     }
 }

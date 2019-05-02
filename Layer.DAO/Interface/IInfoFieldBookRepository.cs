@@ -22,6 +22,8 @@ namespace Layer.DAO.Interface
         void Update(InfoFieldBook movimiento);
         void Insert(InfoFieldBook movimiento);
         bool ValidateIndEuids(List<InfoFieldBook> data);
+        bool GetValidateEuidPacking(string indEuid, string euid);
+        void InsertBulk(List<InfoFieldBook> entities);
         #endregion
     }
 }

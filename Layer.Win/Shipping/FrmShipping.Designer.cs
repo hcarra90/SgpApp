@@ -52,14 +52,12 @@
             this.txtIndEuid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaja = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ctxEuidMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataEuid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ctxEuidMenu
@@ -79,10 +77,10 @@
             // 
             // txtBox
             // 
-            this.txtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBox.Location = new System.Drawing.Point(38, 57);
             this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(57, 15);
+            this.txtBox.Size = new System.Drawing.Size(57, 22);
             this.txtBox.TabIndex = 0;
             this.txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
             // 
@@ -90,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 14);
@@ -101,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(90, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 14);
@@ -112,7 +110,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(90, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 14);
@@ -123,12 +121,12 @@
             // 
             this.dataEuid.AllowUserToAddRows = false;
             this.dataEuid.AllowUserToDeleteRows = false;
-            this.dataEuid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataEuid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataEuid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataEuid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataEuid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -224,19 +222,19 @@
             // 
             // txtEuid
             // 
-            this.txtEuid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEuid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEuid.Location = new System.Drawing.Point(152, 87);
             this.txtEuid.Name = "txtEuid";
-            this.txtEuid.Size = new System.Drawing.Size(113, 15);
+            this.txtEuid.Size = new System.Drawing.Size(113, 22);
             this.txtEuid.TabIndex = 1;
             this.txtEuid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEuid_KeyPress);
             // 
             // txtIndEuid
             // 
-            this.txtIndEuid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIndEuid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIndEuid.Location = new System.Drawing.Point(152, 108);
             this.txtIndEuid.Name = "txtIndEuid";
-            this.txtIndEuid.Size = new System.Drawing.Size(113, 15);
+            this.txtIndEuid.Size = new System.Drawing.Size(113, 22);
             this.txtIndEuid.TabIndex = 11;
             this.txtIndEuid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIndEuid_KeyPress);
             // 
@@ -252,24 +250,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.shipping_32;
+            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.planta_64;
             this.pictureBox2.Location = new System.Drawing.Point(3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.if_icon_close_round_211651;
-            this.pictureBox1.Location = new System.Drawing.Point(358, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnCaja
             // 
@@ -311,13 +298,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(378, 492);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtIndEuid);
             this.Controls.Add(this.txtEuid);
             this.Controls.Add(this.btnCaja);
@@ -327,12 +313,11 @@
             this.Controls.Add(this.txtBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmShipping";
-            this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movimiento Shipping";
             this.Load += new System.EventHandler(this.FrmShipping_Load);
@@ -340,7 +325,6 @@
             this.ctxEuidMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataEuid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,7 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EUID;
         private System.Windows.Forms.DataGridViewTextBoxColumn IndEuid;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaPreparacion;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotal;

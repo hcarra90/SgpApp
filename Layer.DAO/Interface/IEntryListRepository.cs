@@ -15,5 +15,6 @@ namespace Layer.DAO.Interface
         List<EntryList> GetEuid(string cadena, string opcion);
         string GetMaxEuid();
         void Insert(EntryList obj);
+        void InsertBulk(List<EntryList> entities);
     }
 }

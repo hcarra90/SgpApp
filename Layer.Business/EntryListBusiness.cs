@@ -49,6 +49,11 @@ namespace Layer.Business
         {
             return repository.GetEuidByJaula(jaula, idEmpresa);
         }
+
+        public static void InsertBulk(List<EntryList> entities)
+        {
+            repository.InsertBulk(entities);
+        }
         #endregion
     }
 }

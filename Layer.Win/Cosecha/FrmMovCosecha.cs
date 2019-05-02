@@ -38,7 +38,6 @@ namespace Layer.Win.Cosecha
 
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(btnVer, "Ver Detalle Proceso");
             txtBin.Focus();
         }
 

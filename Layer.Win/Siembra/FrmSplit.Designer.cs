@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdOpciones = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
@@ -45,13 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grdResumen = new System.Windows.Forms.DataGridView();
+            this.Euids = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EuidSplit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEuids = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExportar = new System.Windows.Forms.Button();
             this.grpDetalle = new System.Windows.Forms.GroupBox();
             this.grdDetalle = new System.Windows.Forms.DataGridView();
-            this.Euids = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EuidSplit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IndEuid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +83,7 @@
             this.Owner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodPermanencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LotId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCargaSplit = new System.Windows.Forms.Button();
             this.grdOpciones.SuspendLayout();
             this.grpProgreso.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,30 +153,30 @@
             // lbltotal
             // 
             this.lbltotal.AutoSize = true;
-            this.lbltotal.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotal.Location = new System.Drawing.Point(269, 36);
             this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(16, 13);
+            this.lbltotal.Size = new System.Drawing.Size(11, 13);
             this.lbltotal.TabIndex = 17;
             this.lbltotal.Text = ".";
             // 
             // lblPorcentaje
             // 
             this.lblPorcentaje.AutoSize = true;
-            this.lblPorcentaje.Font = new System.Drawing.Font("OCR A Extended", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorcentaje.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.Location = new System.Drawing.Point(20, 36);
             this.lblPorcentaje.Name = "lblPorcentaje";
-            this.lblPorcentaje.Size = new System.Drawing.Size(13, 12);
+            this.lblPorcentaje.Size = new System.Drawing.Size(11, 13);
             this.lblPorcentaje.TabIndex = 3;
             this.lblPorcentaje.Text = ".";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(234, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(20, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "De";
             // 
@@ -190,20 +191,20 @@
             // lblActual
             // 
             this.lblActual.AutoSize = true;
-            this.lblActual.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActual.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActual.Location = new System.Drawing.Point(195, 36);
             this.lblActual.Name = "lblActual";
-            this.lblActual.Size = new System.Drawing.Size(16, 13);
+            this.lblActual.Size = new System.Drawing.Size(11, 13);
             this.lblActual.TabIndex = 15;
             this.lblActual.Text = ".";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("OCR A Extended", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(111, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cargando";
             // 
@@ -224,14 +225,14 @@
             this.grdResumen.AllowUserToOrderColumns = true;
             this.grdResumen.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grdResumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Euids,
@@ -241,18 +242,34 @@
             this.grdResumen.Name = "grdResumen";
             this.grdResumen.ReadOnly = true;
             this.grdResumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdResumen.RowHeadersVisible = false;
             this.grdResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdResumen.Size = new System.Drawing.Size(215, 318);
             this.grdResumen.TabIndex = 0;
+            // 
+            // Euids
+            // 
+            this.Euids.DataPropertyName = "Euid";
+            this.Euids.HeaderText = "Euid";
+            this.Euids.Name = "Euids";
+            this.Euids.ReadOnly = true;
+            this.Euids.Width = 130;
+            // 
+            // EuidSplit
+            // 
+            this.EuidSplit.DataPropertyName = "EuidSplit";
+            this.EuidSplit.HeaderText = "N° Split";
+            this.EuidSplit.Name = "EuidSplit";
+            this.EuidSplit.ReadOnly = true;
+            this.EuidSplit.Width = 70;
             // 
             // lblEuids
             // 
@@ -277,7 +294,7 @@
             // btnExportar
             // 
             this.btnExportar.Enabled = false;
-            this.btnExportar.Location = new System.Drawing.Point(611, 408);
+            this.btnExportar.Location = new System.Drawing.Point(530, 410);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(62, 23);
             this.btnExportar.TabIndex = 13;
@@ -302,14 +319,14 @@
             this.grdDetalle.AllowUserToOrderColumns = true;
             this.grdDetalle.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grdDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
@@ -347,34 +364,18 @@
             this.grdDetalle.Name = "grdDetalle";
             this.grdDetalle.ReadOnly = true;
             this.grdDetalle.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDetalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetalle.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdDetalle.RowHeadersVisible = false;
             this.grdDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDetalle.Size = new System.Drawing.Size(437, 319);
             this.grdDetalle.TabIndex = 2;
-            // 
-            // Euids
-            // 
-            this.Euids.DataPropertyName = "Euid";
-            this.Euids.HeaderText = "Euid";
-            this.Euids.Name = "Euids";
-            this.Euids.ReadOnly = true;
-            this.Euids.Width = 130;
-            // 
-            // EuidSplit
-            // 
-            this.EuidSplit.DataPropertyName = "EuidSplit";
-            this.EuidSplit.HeaderText = "N° Split";
-            this.EuidSplit.Name = "EuidSplit";
-            this.EuidSplit.ReadOnly = true;
-            this.EuidSplit.Width = 70;
             // 
             // Num
             // 
@@ -608,11 +609,24 @@
             this.LotId.ReadOnly = true;
             this.LotId.Width = 70;
             // 
+            // BtnCargaSplit
+            // 
+            this.BtnCargaSplit.Location = new System.Drawing.Point(598, 410);
+            this.BtnCargaSplit.Name = "BtnCargaSplit";
+            this.BtnCargaSplit.Size = new System.Drawing.Size(75, 23);
+            this.BtnCargaSplit.TabIndex = 15;
+            this.BtnCargaSplit.Text = "Carga Split";
+            this.BtnCargaSplit.UseVisualStyleBackColor = true;
+            this.BtnCargaSplit.Visible = false;
+            this.BtnCargaSplit.Click += new System.EventHandler(this.BtnCargaSplit_Click);
+            // 
             // FrmSplit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(679, 456);
+            this.Controls.Add(this.BtnCargaSplit);
             this.Controls.Add(this.grpDetalle);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.lblEuids);
@@ -693,5 +707,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Owner;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodPermanencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn LotId;
+        private System.Windows.Forms.Button BtnCargaSplit;
     }
 }

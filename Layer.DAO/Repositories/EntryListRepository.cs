@@ -41,7 +41,7 @@ namespace Layer.DAO.Repositories
             repository = unitOfWork.Repository<EntryList>();
             var euid = (from EntryList in
                      (from EntryList in repository.Table
-                      where SqlFunctions.IsNumeric(EntryList.Euid)==1
+                      where SqlFunctions.IsNumeric(EntryList.Euid)==1 && EntryList.Euid.Length > 5
                       select new
                       {
                           EntryList.Euid,
@@ -142,6 +142,11 @@ namespace Layer.DAO.Repositories
             repository.Insert(obj);
         }
 
+        public void InsertBulk(List<EntryList> entities)
+        {
+            repository = unitOfWork.Repository<EntryList>();
+            repository.InsertBulk(entities);
+        }
 
     }
 }

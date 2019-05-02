@@ -22,6 +22,7 @@ namespace Layer.DAO.Interface
         MovimientoShipping GetBoxByIndEuid(string indEuid, string cajaEnvio);
         decimal GetBoxWeight(string box);
         List<MovimientoShippingDto> GetEuids(string cadena, string opcion);
+        
         #endregion
     }
 }

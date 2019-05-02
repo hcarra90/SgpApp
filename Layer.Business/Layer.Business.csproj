@@ -90,6 +90,7 @@
     <Compile Include="MovimientoCajaBusiness.cs" />
     <Compile Include="MovimientoCosechaBusiness.cs" />
     <Compile Include="MovimientoDesgraneBusiness.cs" />
+    <Compile Include="MovimientoDespachoBusiness.cs" />
     <Compile Include="MovimientoFloracionBusiness.cs" />
     <Compile Include="MovimientoPackingBusiness.cs" />
     <Compile Include="MovimientoRoggingBusiness.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="MovimientoShippingBusiness.cs" />
     <Compile Include="NotaBusiness.cs" />
     <Compile Include="ParametroBusiness.cs" />
+    <Compile Include="ProgramaExportBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShipmentBusiness.cs" />
     <Compile Include="TipoAgroBusiness.cs" />

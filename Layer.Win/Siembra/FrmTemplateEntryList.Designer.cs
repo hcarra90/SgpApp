@@ -101,8 +101,9 @@
             this.txtNumEuid = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.grpEstado = new System.Windows.Forms.GroupBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -827,17 +828,28 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.btnCancelar);
             this.groupBox8.Controls.Add(this.btnProcesar);
+            this.groupBox8.Controls.Add(this.btnCancelar);
+            this.groupBox8.Controls.Add(this.btnExportar);
             this.groupBox8.Location = new System.Drawing.Point(687, 2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(138, 71);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             // 
+            // btnProcesar
+            // 
+            this.btnProcesar.Location = new System.Drawing.Point(6, 24);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(57, 23);
+            this.btnProcesar.TabIndex = 34;
+            this.btnProcesar.Text = "Procesar";
+            this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click_1);
+            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(9, 32);
+            this.btnCancelar.Location = new System.Drawing.Point(69, 40);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(58, 23);
             this.btnCancelar.TabIndex = 32;
@@ -845,16 +857,16 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnProcesar
+            // btnExportar
             // 
-            this.btnProcesar.Enabled = false;
-            this.btnProcesar.Location = new System.Drawing.Point(73, 31);
-            this.btnProcesar.Name = "btnProcesar";
-            this.btnProcesar.Size = new System.Drawing.Size(57, 23);
-            this.btnProcesar.TabIndex = 33;
-            this.btnProcesar.Text = "Procesar";
-            this.btnProcesar.UseVisualStyleBackColor = true;
-            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
+            this.btnExportar.Enabled = false;
+            this.btnExportar.Location = new System.Drawing.Point(69, 13);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(57, 23);
+            this.btnExportar.TabIndex = 33;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
             // grpEstado
             // 
@@ -992,7 +1004,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnProcesar;
+        private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.GroupBox grpEstado;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label30;
@@ -1003,5 +1015,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtTotalHilera;
+        private System.Windows.Forms.Button btnProcesar;
     }
 }

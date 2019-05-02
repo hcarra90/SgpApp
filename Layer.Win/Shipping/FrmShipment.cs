@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,32 +51,50 @@ namespace Layer.Win.Shipping
         {
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(btnCreate, "Crear Nuevo Shipment");
+            toolTip1.SetToolTip(btnShipment, "Crear Nuevo Shipment");
             dtpFechaEnvio.Value = DateTime.Now;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            CreateShipment();
+            
+        }
+
+        private void ActualizaShipments()
+        {
+            FrmEnvioCaja frm = (FrmEnvioCaja)Application.OpenForms["FrmEnvioCaja"];
+            //GroupBox grp = (GroupBox)frm.Controls["grpLocation"];
+            ComboBox cb = (ComboBox)frm.Controls["cboShipment"];
+            var data = ShipmentBusiness.GetShipmentCode();
+            cb.ValueMember = "ShipmentCode";
+            cb.DisplayMember = "ShipmentCode";
+            cb.DataSource = data;
+        }
+
+        private void CreateShipment()
+        {
             TransactionalInformation transaccion = new TransactionalInformation();
             Shipment shipment = new Shipment();
 
-            if (lblShipmentCode.Text =="")
+            if (lblShipmentCode.Text == "")
             {
                 BuscaCorrelativoEnvio(dtpFechaEnvio.Value.Year);
             }
-            
+
             shipment.Correlativo = correlativoEnvio;
             shipment.FechaCreacion = DateTime.Now.Date;
             shipment.FechaEnvio = dtpFechaEnvio.Value.Date;
             shipment.Usuario = usuarioValido.nombre_usuario;
             shipment.ShipmentCode = lblShipmentCode.Text;
-            shipment.EstadoShipment = (cboEstado.Text == "") ? "A" : "C";
+            shipment.EstadoShipment = "A";//(cboEstado.Text == "") ? "A" : "C";
             ShipmentBusiness.GrabaInformacion(shipment, out transaccion);
 
             if (transaccion.ReturnStatus)
             {
                 GetEnviosByFecha(dtpFechaEnvio.Value.Date);
                 LimpiarFormulario();
+                BuscaCorrelativoEnvio(dtpFechaEnvio.Value.Year);
             }
             else
             {
@@ -97,7 +116,10 @@ namespace Layer.Win.Shipping
 
             BorrarShipment(id);
             LlenaGrilla(dtpFechaEnvio.Value.Date);
+            lblShipmentCode.Text = "";
+            ActualizaShipments();
             dtpFechaEnvio.Focus();
+            
         }
 
         private DataGridViewRow BuscaShipment()
@@ -121,6 +143,7 @@ namespace Layer.Win.Shipping
             {
                 MessageBox.Show("Error: " + transaccion.ReturnMessage, "Módulo Shipment", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
+            
         }
 
         private void dataBox_MouseClick(object sender, MouseEventArgs e)
@@ -203,7 +226,11 @@ namespace Layer.Win.Shipping
 
         private void btnShipment_Click(object sender, EventArgs e)
         {
-            BuscaCorrelativoEnvio(dtpFechaEnvio.Value.Year);
+            CreateShipment();
+            ActualizaShipments();
+
+            //Thread.Sleep(2500);
+            //this.Close();
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)

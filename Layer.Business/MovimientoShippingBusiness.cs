@@ -141,6 +141,7 @@ namespace Layer.Business
         {
             return repository.GetEuids(cadena,opcion);
         }
+        
         #endregion
     }
 }

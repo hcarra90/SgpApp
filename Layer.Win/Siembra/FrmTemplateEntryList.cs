@@ -165,7 +165,7 @@ namespace Layer.Win.Siembra
             this.txtCliente.Enabled = estado;
 
             //Grupo Opciones
-            this.btnProcesar.Enabled = estado;
+            this.btnExportar.Enabled = estado;
 
             //Location y Centro de Costo
             this.cboLocation.Enabled = estado;
@@ -247,6 +247,7 @@ namespace Layer.Win.Siembra
             txtcc.Text = "";
             cboCrop.SelectedIndex = -1;
             cboEstado.SelectedIndex = -1;
+            btnProcesar.Enabled = false;
         }
 
         private void cboLocation_SelectedValueChanged(object sender, EventArgs e)
@@ -257,7 +258,7 @@ namespace Layer.Win.Siembra
                 if (locationSelected.Id > 0)
                 {
                     LlenaValoresLocalidad(locationSelected);
-                    btnProcesar.Enabled = true;
+                    btnExportar.Enabled = true;
                 }
             }
         }
@@ -524,10 +525,12 @@ namespace Layer.Win.Siembra
                 {
                     book.SaveAs(nombreArchivo);
                     MessageBox.Show("Archivo Creado!", "Módulo Centro Costo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    btnProcesar.Enabled = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: ", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    btnProcesar.Enabled = false;
                 }
 
             }
@@ -537,6 +540,13 @@ namespace Layer.Win.Siembra
         {
             FrmNuevaLocation frm = new FrmNuevaLocation();
             frm.TipoAgro = (TipoAgro)cboTipo.SelectedItem;
+            frm.ShowDialog();
+        }
+
+        private void btnProcesar_Click_1(object sender, EventArgs e)
+        {
+            FrmUploadEntryList frm = new FrmUploadEntryList();
+            //frm.usuarioValido = this.usuarioValido;
             frm.ShowDialog();
         }
     }

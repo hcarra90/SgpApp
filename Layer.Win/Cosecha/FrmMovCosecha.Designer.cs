@@ -50,27 +50,24 @@
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnVer = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataEuid)).BeginInit();
             this.ctxEuidMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataEuid
             // 
             this.dataEuid.AllowUserToAddRows = false;
             this.dataEuid.AllowUserToDeleteRows = false;
-            this.dataEuid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataEuid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataEuid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataEuid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataEuid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -84,7 +81,7 @@
             this.Fecha,
             this.Usuario});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(192)))), ((int)(((byte)(44)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -112,7 +109,7 @@
             this.dataEuid.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataEuid.RowTemplate.ReadOnly = true;
             this.dataEuid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataEuid.Size = new System.Drawing.Size(403, 377);
+            this.dataEuid.Size = new System.Drawing.Size(415, 377);
             this.dataEuid.TabIndex = 1;
             this.dataEuid.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataEuid_MouseClick);
             // 
@@ -173,7 +170,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(8, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 23);
@@ -184,7 +181,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(8, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 23);
@@ -193,11 +190,11 @@
             // 
             // txtEuid
             // 
-            this.txtEuid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEuid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEuid.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEuid.Location = new System.Drawing.Point(63, 81);
             this.txtEuid.Name = "txtEuid";
-            this.txtEuid.Size = new System.Drawing.Size(221, 24);
+            this.txtEuid.Size = new System.Drawing.Size(221, 31);
             this.txtEuid.TabIndex = 1;
             this.txtEuid.TextChanged += new System.EventHandler(this.txtEuid_TextChanged);
             this.txtEuid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEuid_KeyPress);
@@ -218,11 +215,11 @@
             // 
             // txtBin
             // 
-            this.txtBin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBin.Location = new System.Drawing.Point(63, 51);
             this.txtBin.Name = "txtBin";
-            this.txtBin.Size = new System.Drawing.Size(91, 24);
+            this.txtBin.Size = new System.Drawing.Size(91, 31);
             this.txtBin.TabIndex = 0;
             this.txtBin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBin_KeyPress);
             // 
@@ -235,38 +232,6 @@
             this.label2.Size = new System.Drawing.Size(168, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Registro Cosecha";
-            // 
-            // btnVer
-            // 
-            this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVer.Image = global::Layer.Win.Properties.Resources.noticias;
-            this.btnVer.Location = new System.Drawing.Point(341, 51);
-            this.btnVer.Name = "btnVer";
-            this.btnVer.Size = new System.Drawing.Size(57, 38);
-            this.btnVer.TabIndex = 52;
-            this.btnVer.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.valla;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.if_icon_close_round_211651;
-            this.pictureBox1.Location = new System.Drawing.Point(391, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -292,17 +257,25 @@
             this.lblTotal.Text = "0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.cosecha_64;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // FrmMovCosecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(410, 538);
-            this.Controls.Add(this.btnVer);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.ClientSize = new System.Drawing.Size(422, 538);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBin);
             this.Controls.Add(this.txtEuid);
@@ -310,20 +283,18 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataEuid);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMovCosecha";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Movimiento Cosecha";
+            this.Text = "Registro Cosecha";
             this.Load += new System.EventHandler(this.FrmMovCosecha_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMovCosecha_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataEuid)).EndInit();
             this.ctxEuidMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,13 +310,11 @@
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
         private System.Windows.Forms.TextBox txtBin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Euid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.Button btnVer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTotal;
     }

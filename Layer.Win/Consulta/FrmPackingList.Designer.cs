@@ -56,26 +56,6 @@
             this.PhoneR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDetail = new System.Windows.Forms.DataGridView();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.pnlEmail = new System.Windows.Forms.Panel();
-            this.cboEmail = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnEnvio = new System.Windows.Forms.Button();
-            this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnEnviar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblTotalResumen = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblTotalDetalle = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShipmentCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Box = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,10 +82,28 @@
             this.Sag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodInternacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodReception = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.pnlEmail = new System.Windows.Forms.Panel();
+            this.cboEmail = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnEnvio = new System.Windows.Forms.Button();
+            this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTotalResumen = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalDetalle = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDetail)).BeginInit();
             this.pnlEmail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +111,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 15);
@@ -133,12 +131,12 @@
             // 
             this.dataBox.AllowUserToAddRows = false;
             this.dataBox.AllowUserToDeleteRows = false;
-            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataBox.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataBox.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -165,7 +163,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -187,7 +185,7 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dataBox.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataBox.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataBox.Size = new System.Drawing.Size(460, 144);
@@ -313,12 +311,12 @@
             // 
             this.dataDetail.AllowUserToAddRows = false;
             this.dataDetail.AllowUserToDeleteRows = false;
-            this.dataDetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataDetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9.75F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -356,7 +354,7 @@
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -378,218 +376,10 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             this.dataDetail.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataDetail.Size = new System.Drawing.Size(1001, 258);
             this.dataDetail.TabIndex = 13;
-            // 
-            // pnlEmail
-            // 
-            this.pnlEmail.Controls.Add(this.cboEmail);
-            this.pnlEmail.Controls.Add(this.label4);
-            this.pnlEmail.Controls.Add(this.btnEnvio);
-            this.pnlEmail.Controls.Add(this.txtMensaje);
-            this.pnlEmail.Controls.Add(this.label3);
-            this.pnlEmail.Controls.Add(this.txtEmail);
-            this.pnlEmail.Controls.Add(this.label2);
-            this.pnlEmail.Location = new System.Drawing.Point(581, 81);
-            this.pnlEmail.Name = "pnlEmail";
-            this.pnlEmail.Size = new System.Drawing.Size(423, 117);
-            this.pnlEmail.TabIndex = 19;
-            this.pnlEmail.Visible = false;
-            // 
-            // cboEmail
-            // 
-            this.cboEmail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmail.FormattingEnabled = true;
-            this.cboEmail.Location = new System.Drawing.Point(103, 5);
-            this.cboEmail.Name = "cboEmail";
-            this.cboEmail.Size = new System.Drawing.Size(300, 23);
-            this.cboEmail.TabIndex = 28;
-            this.cboEmail.SelectedIndexChanged += new System.EventHandler(this.cboEmail_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 15);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Email Destino:";
-            // 
-            // btnEnvio
-            // 
-            this.btnEnvio.FlatAppearance.BorderSize = 0;
-            this.btnEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnvio.Image = global::Layer.Win.Properties.Resources.send_24;
-            this.btnEnvio.Location = new System.Drawing.Point(15, 87);
-            this.btnEnvio.Name = "btnEnvio";
-            this.btnEnvio.Size = new System.Drawing.Size(36, 23);
-            this.btnEnvio.TabIndex = 26;
-            this.btnEnvio.UseVisualStyleBackColor = true;
-            this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
-            // 
-            // txtMensaje
-            // 
-            this.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMensaje.Location = new System.Drawing.Point(103, 56);
-            this.txtMensaje.Multiline = true;
-            this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(307, 54);
-            this.txtMensaje.TabIndex = 25;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Mensaje:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Location = new System.Drawing.Point(103, 34);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(307, 16);
-            this.txtEmail.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 15);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Email Destino:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.if_icon_close_round_211651;
-            this.pictureBox1.Location = new System.Drawing.Point(989, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.FlatAppearance.BorderSize = 0;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Image = global::Layer.Win.Properties.Resources.email_24;
-            this.btnEnviar.Location = new System.Drawing.Point(890, 37);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(44, 36);
-            this.btnEnviar.TabIndex = 16;
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Image = global::Layer.Win.Properties.Resources.escobilla_24;
-            this.btnLimpiar.Location = new System.Drawing.Point(940, 37);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(44, 36);
-            this.btnLimpiar.TabIndex = 15;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.FlatAppearance.BorderSize = 0;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Image = global::Layer.Win.Properties.Resources.excel_24;
-            this.btnExportar.Location = new System.Drawing.Point(840, 39);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(44, 36);
-            this.btnExportar.TabIndex = 14;
-            this.btnExportar.UseVisualStyleBackColor = true;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::Layer.Win.Properties.Resources.lupa_16;
-            this.btnBuscar.Location = new System.Drawing.Point(245, 52);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(42, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(38, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 24);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "Packing List";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.consulta_32;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 51;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblTotalResumen
-            // 
-            this.lblTotalResumen.AutoSize = true;
-            this.lblTotalResumen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotalResumen.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalResumen.Location = new System.Drawing.Point(543, 81);
-            this.lblTotalResumen.Name = "lblTotalResumen";
-            this.lblTotalResumen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalResumen.Size = new System.Drawing.Size(20, 23);
-            this.lblTotalResumen.TabIndex = 54;
-            this.lblTotalResumen.Text = "0";
-            this.lblTotalResumen.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(469, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 23);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "TOTAL :";
-            // 
-            // lblTotalDetalle
-            // 
-            this.lblTotalDetalle.AutoSize = true;
-            this.lblTotalDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotalDetalle.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalDetalle.Location = new System.Drawing.Point(73, 495);
-            this.lblTotalDetalle.Name = "lblTotalDetalle";
-            this.lblTotalDetalle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalDetalle.Size = new System.Drawing.Size(20, 23);
-            this.lblTotalDetalle.TabIndex = 56;
-            this.lblTotalDetalle.Text = "0";
-            this.lblTotalDetalle.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(-1, 495);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 23);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "TOTAL :";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -803,11 +593,208 @@
             this.CodReception.Name = "CodReception";
             this.CodReception.ReadOnly = true;
             // 
+            // pnlEmail
+            // 
+            this.pnlEmail.Controls.Add(this.cboEmail);
+            this.pnlEmail.Controls.Add(this.label4);
+            this.pnlEmail.Controls.Add(this.btnEnvio);
+            this.pnlEmail.Controls.Add(this.txtMensaje);
+            this.pnlEmail.Controls.Add(this.label3);
+            this.pnlEmail.Controls.Add(this.txtEmail);
+            this.pnlEmail.Controls.Add(this.label2);
+            this.pnlEmail.Location = new System.Drawing.Point(581, 81);
+            this.pnlEmail.Name = "pnlEmail";
+            this.pnlEmail.Size = new System.Drawing.Size(423, 117);
+            this.pnlEmail.TabIndex = 19;
+            this.pnlEmail.Visible = false;
+            // 
+            // cboEmail
+            // 
+            this.cboEmail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEmail.FormattingEnabled = true;
+            this.cboEmail.Location = new System.Drawing.Point(103, 5);
+            this.cboEmail.Name = "cboEmail";
+            this.cboEmail.Size = new System.Drawing.Size(300, 23);
+            this.cboEmail.TabIndex = 28;
+            this.cboEmail.SelectedIndexChanged += new System.EventHandler(this.cboEmail_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 15);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Email Destino:";
+            // 
+            // btnEnvio
+            // 
+            this.btnEnvio.FlatAppearance.BorderSize = 0;
+            this.btnEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnvio.Image = global::Layer.Win.Properties.Resources.send_24;
+            this.btnEnvio.Location = new System.Drawing.Point(15, 87);
+            this.btnEnvio.Name = "btnEnvio";
+            this.btnEnvio.Size = new System.Drawing.Size(36, 23);
+            this.btnEnvio.TabIndex = 26;
+            this.btnEnvio.UseVisualStyleBackColor = true;
+            this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
+            // 
+            // txtMensaje
+            // 
+            this.txtMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMensaje.Location = new System.Drawing.Point(103, 56);
+            this.txtMensaje.Multiline = true;
+            this.txtMensaje.Name = "txtMensaje";
+            this.txtMensaje.Size = new System.Drawing.Size(307, 54);
+            this.txtMensaje.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Mensaje:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Location = new System.Drawing.Point(103, 34);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(307, 23);
+            this.txtEmail.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Email Destino:";
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Image = global::Layer.Win.Properties.Resources.email_24;
+            this.btnEnviar.Location = new System.Drawing.Point(890, 37);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(44, 36);
+            this.btnEnviar.TabIndex = 16;
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Image = global::Layer.Win.Properties.Resources.escobilla_24;
+            this.btnLimpiar.Location = new System.Drawing.Point(940, 37);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(44, 36);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Image = global::Layer.Win.Properties.Resources.excel_24;
+            this.btnExportar.Location = new System.Drawing.Point(840, 39);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(44, 36);
+            this.btnExportar.TabIndex = 14;
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::Layer.Win.Properties.Resources.lupa_16;
+            this.btnBuscar.Location = new System.Drawing.Point(245, 52);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(42, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(38, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(121, 24);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Packing List";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.supermercado_64;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTotalResumen
+            // 
+            this.lblTotalResumen.AutoSize = true;
+            this.lblTotalResumen.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalResumen.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalResumen.Location = new System.Drawing.Point(543, 81);
+            this.lblTotalResumen.Name = "lblTotalResumen";
+            this.lblTotalResumen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalResumen.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalResumen.TabIndex = 54;
+            this.lblTotalResumen.Text = "0";
+            this.lblTotalResumen.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(469, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 23);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "TOTAL :";
+            // 
+            // lblTotalDetalle
+            // 
+            this.lblTotalDetalle.AutoSize = true;
+            this.lblTotalDetalle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalDetalle.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalDetalle.Location = new System.Drawing.Point(73, 495);
+            this.lblTotalDetalle.Name = "lblTotalDetalle";
+            this.lblTotalDetalle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalDetalle.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalDetalle.TabIndex = 56;
+            this.lblTotalDetalle.Text = "0";
+            this.lblTotalDetalle.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(-1, 495);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 23);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "TOTAL :";
+            // 
             // FrmPackingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(1008, 524);
             this.Controls.Add(this.lblTotalDetalle);
             this.Controls.Add(this.label6);
@@ -816,7 +803,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pnlEmail);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnExportar);
@@ -826,12 +812,11 @@
             this.Controls.Add(this.cboShipment);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 9.75F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPackingList";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Packing List";
             this.Load += new System.EventHandler(this.FrmPackingList_Load);
@@ -840,7 +825,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataDetail)).EndInit();
             this.pnlEmail.ResumeLayout(false);
             this.pnlEmail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -858,7 +842,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlEmail;
         private System.Windows.Forms.Button btnEnvio;
         private System.Windows.Forms.TextBox txtMensaje;

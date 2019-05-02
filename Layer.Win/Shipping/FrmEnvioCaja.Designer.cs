@@ -58,7 +58,6 @@
             this.borrarCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.cboShipment = new System.Windows.Forms.ComboBox();
             this.txtPallet = new System.Windows.Forms.TextBox();
@@ -73,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             this.ctxCajaMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlEmail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +79,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(1, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 14);
@@ -92,12 +90,12 @@
             // 
             this.dataBox.AllowUserToAddRows = false;
             this.dataBox.AllowUserToDeleteRows = false;
-            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataBox.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataBox.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -192,10 +190,10 @@
             // 
             // txtBox
             // 
-            this.txtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBox.Location = new System.Drawing.Point(50, 83);
             this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(57, 15);
+            this.txtBox.Size = new System.Drawing.Size(57, 22);
             this.txtBox.TabIndex = 2;
             this.txtBox.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             this.txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
@@ -204,7 +202,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(16, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 14);
@@ -215,7 +213,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(113, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 14);
@@ -224,17 +222,17 @@
             // 
             // txtNeto
             // 
-            this.txtNeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNeto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNeto.Location = new System.Drawing.Point(181, 84);
             this.txtNeto.Name = "txtNeto";
-            this.txtNeto.Size = new System.Drawing.Size(57, 15);
+            this.txtNeto.Size = new System.Drawing.Size(57, 22);
             this.txtNeto.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(244, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 14);
@@ -243,10 +241,10 @@
             // 
             // txtBruto
             // 
-            this.txtBruto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBruto.Location = new System.Drawing.Point(315, 85);
             this.txtBruto.Name = "txtBruto";
-            this.txtBruto.Size = new System.Drawing.Size(57, 15);
+            this.txtBruto.Size = new System.Drawing.Size(57, 22);
             this.txtBruto.TabIndex = 4;
             this.txtBruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBruto_KeyPress);
             // 
@@ -327,24 +325,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.envio_32;
+            this.pictureBox2.Image = global::Layer.Win.Properties.Resources.cosecha_2_64;
             this.pictureBox2.Location = new System.Drawing.Point(3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.if_icon_close_round_211651;
-            this.pictureBox1.Location = new System.Drawing.Point(399, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnCreate
             // 
@@ -360,7 +347,7 @@
             // 
             // cboShipment
             // 
-            this.cboShipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.cboShipment.BackColor = System.Drawing.Color.White;
             this.cboShipment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboShipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboShipment.FormattingEnabled = true;
@@ -372,17 +359,17 @@
             // 
             // txtPallet
             // 
-            this.txtPallet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPallet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPallet.Location = new System.Drawing.Point(56, 11);
             this.txtPallet.Name = "txtPallet";
-            this.txtPallet.Size = new System.Drawing.Size(57, 15);
+            this.txtPallet.Size = new System.Drawing.Size(57, 22);
             this.txtPallet.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(15, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 14);
@@ -391,7 +378,7 @@
             // 
             // pnlEmail
             // 
-            this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             this.pnlEmail.Controls.Add(this.txtPesoBulto);
             this.pnlEmail.Controls.Add(this.label11);
             this.pnlEmail.Controls.Add(this.label10);
@@ -407,17 +394,17 @@
             // 
             // txtPesoBulto
             // 
-            this.txtPesoBulto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPesoBulto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesoBulto.Location = new System.Drawing.Point(155, 32);
             this.txtPesoBulto.Name = "txtPesoBulto";
-            this.txtPesoBulto.Size = new System.Drawing.Size(57, 15);
+            this.txtPesoBulto.Size = new System.Drawing.Size(57, 22);
             this.txtPesoBulto.TabIndex = 8;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(119, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 14);
@@ -428,7 +415,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(15, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 14);
@@ -437,25 +424,25 @@
             // 
             // txtBulto
             // 
-            this.txtBulto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBulto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBulto.Location = new System.Drawing.Point(56, 32);
             this.txtBulto.Name = "txtBulto";
-            this.txtBulto.Size = new System.Drawing.Size(57, 15);
+            this.txtBulto.Size = new System.Drawing.Size(57, 22);
             this.txtBulto.TabIndex = 7;
             // 
             // txtPesoPallet
             // 
-            this.txtPesoPallet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPesoPallet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesoPallet.Location = new System.Drawing.Point(155, 11);
             this.txtPesoPallet.Name = "txtPesoPallet";
-            this.txtPesoPallet.Size = new System.Drawing.Size(57, 15);
+            this.txtPesoPallet.Size = new System.Drawing.Size(57, 22);
             this.txtPesoPallet.TabIndex = 6;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(119, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 14);
@@ -466,13 +453,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(418, 451);
             this.Controls.Add(this.pnlEmail);
             this.Controls.Add(this.cboShipment);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTotalKilosBruto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblTotalKilosNeto);
@@ -488,20 +474,18 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmEnvioCaja";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulario Envio De Cajas";
+            this.Text = "Envio Caja";
             this.Load += new System.EventHandler(this.FrmEnvioCaja_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmEnvioCaja_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).EndInit();
             this.ctxCajaMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlEmail.ResumeLayout(false);
             this.pnlEmail.PerformLayout();
             this.ResumeLayout(false);
@@ -529,7 +513,6 @@
         private System.Windows.Forms.ToolStripMenuItem borrarCajaToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cboShipment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Box;

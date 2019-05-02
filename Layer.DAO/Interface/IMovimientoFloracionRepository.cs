@@ -8,9 +8,9 @@ namespace Layer.DAO.Interface
     public interface IMovimientoFloracionRepository
     {
         #region Declaración
-        List<MovimientoFloracionDto> Getfloraciones(DateTime fechaInicio,DateTime fechaTermino);
-        void Update(MovimientoFloracion obj);
-        void Insert(MovimientoFloracion obj);
+        List<MovimientoNotaDto> Getfloraciones(DateTime fechaInicio,DateTime fechaTermino);
+        void Update(MovimientoNota obj);
+        void Insert(MovimientoNota obj);
         void BorrarEuid(int id, out TransactionalInformation transaction);
         #endregion
     }

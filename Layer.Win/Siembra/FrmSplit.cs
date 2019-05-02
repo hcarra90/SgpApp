@@ -20,6 +20,7 @@ namespace Layer.Win.Siembra
     {
         #region -------Declaración-------
         string pathFile = "";
+        public Usuario usuarioValido = new Usuario();
         List<SplitEuidDto> datos = new List<SplitEuidDto>();
         List<SplitEuidDto> SplitEuid = new List<SplitEuidDto>();
         List<EntryListDto> listData = new List<EntryListDto>();
@@ -65,6 +66,14 @@ namespace Layer.Win.Siembra
         {
             LimpiarFormulario();
         }
+        private void BtnCargaSplit_Click(object sender, EventArgs e)
+        {
+            FrmUploadInfoFieldBook frm = new FrmUploadInfoFieldBook
+            {
+                usuarioValido = this.usuarioValido
+            };
+            frm.ShowDialog();
+        }
         #endregion
 
         #region -------Funciones-------
@@ -84,7 +93,7 @@ namespace Layer.Win.Siembra
             {
                 using (var client = new WebClient())
                 {
-                    client.DownloadFile("http://www.massainursery.cl/Files/SplitList.xlsx", "C:\\Templates\\SplitList.xlsx");
+                    client.DownloadFile("http://www.massainursery.cl/Files/InfoFieldBook.xlsx", "C:\\Templates\\InfoFieldBook.xlsx");
                 }
 
             }
@@ -270,6 +279,12 @@ namespace Layer.Win.Siembra
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
 
         private void bg_ProgressChanged(object sender, ProgressChangedEventArgs e)

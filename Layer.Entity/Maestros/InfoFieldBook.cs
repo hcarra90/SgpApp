@@ -16,7 +16,7 @@ namespace Layer.Entity
     {
         [Key]
         [ScaffoldColumn(false)]
-
+        [Required]
         [Column("id_field_book")]
         public int Id { get; set; }
 

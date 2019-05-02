@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Layer.DAO.Repositories
 {
-    public class MovimientoFloracionRepository : GenericRepository<DataContext, MovimientoFloracion>, IMovimientoFloracionRepository
+    public class MovimientoFloracionRepository : GenericRepository<DataContext, MovimientoNota>, IMovimientoFloracionRepository
     {
         #region -----Declaración-----
         readonly DataContext db;
         private static UnitOfWork unitOfWork = new UnitOfWork();
-        private static Repository<MovimientoFloracion> repository;
+        private static Repository<MovimientoNota> repository;
         private static Repository<EntryList> repositoryE;
         private static Repository<InfoLoc> repositoryI;
 
@@ -27,9 +27,9 @@ namespace Layer.DAO.Repositories
         #endregion
 
         #region -----Métodos Públicos-----
-        public List<MovimientoFloracionDto> Getfloraciones(DateTime fechaInicio,DateTime fechaTermino)
+        public List<MovimientoNotaDto> Getfloraciones(DateTime fechaInicio,DateTime fechaTermino)
         {
-            repository = unitOfWork.Repository<MovimientoFloracion>();
+            repository = unitOfWork.Repository<MovimientoNota>();
             repositoryE = unitOfWork.Repository<EntryList>();
             repositoryI= unitOfWork.Repository<InfoLoc>();
 
@@ -38,7 +38,7 @@ namespace Layer.DAO.Repositories
                          from el in repositoryE.Table
                          where ta.Euid == el.Euid && el.Location == il.LocationCuartel
                          && (ta.Fecha >= fechaInicio && ta.Fecha <= fechaTermino )
-                         select new MovimientoFloracionDto {
+                         select new MovimientoNotaDto {
                              Euid = ta.Euid,
                              Fecha = ta.Fecha,
                              Jaula = il.Jaula,
@@ -50,21 +50,21 @@ namespace Layer.DAO.Repositories
             return items;
         }
 
-        public void Insert(MovimientoFloracion obj)
+        public void Insert(MovimientoNota obj)
         {
-            repository = unitOfWork.Repository<MovimientoFloracion>();
+            repository = unitOfWork.Repository<MovimientoNota>();
             repository.Insert(obj);
         }
 
-        public void Update(MovimientoFloracion obj)
+        public void Update(MovimientoNota obj)
         {
-            repository = unitOfWork.Repository<MovimientoFloracion>();
+            repository = unitOfWork.Repository<MovimientoNota>();
             repository.Update(obj);
         }
 
-        public MovimientoFloracion GetEuidById(int id)
+        public MovimientoNota GetEuidById(int id)
         {
-            repository = unitOfWork.Repository<MovimientoFloracion>();
+            repository = unitOfWork.Repository<MovimientoNota>();
             var item = repository.Table.Where(mp => mp.Id == id).FirstOrDefault();
             return item;
         }
@@ -72,7 +72,7 @@ namespace Layer.DAO.Repositories
         public void BorrarEuid(int id, out TransactionalInformation transaction)
         {
             transaction = new TransactionalInformation();
-            repository = unitOfWork.Repository<MovimientoFloracion>();
+            repository = unitOfWork.Repository<MovimientoNota>();
 
             try
             {

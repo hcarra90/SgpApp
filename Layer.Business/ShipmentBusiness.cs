@@ -67,7 +67,7 @@ namespace Layer.Business
         {
             repository = unitOfWork.Repository<Shipment>();
 
-            var data = repository.Table.ToList();
+            var data = repository.Table.Where(s=>s.EstadoShipment=="A").ToList();
             data.Insert(0, new Shipment { ShipmentCode="", Id=0});
             return data;
         }

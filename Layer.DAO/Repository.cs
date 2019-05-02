@@ -50,6 +50,11 @@ namespace Layer.DAO
             }
         }
 
+        public void InsertBulk(List<T> entities)
+        {
+            this.context.BulkInsert<T>(entities);
+        }
+
         public void Update(T entity)
         {
             try
@@ -58,6 +63,7 @@ namespace Layer.DAO
                 {
                     throw new ArgumentNullException("entity");
                 }
+                context.Entry(entity).State = EntityState.Modified;
                 this.context.SaveChanges();
             }
             catch (DbEntityValidationException dbEx)

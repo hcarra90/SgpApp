@@ -35,7 +35,7 @@ namespace Layer.Win
             if (txtUser.Text == "Usuario")
             {
                 txtUser.Text = "";
-                txtUser.ForeColor = Color.LightGray;
+                txtUser.ForeColor = Color.DimGray;
             }
         }
 
@@ -53,7 +53,7 @@ namespace Layer.Win
             if (txtPass.Text == "Password")
             {
                 txtPass.Text = "";
-                txtPass.ForeColor = Color.LightGray;
+                txtPass.ForeColor = Color.DimGray;
                 txtPass.UseSystemPasswordChar = true;
             }
         }

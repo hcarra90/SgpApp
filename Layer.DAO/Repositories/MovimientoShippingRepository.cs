@@ -131,8 +131,8 @@ namespace Layer.DAO.Repositories
         public decimal GetBoxWeight(string box)
         {
             var data = (from mp in db.MovimientoPacking
-                        join ms in db.MovimientoShipping on mp.euid equals ms.euid
-                        where ms.cajaEnvio == box
+                        join ms in db.MovimientoShipping on mp.euid equals ms.euid 
+                        where ms.euid == mp.euid && ms.indEuid==mp.indEuid && ms.cajaEnvio == box
                         select new ContenidoCajaDto
                         {
                             box = ms.cajaEnvio,

@@ -54,17 +54,15 @@
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ctxShipment = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarShipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreate = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblShipmentCode = new System.Windows.Forms.Label();
             this.btnShipment = new System.Windows.Forms.Button();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             this.ctxShipment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -90,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 14);
@@ -99,7 +97,7 @@
             // 
             // cboEstado
             // 
-            this.cboEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.cboEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstado.FormattingEnabled = true;
@@ -107,32 +105,34 @@
             "",
             "Abierto",
             "Cerrado"});
-            this.cboEstado.Location = new System.Drawing.Point(89, 73);
+            this.cboEstado.Location = new System.Drawing.Point(386, 29);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(93, 22);
             this.cboEstado.TabIndex = 54;
+            this.cboEstado.Visible = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(0, 75);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(386, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 15);
             this.label11.TabIndex = 53;
             this.label11.Text = "Estado";
+            this.label11.Visible = false;
             // 
             // dataBox
             // 
             this.dataBox.AllowUserToAddRows = false;
             this.dataBox.AllowUserToDeleteRows = false;
-            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.dataBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.dataBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataBox.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataBox.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 9F);
             dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -275,7 +275,7 @@
             this.abrirToolStripMenuItem,
             this.borrarShipmentToolStripMenuItem});
             this.ctxShipment.Name = "contextMenu";
-            this.ctxShipment.Size = new System.Drawing.Size(181, 92);
+            this.ctxShipment.Size = new System.Drawing.Size(118, 70);
             // 
             // cerrarToolStripMenuItem
             // 
@@ -283,6 +283,13 @@
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // borrarShipmentToolStripMenuItem
             // 
@@ -296,11 +303,12 @@
             this.btnCreate.FlatAppearance.BorderSize = 0;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Image = global::Layer.Win.Properties.Resources.shipment_code;
-            this.btnCreate.Location = new System.Drawing.Point(188, 73);
+            this.btnCreate.Location = new System.Drawing.Point(269, 44);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(32, 25);
             this.btnCreate.TabIndex = 33;
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Visible = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // pictureBox2
@@ -312,17 +320,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.if_icon_close_round_211651;
-            this.pictureBox1.Location = new System.Drawing.Point(473, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblShipmentCode
             // 
@@ -336,28 +333,20 @@
             // btnShipment
             // 
             this.btnShipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipment.Location = new System.Drawing.Point(188, 46);
+            this.btnShipment.Location = new System.Drawing.Point(188, 44);
             this.btnShipment.Name = "btnShipment";
             this.btnShipment.Size = new System.Drawing.Size(69, 23);
             this.btnShipment.TabIndex = 58;
-            this.btnShipment.Text = "Asignar";
+            this.btnShipment.Text = "Crear";
             this.btnShipment.UseVisualStyleBackColor = true;
             this.btnShipment.Click += new System.EventHandler(this.btnShipment_Click);
-            // 
-            // abrirToolStripMenuItem
-            // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // FrmShipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(491, 449);
-            this.ControlBox = false;
             this.Controls.Add(this.btnShipment);
             this.Controls.Add(this.lblShipmentCode);
             this.Controls.Add(this.dataBox);
@@ -368,11 +357,11 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Calibri", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmShipment";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creación Shipment";
             this.Load += new System.EventHandler(this.FrmShipment_Load);
@@ -380,7 +369,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).EndInit();
             this.ctxShipment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +378,6 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.DateTimePicker dtpFechaEnvio;
         private System.Windows.Forms.Label label1;

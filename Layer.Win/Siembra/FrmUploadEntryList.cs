@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Layer.Win.Siembra
@@ -21,6 +22,8 @@ namespace Layer.Win.Siembra
         string pathFile = "";
         List<EntryList> datos = new List<EntryList>();
         List<SplitEuidDto> SplitEuid = new List<SplitEuidDto>();
+        List<InfoFieldBook> listaSplit = new List<InfoFieldBook>();
+        InfoFieldBook itemInfoField = new InfoFieldBook();
         int progreso = 0, porciento = 0, totalEmpleadosProcesar = 0;
 
         BackgroundWorker bg = new BackgroundWorker();
@@ -103,8 +106,9 @@ namespace Layer.Win.Siembra
         private void GrabaDatos()
         {
             lblEuids.Text = "";
-            grdOpciones.Enabled = false;
+            //grdOpciones.Enabled = false;
             var mensaje = ValidaDatos();
+            
             if (mensaje == "")
             {
                 try
@@ -228,6 +232,8 @@ namespace Layer.Win.Siembra
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
+            lblInicio.Text = DateTime.Now.ToString();
+
             this.Cursor = Cursors.WaitCursor;
             GrabaDatos();
             this.Cursor = Cursors.Default;
@@ -298,19 +304,57 @@ namespace Layer.Win.Siembra
         private void bg_DoWork(object sender, DoWorkEventArgs e)
         {
             totalEmpleadosProcesar = datos.Count;
-
+            
+            //Se debe crear lista de InfoFieldBook para cargarlas
             foreach (var item in datos)
             {
-                EntryListBusiness.Insert(item);
+                itemInfoField.BreedersInstructions1 = item.Bi1;
+                itemInfoField.BreedersInstructions2 = item.Bi2;
+                itemInfoField.BreedersInstructions3 = item.Bi3;
+                itemInfoField.BreedersInstructions4 = item.Bi4;
+                itemInfoField.cc = item.Cc;
+                itemInfoField.client = item.Client;
+                itemInfoField.codInternacion = item.CodInternacion;
+                itemInfoField.CodPermanencia = item.CodPermanencia;
+                itemInfoField.codReception = item.CodReception;
+                itemInfoField.country = item.Country;
+                itemInfoField.crop = item.Crop;
+                itemInfoField.ent = item.Ent;
+                itemInfoField.EntName = item.EntName;
+                itemInfoField.EntRole = item.EntRole;
+                itemInfoField.euid = item.Euid;
+                itemInfoField.fechaCarga = DateTime.Now;
+                itemInfoField.gmoEvent = item.GmoEvent;
+                itemInfoField.GranosHilera = int.Parse(item.GranosHilera);
+                itemInfoField.indEuid = "";
+                itemInfoField.instructions = "";
+                itemInfoField.location = item.Location;
+                itemInfoField.LotId = item.LotId;
+                itemInfoField.obs = item.Obs;
+                itemInfoField.opExpName = item.ExpName;
+                itemInfoField.Owner = item.Owner;
+                itemInfoField.plt = item.Plt;
+                itemInfoField.projecLead = item.ProjectLead;
+                itemInfoField.projectCode = item.ProjectCode;
+                itemInfoField.ResImportation = item.ResImportacion;
+                itemInfoField.rng = item.Rng;
+                itemInfoField.sag = item.Sag;
+                itemInfoField.year = item.Year;
+                listaSplit.Add(itemInfoField);
+                itemInfoField = new InfoFieldBook();
 
                 progreso++; //Aumentando el progreso 
                 porciento = Convert.ToInt16((((double)progreso / (double)totalEmpleadosProcesar) * 100.00)); //Calculo del porcentaje
                 bg.ReportProgress(porciento);
+
             }
+            EntryListBusiness.InsertBulk(datos);
+            InfoFieldBookBusiness.InsertBulk(listaSplit);
         }
 
         private void bg_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            
             // Change the value of the ProgressBar to the BackgroundWorker progress.
             prgGraba.Value = e.ProgressPercentage;
             prgGraba.Step = 1;
@@ -345,6 +389,7 @@ namespace Layer.Win.Siembra
             grdDetalle.DataSource = datos;
             grdDetalle.ClearSelection();
             btnExportar.Enabled = true;
+            lblTermino.Text = DateTime.Now.ToString();
         }
         #endregion
 

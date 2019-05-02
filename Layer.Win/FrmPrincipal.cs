@@ -70,24 +70,26 @@ namespace Layer.Win
             toolTip1.SetToolTip(btnEnvio, "Registro De Envios");
             toolTip1.SetToolTip(btnTracking, "Consulta De Tracking");
             toolTip1.SetToolTip(btnPlist, "Packing List");
-            toolTip1.SetToolTip(btnEficiencia, "Reporte De Eficiencia");
+            //toolTip1.SetToolTip(btnEficiencia, "Reporte De Eficiencia");
             toolTip1.SetToolTip(btnRogging, "Registro De Rogging");
-            toolTip1.SetToolTip(btnCargaArchivo, "Carga De Archivo");
-            toolTip1.SetToolTip(btnSiembra, "Crear Template Carga Entry List");
-            toolTip1.SetToolTip(btnUpload, "Subir Archivo Entry List");
+            toolTip1.SetToolTip(btnSiembra, "Carga Entry List");
+            toolTip1.SetToolTip(btnInfoField, "Crea Archivo Split");
+            toolTip1.SetToolTip(btnSplit, "Carga Split");
             toolTip1.SetToolTip(btnFloracion, "Registrar Nota De Floración");
-            //try
-            //{
-            //    using (var client = new WebClient())
-            //    {
-            //        client.DownloadFile("http://www.massainursery.cl/Files/TrackingList.xlsx", "C:\\Templates\\TrackingList.xlsx");
-            //    }
-            //    lblVersion.Text = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-            //}
-            //catch (Exception)
-            //{
-            //    lblVersion.Text = "Desarrollo";
-            //}
+            toolTip1.SetToolTip(btnPackingUva, "Packing Uva");
+            //btnPackingUva
+            try
+            {
+                //using (var client = new WebClient())
+                //{
+                //    client.DownloadFile("http://www.massainursery.cl/Files/TrackingList.xlsx", "C:\\Templates\\TrackingList.xlsx");
+                //}
+                lblVersion.Text = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            catch (Exception)
+            {
+                lblVersion.Text = "Desarrollo";
+            }
 
             LlenaCombos();
 
@@ -305,13 +307,6 @@ namespace Layer.Win
 
         }
 
-        private void btnCargaArchivo_Click(object sender, EventArgs e)
-        {
-            FrmUploadInfoFieldBook frm = new FrmUploadInfoFieldBook();
-            frm.usuarioValido = this.usuarioValido;
-            frm.ShowDialog();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (cboProject.Text != "" && cboAnio.Text !="")
@@ -331,15 +326,15 @@ namespace Layer.Win
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            FrmUploadEntryList frm = new FrmUploadEntryList();
+            FrmSplit frm = new FrmSplit();
             //frm.usuarioValido = this.usuarioValido;
             frm.ShowDialog();
         }
 
         private void btnSplit_Click(object sender, EventArgs e)
         {
-            FrmSplit frm = new FrmSplit();
-            //frm.usuarioValido = this.usuarioValido;
+            FrmUploadInfoFieldBook frm = new FrmUploadInfoFieldBook();
+            frm.usuarioValido = this.usuarioValido;
             frm.ShowDialog();
         }
 
@@ -348,6 +343,44 @@ namespace Layer.Win
             FrmFloracion frm = new FrmFloracion();
             frm.usuarioValido = this.usuarioValido;
             frm.ShowDialog();
+        }
+
+        private void btnPackingUva_Click(object sender, EventArgs e)
+        {
+            FrmPackingUva frm = new FrmPackingUva();
+            frm.usuarioValido = this.usuarioValido;
+            frm.ShowDialog();
+        }
+
+        private void btnInfoField_Click(object sender, EventArgs e)
+        {
+            FrmUploadInfoFieldBook frm = new FrmUploadInfoFieldBook();
+            frm.usuarioValido = this.usuarioValido;
+            frm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSplit frm = new FrmSplit
+            {
+                usuarioValido = this.usuarioValido
+            };
+            frm.ShowDialog();
+        }
+
+        private void btnSplit_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnMouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void btnMouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Layer.DAO.Repositories
         readonly DataContext db;
         private static UnitOfWork unitOfWork = new UnitOfWork();
         private static Repository<InfoFieldBook> repository;
+        private static Repository<MovimientoShipping> repositoryS;
         #endregion
 
         #region Constructores
@@ -111,7 +112,23 @@ namespace Layer.DAO.Repositories
 
             try
             {
-                secuencia = (int.Parse(euidEncontrado.ToList()[0].Secuencia)+1).ToString();
+                if (euidEncontrado.Count > 0)
+                {
+                    var sec = euidEncontrado.ToList()[euidEncontrado.Count - 1].Secuencia;
+                    if (sec != null && sec != "")
+                    {
+                        secuencia = (int.Parse(euidEncontrado.ToList()[euidEncontrado.Count - 1].Secuencia) + 1).ToString();
+                    }
+                    else
+                    {
+                        secuencia = "1";
+                    } 
+                }
+                else
+                {
+                    secuencia = "1";
+                }
+                
             }
             catch (Exception ex)
             {
@@ -164,7 +181,6 @@ namespace Layer.DAO.Repositories
             if (allData[0].anio != "")
             {
                 allData.Insert(0, obj);
-
             }
 
             return allData;
@@ -285,6 +301,37 @@ namespace Layer.DAO.Repositories
             var result = euidsG.Where(p => euidsC.Any(p2 => p2.indEuid == p.indEuid)).ToList();
 
             return result.Count > 0;
+        }
+
+        public bool GetValidateEuidPacking(string indEuid, string euid)
+        {
+            bool encontrado = false;
+            repositoryS = unitOfWork.Repository<MovimientoShipping>();
+            MovimientoShipping ms = new MovimientoShipping();
+
+            if (indEuid == "")
+            {
+                ms = (from ue in repositoryS.Table
+                                      where ue.euid == euid
+                                      select ue).FirstOrDefault();
+            }
+            else if (indEuid != "" && euid != "")
+            {
+                ms = (from ue in repositoryS.Table
+                      where ue.indEuid == indEuid
+                      select ue).FirstOrDefault();
+            }
+            encontrado = (ms != null);
+            
+
+            return encontrado;
+        }
+
+
+        public void InsertBulk(List<InfoFieldBook> entities)
+        {
+            repository = unitOfWork.Repository<InfoFieldBook>();
+            repository.InsertBulk(entities);
         }
     }
 }
