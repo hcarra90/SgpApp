@@ -1,53 +1,58 @@
-﻿1>------ Operación Compilar iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Secado\FrmMovSecado.Designer.cs(425,64,425,72): warning CS0108: 'FrmMovSecado.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmConsulta.Designer.cs(3421,64,3421,72): warning CS0108: 'FrmConsulta.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmConsulta.Designer.cs(3572,64,3572,69): warning CS0108: 'FrmConsulta.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmPackingList.Designer.cs(902,64,902,72): warning CS0108: 'FrmPackingList.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmSplit.Designer.cs(684,64,684,72): warning CS0108: 'FrmSplit.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmSplit.Designer.cs(707,64,707,69): warning CS0108: 'FrmSplit.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadEntryList.Designer.cs(579,64,579,72): warning CS0108: 'FrmUploadEntryList.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadInfoFieldBook.Designer.cs(761,64,761,72): warning CS0108: 'FrmUploadInfoFieldBook.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadInfoFieldBook.Designer.cs(795,64,795,69): warning CS0108: 'FrmUploadInfoFieldBook.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmNuevaLocation.cs(34,13,34,20): warning CS0414: El campo 'FrmNuevaLocation.idOwner' está asignado pero su valor nunca se usa
-1>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmEficiencia.cs(28,16,28,22): warning CS0414: El campo 'FrmEficiencia.titulo' está asignado pero su valor nunca se usa
-1>  Layer.Win -> C:\Desarrollo\Git\Sgp\Layer.Win\bin\Debug\SGP.exe
+﻿1>------ Operación Compilar iniciada: proyecto: Layer.DAO, configuración: Debug Any CPU ------
+1>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3270: La arquitectura del procesador del proyecto que se va a compilar "MSIL" y la arquitectura del procesador de la referencia "Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86", "x86", no coinciden. Esta falta de coincidencia puede causar errores en tiempo de ejecución. Cambie la arquitectura del procesador de destino del proyecto mediante el Administrador de configuración para alinear las arquitecturas de procesador entre el proyecto y las referencias, o tome una dependencia de las referencias con una arquitectura de procesador que coincida con la arquitectura del procesador de destino del proyecto.
+1>  Layer.DAO -> C:\Desarrollo\Git\Sgp\Layer.DAO\bin\Debug\Layer.DAO.dll
+2>------ Operación Compilar iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Secado\FrmMovSecado.Designer.cs(425,64,425,72): warning CS0108: 'FrmMovSecado.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmConsulta.Designer.cs(3405,64,3405,72): warning CS0108: 'FrmConsulta.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmConsulta.Designer.cs(3556,64,3556,69): warning CS0108: 'FrmConsulta.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmPackingList.Designer.cs(973,64,973,72): warning CS0108: 'FrmPackingList.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmSplit.Designer.cs(684,64,684,72): warning CS0108: 'FrmSplit.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmSplit.Designer.cs(707,64,707,69): warning CS0108: 'FrmSplit.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadEntryList.Designer.cs(626,64,626,72): warning CS0108: 'FrmUploadEntryList.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadInfoFieldBook.Designer.cs(761,64,761,72): warning CS0108: 'FrmUploadInfoFieldBook.Location' oculta el miembro heredado 'Form.Location'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadInfoFieldBook.Designer.cs(795,64,795,69): warning CS0108: 'FrmUploadInfoFieldBook.Owner' oculta el miembro heredado 'Form.Owner'. Use la palabra clave new si su intención era ocultarlo.
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Consulta\FrmEficiencia.cs(28,16,28,22): warning CS0414: El campo 'FrmEficiencia.titulo' está asignado pero su valor nunca se usa
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmUploadInfoFieldBook.cs(28,13,28,30): warning CS0414: El campo 'FrmUploadInfoFieldBook.euidNoProcesables' está asignado pero su valor nunca se usa
+2>C:\Desarrollo\Git\Sgp\Layer.Win\Siembra\FrmNuevaLocation.cs(34,13,34,20): warning CS0414: El campo 'FrmNuevaLocation.idOwner' está asignado pero su valor nunca se usa
+2>  Layer.Win -> C:\Desarrollo\Git\Sgp\Layer.Win\bin\Debug\SGP.exe
 Compilando Layer.Win...
-2>------ Publicación iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
+3>------ Publicación iniciada: proyecto: Layer.Win, configuración: Debug Any CPU ------
 Conectando con 'ftp://ftppub.everleap.com/site/wwwroot/Publicacion/'...
 Publicando archivos...
-Comprobando Publicacion.html... (1 de 32)
-Comprobando setup.exe... (2 de 32)
-Comprobando SGP.application... (3 de 32)
-Comprobando ClosedXML.dll.deploy... (4 de 32)
-Comprobando Com.SharpZebra.dll.deploy... (5 de 32)
-Comprobando DocumentFormat.OpenXml.dll.deploy... (6 de 32)
-Comprobando Encabezado_1.txt.deploy... (7 de 32)
-Comprobando EntityFramework.dll.deploy... (8 de 32)
-Comprobando EntityFramework.SqlServer.dll.deploy... (9 de 32)
-Comprobando ExcelNumberFormat.dll.deploy... (10 de 32)
-Comprobando FastMember.Signed.dll.deploy... (11 de 32)
-Comprobando IconMdi.ico.deploy... (12 de 32)
-Comprobando Layer.Business.dll.deploy... (13 de 32)
-Comprobando Layer.DAO.dll.deploy... (14 de 32)
-Comprobando Layer.Entity.dll.deploy... (15 de 32)
-Comprobando Layer.Functions.dll.deploy... (16 de 32)
-Comprobando LinqToExcel.dll.deploy... (17 de 32)
-Comprobando LiveCharts.dll.deploy... (18 de 32)
-Comprobando LiveCharts.WinForms.dll.deploy... (19 de 32)
-Comprobando LiveCharts.Wpf.dll.deploy... (20 de 32)
-Comprobando Microsoft.VisualBasic.PowerPacks.dll.deploy... (21 de 32)
-Comprobando Remotion.Data.Linq.dll.deploy... (22 de 32)
-Comprobando SGP.application... (23 de 32)
-Comprobando SGP.exe.config.deploy... (24 de 32)
-Comprobando SGP.exe.deploy... (25 de 32)
-Comprobando SGP.exe.manifest... (26 de 32)
-Comprobando System.IO.FileSystem.Primitives.dll.deploy... (27 de 32)
-Comprobando System.IO.Packaging.dll.deploy... (28 de 32)
-Comprobando Microsoft.VisualBasic.PowerPacks.resources.dll.deploy... (29 de 32)
-Comprobando bad.png.deploy... (30 de 32)
-Comprobando good.png.deploy... (31 de 32)
-Comprobando info.png.deploy... (32 de 32)
+Comprobando Publicacion.html... (1 de 33)
+Comprobando setup.exe... (2 de 33)
+Comprobando SGP.application... (3 de 33)
+Comprobando ClosedXML.dll.deploy... (4 de 33)
+Comprobando Com.SharpZebra.dll.deploy... (5 de 33)
+Comprobando DocumentFormat.OpenXml.dll.deploy... (6 de 33)
+Comprobando Encabezado_1.txt.deploy... (7 de 33)
+Comprobando EntityFramework.dll.deploy... (8 de 33)
+Comprobando EntityFramework.SqlServer.dll.deploy... (9 de 33)
+Comprobando ExcelNumberFormat.dll.deploy... (10 de 33)
+Comprobando FastMember.Signed.dll.deploy... (11 de 33)
+Comprobando IconMdi.ico.deploy... (12 de 33)
+Comprobando Layer.Business.dll.deploy... (13 de 33)
+Comprobando Layer.DAO.dll.deploy... (14 de 33)
+Comprobando Layer.Entity.dll.deploy... (15 de 33)
+Comprobando Layer.Functions.dll.deploy... (16 de 33)
+Comprobando LinqToExcel.dll.deploy... (17 de 33)
+Comprobando LiveCharts.dll.deploy... (18 de 33)
+Comprobando LiveCharts.WinForms.dll.deploy... (19 de 33)
+Comprobando LiveCharts.Wpf.dll.deploy... (20 de 33)
+Comprobando Microsoft.VisualBasic.PowerPacks.dll.deploy... (21 de 33)
+Comprobando Remotion.Data.Linq.dll.deploy... (22 de 33)
+Comprobando SGP.application... (23 de 33)
+Comprobando SGP.exe.config.deploy... (24 de 33)
+Comprobando SGP.exe.deploy... (25 de 33)
+Comprobando SGP.exe.manifest... (26 de 33)
+Comprobando System.IO.FileSystem.Primitives.dll.deploy... (27 de 33)
+Comprobando System.IO.Packaging.dll.deploy... (28 de 33)
+Comprobando Z.EntityFramework.Extensions.dll.deploy... (29 de 33)
+Comprobando Microsoft.VisualBasic.PowerPacks.resources.dll.deploy... (30 de 33)
+Comprobando bad.png.deploy... (31 de 33)
+Comprobando good.png.deploy... (32 de 33)
+Comprobando info.png.deploy... (33 de 33)
 Publicación correcta.
 http://www.massainursery.cl/Publicacion/Publicacion.html
-========== Compilar: 1 correctos, 0 incorrectos, 4 actualizados, 0 omitidos ==========
+========== Compilar: 2 correctos, 0 incorrectos, 3 actualizados, 0 omitidos ==========
 ========== Publicación: 1 procesados, 0 no procesados, 0 omitidos ==========

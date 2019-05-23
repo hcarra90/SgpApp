@@ -268,6 +268,26 @@ namespace Layer.DAO.Repositories
 
             return result.Count > 0;
         }
+
+        public bool ValidateIndEuid(List<InfoFieldBook> data)
+        {
+            repository = unitOfWork.Repository<InfoFieldBook>();
+            var euidsG = (from e in repository.Table
+                          select new
+                          {
+                              Euid = e.euid
+                          }).ToList();
+
+            var euidsC = (from ec in data
+                          select new
+                          {
+                              euid = ec.euid
+                          }).ToList();
+
+            var result = euidsG.Where(p => euidsC.Any(p2 => p2.euid == p.Euid)).ToList();
+
+            return result.Count > 0;
+        }
         #endregion
 
         public void Insert(InfoFieldBook movimiento)

@@ -31,6 +31,7 @@ namespace Layer.Win.Shipping
         Shipment shipmentSeleccionado = new Shipment();
         string shipmentCode = "";
         private string estadoShipment = "";
+        List<EncPackingListDto> BoxsShipment = new List<EncPackingListDto>();
 
         private delegate void Closure();
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -75,71 +76,117 @@ namespace Layer.Win.Shipping
 
         private void BuscaInfoCaja(string box)
         {
-            var weight = MovimientoShippingBusiness.GetBoxWeight(box);
-            if (weight == 0)
+            if (ValidacionCajas(box))
             {
-                MessageBox.Show("Caja Sin Contenido", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                txtBox.Text = "";
-                txtBox.Focus();
+                var weight = MovimientoShippingBusiness.GetBoxWeight(box);
+                if (weight == 0)
+                {
+                    MessageBox.Show("Caja Sin Contenido", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    txtBox.Text = "";
+                    txtBox.Focus();
+                }
+                else
+                {
+                    txtNeto.Text = weight.ToString();
+                    txtBruto.Focus();
+                }
             }
             else
             {
-                txtNeto.Text = weight.ToString();
-                txtBruto.Focus();
+                MessageBox.Show("Distintos Ship To, no pueden ir en un mismo Pallet", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                txtBox.Focus();
             }
+            
+        }
+
+        private bool ValidacionCajas(string box)
+        {
+            bool resultado = true;
+            if (cboPallet.Text != "")
+            {
+                var pallets = BoxsShipment.Where(p => p.palletEnvio == cboPallet.Text).ToList();
+                foreach (var item in pallets)
+                {
+                    if (item.shipTo != box.Substring(0, 2).ToUpper())
+                    {
+                        resultado = false;
+                    }
+                }
+            }
+
+            if (cboBulto.Text != "")
+            {
+                var bultos = BoxsShipment.Where(p => p.palletEnvio == cboBulto.Text).ToList();
+                foreach (var item in bultos)
+                {
+                    if (item.shipTo != box.Substring(0, 2))
+                    {
+                        resultado = false;
+                    }
+                }
+            }
+
+            return resultado;
         }
 
         private void GrabaInformacion()
         {
-            if (txtBox.Text.ToUpper() !="" && txtBruto.Text!="" & correlativoEnvio > 0 && shipmentCode != "" && shipmentSeleccionado !=null)
+            if (ValidacionCajas(txtBox.Text))
             {
-                if (shipmentSeleccionado.Id ==0)
+                if (txtBox.Text.ToUpper() != "" && txtBruto.Text != "" && txtNeto.Text != "" & correlativoEnvio > 0 && shipmentCode != "" && shipmentSeleccionado != null)
                 {
-                    MessageBox.Show("Falta Shipment Code Para Guardar Envio", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                    return;
-                }
+                    if (shipmentSeleccionado.Id == 0)
+                    {
+                        MessageBox.Show("Falta Shipment Code Para Guardar Envio", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                        return;
+                    }
 
-                var MovCaja = MovimientoShippingBusiness.GetCaja(txtBox.Text.Trim());
-                if (MovCaja !=null)
+                    var MovCaja = MovimientoShippingBusiness.GetCaja(txtBox.Text.Trim());
+                    if (MovCaja != null)
+                    {
+                        TransactionalInformation transaccion = new TransactionalInformation();
+                        MovCaja.pesoNeto = decimal.Parse(txtNeto.Text);
+                        MovCaja.pesoBruto = decimal.Parse(txtBruto.Text);
+                        MovCaja.fechaEnvio = shipmentSeleccionado.FechaEnvio;
+                        MovCaja.shipmentCode = shipmentCode;
+                        MovCaja.correlativoEnvio = correlativoEnvio;
+
+                        if (cboBulto.Text != "")
+                        {
+                            MovCaja.bulto = cboBulto.Text;
+                            MovCaja.pesoBulto = decimal.Parse(txtPesoBulto.Text);
+                        }
+
+                        if (cboPallet.Text != "")
+                        {
+                            MovCaja.pallet = cboPallet.Text;
+                            MovCaja.pesoPallet = decimal.Parse(txtPesoPallet.Text);
+                        }
+
+                        MovimientoCajaBusiness.GrabaInformacion(MovCaja, out transaccion);
+
+                        if (transaccion.ReturnStatus)
+                        {
+                            totalNetoEnvio += Math.Round(decimal.Parse(txtNeto.Text), 2);
+                            totalBrutoEnvio += Math.Round(decimal.Parse(txtBruto.Text), 2);
+
+                            lblTotalKilosNeto.Text = totalNetoEnvio.ToString("N", culture);
+                            lblTotalKilosBruto.Text = totalBrutoEnvio.ToString("N", culture);
+
+                            GetEnviosByShipment(shipmentCode);
+                            LimpiarFormulario();
+                            //MessageBox.Show("Envio Creado!", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                        }
+                    }
+                }
+                else
                 {
-                    TransactionalInformation transaccion = new TransactionalInformation();
-                    MovCaja.pesoNeto=decimal.Parse(txtNeto.Text);
-                    MovCaja.pesoBruto = decimal.Parse(txtBruto.Text);
-                    MovCaja.fechaEnvio = shipmentSeleccionado.FechaEnvio;
-                    MovCaja.shipmentCode = shipmentCode;
-                    MovCaja.correlativoEnvio = correlativoEnvio;
-                    
-                    if (txtBulto.Text !="")
-                    {
-                        MovCaja.bulto = txtBulto.Text;
-                        MovCaja.pesoBulto = decimal.Parse(txtPesoBulto.Text);
-                    }
-
-                    if (txtPallet.Text !="")
-                    {
-                        MovCaja.pallet = txtPallet.Text;
-                        MovCaja.pesoPallet = decimal.Parse(txtPallet.Text);
-                    }
-
-                    MovimientoCajaBusiness.GrabaInformacion(MovCaja, out transaccion);
-
-                    if (transaccion.ReturnStatus)
-                    {
-                        totalNetoEnvio += Math.Round(decimal.Parse(txtNeto.Text),2);
-                        totalBrutoEnvio += Math.Round(decimal.Parse(txtBruto.Text),2);
-
-                        lblTotalKilosNeto.Text = totalNetoEnvio.ToString("N",culture);
-                        lblTotalKilosBruto.Text = totalBrutoEnvio.ToString("N",culture);
-                        
-                        GetEnviosByShipment(shipmentCode);
-                        LimpiarFormulario();
-                        //MessageBox.Show("Envio Creado!", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                    }
-                }
+                    MessageBox.Show("Falta Información Para Guardar Envio", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                } 
             }
             else
             {
-                MessageBox.Show("Falta Información Para Guardar Envio", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Distintos Ship To, no pueden ir en un mismo Pallet", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
 
@@ -158,12 +205,11 @@ namespace Layer.Win.Shipping
             txtBox.Text = "";
             txtBruto.Text = "";
             txtNeto.Text = "";
-            txtBulto.Text = "";
-            txtPesoBulto.Text = "";
+            //txtPesoBulto.Text = "";
             txtPallet.Text = "";
-            txtPesoPallet.Text = "";
+            //txtPesoPallet.Text = "";
             txtBox.Focus();
-            shipmentSeleccionado = null;
+            //shipmentSeleccionado = null;
             estadoShipment = "";
         }
 
@@ -218,7 +264,30 @@ namespace Layer.Win.Shipping
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(btnCreate, "Crear Nuevo Shipment");
 
+            FillPallets();
             txtBox.Focus();
+        }
+
+        public void FillPallets()
+        {
+            var data = PalletBusiness.GetPallet(usuarioValido.id_empresa);
+            var pallets = data.Where(p => p.Tipo == 1).ToList();
+            pallets.Insert(0, new Pallet { Codigo = "" });
+
+            cboPallet.DisplayMember = "Codigo";
+            cboPallet.ValueMember = "Codigo";
+            cboPallet.DataSource = pallets;
+            FillBultos(data);
+        }
+
+        public void FillBultos(List<Pallet> data)
+        {
+            data = data.Where(p => p.Tipo == 2).ToList();
+            data.Insert(0, new Pallet { Codigo = "" });
+
+            cboBulto.DisplayMember = "Codigo";
+            cboBulto.ValueMember = "Codigo";
+            cboBulto.DataSource = data;
         }
 
         public void GetShipmentCode()
@@ -231,13 +300,13 @@ namespace Layer.Win.Shipping
 
         public void GetEnviosByShipment(string shipmentCode)
         {
-            List<EncPackingListDto> data = new List<EncPackingListDto>();
-            data = ShipmentBusiness.GetCajasByshipmentCode(shipmentCode);
+            BoxsShipment = ShipmentBusiness.GetCajasByshipmentCode(shipmentCode);
             dataBox.AutoGenerateColumns = false;
-            dataBox.DataSource = data;
+            dataBox.DataSource = BoxsShipment;
             dataBox.ClearSelection();
 
-            
+            lblTotalKilosBruto.Text = BoxsShipment.Sum(p => decimal.Parse(p.pesoBruto, CultureInfo.InvariantCulture.NumberFormat)).ToString("0.00");
+            lblTotalKilosNeto.Text = BoxsShipment.Sum(p => decimal.Parse(p.pesoNeto, CultureInfo.InvariantCulture.NumberFormat)).ToString("0.00");
         }
 
         private void borrarCajaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -373,6 +442,59 @@ namespace Layer.Win.Shipping
                     }
                     GetEnviosByShipment(shipmentCode);
                 }
+            }
+        }
+
+        private void CboPallet_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cboPallet.SelectedItem != null)
+            {
+                if (((Pallet)cboPallet.SelectedItem).Id > 0)
+                {
+                    var pallet = (Pallet)cboPallet.SelectedItem;
+                    txtPesoPallet.Text = pallet.Peso.ToString();
+                }
+                else
+                {
+                    txtPesoPallet.Text = "";
+                }
+            }
+            else
+            {
+                txtPesoPallet.Text = "";
+            }
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            if (txtBox.Text != "")
+            {
+                GrabaInformacion();
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar caja", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                txtBox.Focus();
+            }
+        }
+
+        private void CboBulto_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cboBulto.SelectedItem != null)
+            {
+                if (((Pallet)cboBulto.SelectedItem).Id > 0)
+                {
+                    var bulto = (Pallet)cboBulto.SelectedItem;
+                    txtPesoBulto.Text = bulto.Peso.ToString();
+                }
+                else
+                {
+                    txtPesoBulto.Text = "";
+                }
+            }
+            else
+            {
+                txtPesoBulto.Text = "";
             }
         }
     }

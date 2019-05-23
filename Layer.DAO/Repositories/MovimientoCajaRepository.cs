@@ -23,6 +23,8 @@ namespace Layer.DAO.Repositories
         private static Repository<MovimientoPacking> repositoryP;
         private static Repository<InfoFieldBook> repositoryI;
         private static Repository<InfoShipping> repositoryIS;
+        private static Repository<Pallet> repositoryPal;
+        private static Repository<Pallet> repositoryBul;
         #endregion
 
         #region Constructores
@@ -160,33 +162,78 @@ namespace Layer.DAO.Repositories
         {
             repository = unitOfWork.Repository<MovimientoCaja>();
             repositoryIS = unitOfWork.Repository<InfoShipping>();
+            repositoryI= unitOfWork.Repository<InfoFieldBook>();
+            repository= unitOfWork.Repository<MovimientoCaja>();
+            repositoryS = unitOfWork.Repository<MovimientoShipping>();
+            repositoryPal = unitOfWork.Repository<Pallet>();
+            repositoryBul = unitOfWork.Repository<Pallet>();
 
-            var data=(from mc in repository.Table
-                      from ins in repositoryIS.Table
-                      where mc.shipTo == ins.shipTo
-                      && mc.shipmentCode == shipmentCode
-                      orderby mc.correlativo
-                      select new EncPackingListDto
-                      {
-                          cajaEnvio=mc.cajaEnvio,
-                          palletEnvio=mc.pallet,
-                          bultoEnvio=mc.bulto,
-                          pesoBulto=mc.pesoBulto.ToString(),
-                          pesoPallet=mc.pesoPallet.ToString(),
-                          fechaEnvio=mc.fechaEnvio,
-                          pesoBruto=mc.pesoBruto.ToString(),
-                          pesoNeto=mc.pesoNeto.ToString(),
-                          shipTo=mc.shipTo,
-                          country = ins.country,
-                          state = ins.state,
-                          city = ins.state,
-                          address = ins.address,
-                          zipCode = ins.zipcode,
-                          contact = ins.contact,
-                          email = ins.email,
-                          phone = ins.phone,
-                          client = ins.client
-                      }).ToList();
+            var data = (from mc in repository.Table
+                        join ins in repositoryIS.Table on mc.shipTo equals ins.shipTo
+                        join bul in repositoryBul.Table on new { repositoryBul = mc.bulto } equals new { repositoryBul = bul.Codigo } into Pallet_join
+                        from bul in Pallet_join.DefaultIfEmpty()
+                        join pal in repositoryPal.Table on new { repositoryPal = mc.pallet } equals new { repositoryPal = pal.Codigo } into Pallet_1_join
+                        from pal in Pallet_1_join.DefaultIfEmpty()
+                        where mc.shipmentCode == shipmentCode
+                        orderby mc.correlativo
+                        select new EncPackingListDto
+                        {
+                            cajaEnvio = mc.cajaEnvio,
+                            palletEnvio = mc.pallet,
+                            bultoEnvio = mc.bulto,
+                            pesoBulto = mc.pesoBulto.ToString(),
+                            pesoPallet = mc.pesoPallet.ToString(),
+                            fechaEnvio = mc.fechaEnvio,
+                            pesoBruto = mc.pesoBruto.ToString(),
+                            pesoNeto = mc.pesoNeto.ToString(),
+                            shipTo = mc.shipTo,
+                            country = ins.country,
+                            state = ins.state,
+                            city = ins.state,
+                            address = ins.address,
+                            zipCode = ins.zipcode,
+                            contact = ins.contact,
+                            email = ins.email,
+                            phone = ins.phone,
+                            client = ins.client,
+                            NumeroCaja = (int)mc.correlativo,
+                            MaterialPallet = pal.Material,
+                            MedidaPallet = pal.Medidas,
+                            MaterialBulto = bul.Material,
+                            MedidaBulto = bul.Medidas,
+
+                        }).ToList();
+            foreach (var item in data)
+            {
+                var values = (from ms in repositoryS.Table
+                            join ifb in repositoryI.Table
+                                  on new { ms.euid, ms.indEuid }
+                              equals new { ifb.euid, ifb.indEuid }
+                            join mc in repository.Table
+                                  on new { ms.cajaEnvio, shipmentCode = shipmentCode }
+                              equals new { mc.cajaEnvio, mc.shipmentCode }
+                            where
+                              ms.cajaEnvio == item.cajaEnvio
+                            group new { ifb, ms } by new
+                            {
+                                ifb.crop,
+                                ifb.gmoEvent,
+                                ifb.sag,
+                                ifb.codInternacion
+                            } into g
+                            select new
+                            {
+                                Contenido = (g.Key.crop + "//" + g.Count(p => p.ms.indEuid != null) + "//" + g.Key.codInternacion),
+                                //g.Key.crop,
+                                //sobres = g.Count(p => p.ms.indEuid != null),
+                                //g.Key.codInternacion,
+                                g.Key.gmoEvent,
+                                g.Key.sag
+                            }).ToList();
+                item.Contenido = String.Join("-", values.Select(i=>i.Contenido));
+                item.Gmo = String.Join("-", values.Select(i => i.gmoEvent));
+                item.Sag = String.Join("-", values.Select(i => i.sag));
+            }
 
             return data;
         }

@@ -40,21 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboShipment = new System.Windows.Forms.ComboBox();
             this.dataBox = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShipTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CajaEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PesoNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PesoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CountryR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StateR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CityR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddressR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZipCodeR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDetail = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShipmentCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +86,32 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalDetalle = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CajaEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShipTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaterialPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedidaPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KgB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaterialBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedidaBulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gmo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SagH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PesoNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PesoBruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CountryR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StateR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CityR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddressR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZipCodeR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClientR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataDetail)).BeginInit();
             this.pnlEmail.SuspendLayout();
@@ -147,8 +158,19 @@
             this.dataBox.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.FechaEnvio,
-            this.ShipTo,
             this.CajaEnvio,
+            this.ShipTo,
+            this.Pallet,
+            this.Kg,
+            this.MaterialPallet,
+            this.MedidaPallet,
+            this.Bulto,
+            this.KgB,
+            this.MaterialBulto,
+            this.MedidaBulto,
+            this.Contenido,
+            this.Gmo,
+            this.SagH,
             this.PesoNeto,
             this.PesoBruto,
             this.CountryR,
@@ -191,121 +213,6 @@
             this.dataBox.Size = new System.Drawing.Size(460, 144);
             this.dataBox.TabIndex = 12;
             this.dataBox.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataBox_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // FechaEnvio
-            // 
-            this.FechaEnvio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FechaEnvio.DataPropertyName = "fechaEnvio";
-            this.FechaEnvio.HeaderText = "Fecha Envio";
-            this.FechaEnvio.Name = "FechaEnvio";
-            this.FechaEnvio.ReadOnly = true;
-            // 
-            // ShipTo
-            // 
-            this.ShipTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShipTo.DataPropertyName = "shipTo";
-            this.ShipTo.HeaderText = "Ship To";
-            this.ShipTo.Name = "ShipTo";
-            this.ShipTo.ReadOnly = true;
-            this.ShipTo.Width = 70;
-            // 
-            // CajaEnvio
-            // 
-            this.CajaEnvio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CajaEnvio.DataPropertyName = "cajaEnvio";
-            this.CajaEnvio.HeaderText = "Caja Envio";
-            this.CajaEnvio.Name = "CajaEnvio";
-            this.CajaEnvio.ReadOnly = true;
-            // 
-            // PesoNeto
-            // 
-            this.PesoNeto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PesoNeto.DataPropertyName = "pesoNeto";
-            this.PesoNeto.HeaderText = "Peso Neto";
-            this.PesoNeto.Name = "PesoNeto";
-            this.PesoNeto.ReadOnly = true;
-            this.PesoNeto.Width = 90;
-            // 
-            // PesoBruto
-            // 
-            this.PesoBruto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PesoBruto.DataPropertyName = "pesoBruto";
-            this.PesoBruto.HeaderText = "Peso Bruto";
-            this.PesoBruto.Name = "PesoBruto";
-            this.PesoBruto.ReadOnly = true;
-            this.PesoBruto.Width = 90;
-            // 
-            // CountryR
-            // 
-            this.CountryR.DataPropertyName = "country";
-            this.CountryR.HeaderText = "Country";
-            this.CountryR.Name = "CountryR";
-            this.CountryR.ReadOnly = true;
-            // 
-            // StateR
-            // 
-            this.StateR.DataPropertyName = "state";
-            this.StateR.HeaderText = "State";
-            this.StateR.Name = "StateR";
-            this.StateR.ReadOnly = true;
-            // 
-            // CityR
-            // 
-            this.CityR.DataPropertyName = "city";
-            this.CityR.HeaderText = "City";
-            this.CityR.Name = "CityR";
-            this.CityR.ReadOnly = true;
-            // 
-            // AddressR
-            // 
-            this.AddressR.DataPropertyName = "address";
-            this.AddressR.HeaderText = "Address";
-            this.AddressR.Name = "AddressR";
-            this.AddressR.ReadOnly = true;
-            // 
-            // ZipCodeR
-            // 
-            this.ZipCodeR.DataPropertyName = "zipCode";
-            this.ZipCodeR.HeaderText = "ZipCode";
-            this.ZipCodeR.Name = "ZipCodeR";
-            this.ZipCodeR.ReadOnly = true;
-            // 
-            // ContactR
-            // 
-            this.ContactR.DataPropertyName = "contact";
-            this.ContactR.HeaderText = "Contact";
-            this.ContactR.Name = "ContactR";
-            this.ContactR.ReadOnly = true;
-            // 
-            // EmailR
-            // 
-            this.EmailR.DataPropertyName = "email";
-            this.EmailR.HeaderText = "Email";
-            this.EmailR.Name = "EmailR";
-            this.EmailR.ReadOnly = true;
-            // 
-            // PhoneR
-            // 
-            this.PhoneR.DataPropertyName = "phone";
-            this.PhoneR.HeaderText = "Phone";
-            this.PhoneR.Name = "PhoneR";
-            this.PhoneR.ReadOnly = true;
-            // 
-            // ClientR
-            // 
-            this.ClientR.DataPropertyName = "client";
-            this.ClientR.HeaderText = "Client";
-            this.ClientR.Name = "ClientR";
-            this.ClientR.ReadOnly = true;
             // 
             // dataDetail
             // 
@@ -790,6 +697,202 @@
             this.label6.TabIndex = 55;
             this.label6.Text = "TOTAL :";
             // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // FechaEnvio
+            // 
+            this.FechaEnvio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FechaEnvio.DataPropertyName = "fechaEnvio";
+            this.FechaEnvio.HeaderText = "Fecha Envio";
+            this.FechaEnvio.Name = "FechaEnvio";
+            this.FechaEnvio.ReadOnly = true;
+            // 
+            // CajaEnvio
+            // 
+            this.CajaEnvio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CajaEnvio.DataPropertyName = "cajaEnvio";
+            this.CajaEnvio.HeaderText = "Caja Envio";
+            this.CajaEnvio.Name = "CajaEnvio";
+            this.CajaEnvio.ReadOnly = true;
+            // 
+            // ShipTo
+            // 
+            this.ShipTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShipTo.DataPropertyName = "shipTo";
+            this.ShipTo.HeaderText = "Ship To";
+            this.ShipTo.Name = "ShipTo";
+            this.ShipTo.ReadOnly = true;
+            this.ShipTo.Width = 70;
+            // 
+            // Pallet
+            // 
+            this.Pallet.DataPropertyName = "palletEnvio";
+            this.Pallet.HeaderText = "Pallet";
+            this.Pallet.Name = "Pallet";
+            this.Pallet.ReadOnly = true;
+            this.Pallet.Width = 80;
+            // 
+            // Kg
+            // 
+            this.Kg.DataPropertyName = "pesoPallet";
+            this.Kg.HeaderText = "Kg";
+            this.Kg.Name = "Kg";
+            this.Kg.ReadOnly = true;
+            this.Kg.Width = 60;
+            // 
+            // MaterialPallet
+            // 
+            this.MaterialPallet.DataPropertyName = "MaterialPallet";
+            this.MaterialPallet.HeaderText = "Material";
+            this.MaterialPallet.Name = "MaterialPallet";
+            this.MaterialPallet.ReadOnly = true;
+            // 
+            // MedidaPallet
+            // 
+            this.MedidaPallet.DataPropertyName = "MedidaPallet";
+            this.MedidaPallet.HeaderText = "Medidas";
+            this.MedidaPallet.Name = "MedidaPallet";
+            this.MedidaPallet.ReadOnly = true;
+            // 
+            // Bulto
+            // 
+            this.Bulto.DataPropertyName = "bultoEnvio";
+            this.Bulto.HeaderText = "Bulto";
+            this.Bulto.Name = "Bulto";
+            this.Bulto.ReadOnly = true;
+            this.Bulto.Width = 80;
+            // 
+            // KgB
+            // 
+            this.KgB.DataPropertyName = "pesoBulto";
+            this.KgB.HeaderText = "Kg";
+            this.KgB.Name = "KgB";
+            this.KgB.ReadOnly = true;
+            this.KgB.Width = 60;
+            // 
+            // MaterialBulto
+            // 
+            this.MaterialBulto.DataPropertyName = "MaterialBulto";
+            this.MaterialBulto.HeaderText = "Material";
+            this.MaterialBulto.Name = "MaterialBulto";
+            this.MaterialBulto.ReadOnly = true;
+            // 
+            // MedidaBulto
+            // 
+            this.MedidaBulto.DataPropertyName = "MedidaBulto";
+            this.MedidaBulto.HeaderText = "Medidas";
+            this.MedidaBulto.Name = "MedidaBulto";
+            this.MedidaBulto.ReadOnly = true;
+            // 
+            // Contenido
+            // 
+            this.Contenido.DataPropertyName = "Contenido";
+            this.Contenido.HeaderText = "Contenido";
+            this.Contenido.Name = "Contenido";
+            this.Contenido.ReadOnly = true;
+            // 
+            // Gmo
+            // 
+            this.Gmo.DataPropertyName = "Gmo";
+            this.Gmo.HeaderText = "Gmo";
+            this.Gmo.Name = "Gmo";
+            this.Gmo.ReadOnly = true;
+            // 
+            // SagH
+            // 
+            this.SagH.DataPropertyName = "Sag";
+            this.SagH.HeaderText = "Sag";
+            this.SagH.Name = "SagH";
+            this.SagH.ReadOnly = true;
+            // 
+            // PesoNeto
+            // 
+            this.PesoNeto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PesoNeto.DataPropertyName = "pesoNeto";
+            this.PesoNeto.HeaderText = "Peso Neto";
+            this.PesoNeto.Name = "PesoNeto";
+            this.PesoNeto.ReadOnly = true;
+            this.PesoNeto.Width = 90;
+            // 
+            // PesoBruto
+            // 
+            this.PesoBruto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.PesoBruto.DataPropertyName = "pesoBruto";
+            this.PesoBruto.HeaderText = "Peso Bruto";
+            this.PesoBruto.Name = "PesoBruto";
+            this.PesoBruto.ReadOnly = true;
+            this.PesoBruto.Width = 90;
+            // 
+            // CountryR
+            // 
+            this.CountryR.DataPropertyName = "country";
+            this.CountryR.HeaderText = "Country";
+            this.CountryR.Name = "CountryR";
+            this.CountryR.ReadOnly = true;
+            // 
+            // StateR
+            // 
+            this.StateR.DataPropertyName = "state";
+            this.StateR.HeaderText = "State";
+            this.StateR.Name = "StateR";
+            this.StateR.ReadOnly = true;
+            // 
+            // CityR
+            // 
+            this.CityR.DataPropertyName = "city";
+            this.CityR.HeaderText = "City";
+            this.CityR.Name = "CityR";
+            this.CityR.ReadOnly = true;
+            // 
+            // AddressR
+            // 
+            this.AddressR.DataPropertyName = "address";
+            this.AddressR.HeaderText = "Address";
+            this.AddressR.Name = "AddressR";
+            this.AddressR.ReadOnly = true;
+            // 
+            // ZipCodeR
+            // 
+            this.ZipCodeR.DataPropertyName = "zipCode";
+            this.ZipCodeR.HeaderText = "ZipCode";
+            this.ZipCodeR.Name = "ZipCodeR";
+            this.ZipCodeR.ReadOnly = true;
+            // 
+            // ContactR
+            // 
+            this.ContactR.DataPropertyName = "contact";
+            this.ContactR.HeaderText = "Contact";
+            this.ContactR.Name = "ContactR";
+            this.ContactR.ReadOnly = true;
+            // 
+            // EmailR
+            // 
+            this.EmailR.DataPropertyName = "email";
+            this.EmailR.HeaderText = "Email";
+            this.EmailR.Name = "EmailR";
+            this.EmailR.ReadOnly = true;
+            // 
+            // PhoneR
+            // 
+            this.PhoneR.DataPropertyName = "phone";
+            this.PhoneR.HeaderText = "Phone";
+            this.PhoneR.Name = "PhoneR";
+            this.PhoneR.ReadOnly = true;
+            // 
+            // ClientR
+            // 
+            this.ClientR.DataPropertyName = "client";
+            this.ClientR.HeaderText = "Client";
+            this.ClientR.Name = "ClientR";
+            this.ClientR.ReadOnly = true;
+            // 
             // FrmPackingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -854,21 +957,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTotalDetalle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEnvio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShipTo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CajaEnvio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PesoNeto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PesoBruto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CountryR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StateR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CityR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AddressR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ZipCodeR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClientR;
         private System.Windows.Forms.ComboBox cboEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -897,5 +985,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sag;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodInternacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodReception;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaEnvio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CajaEnvio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShipTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialPallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MedidaPallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bulto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KgB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialBulto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MedidaBulto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contenido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gmo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SagH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PesoNeto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PesoBruto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CountryR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StateR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CityR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddressR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZipCodeR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientR;
     }
 }

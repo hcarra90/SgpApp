@@ -133,6 +133,16 @@ namespace Layer.Win.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_64 {
+            get {
+                object obj = ResourceManager.GetObject("caja_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camion_64 {
             get {
                 object obj = ResourceManager.GetObject("camion_64", resourceCulture);
@@ -726,6 +736,16 @@ namespace Layer.Win.Properties {
         internal static System.Drawing.Bitmap pala {
             get {
                 object obj = ResourceManager.GetObject("pala", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pallet_64 {
+            get {
+                object obj = ResourceManager.GetObject("pallet_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

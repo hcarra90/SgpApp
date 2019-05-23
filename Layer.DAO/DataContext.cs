@@ -273,6 +273,17 @@ namespace Layer.DAO
             }
         }
 
+        DbSet<Pallet> pallet;
+        public DbSet<Pallet> Pallet
+        {
+            get
+            {
+                if (pallet == null)
+                    pallet = base.Set<Pallet>();
+                return pallet;
+            }
+        }
+
         #endregion
 
         #region Clases de auditoria
@@ -431,6 +442,7 @@ namespace Layer.DAO
             modelBuilder.Entity<MovimientoNota>().ToTable("MovimientoNota");
             modelBuilder.Entity<ProgramaExport>().ToTable("ProgramaExport");
             modelBuilder.Entity<MovimientoDespacho>().ToTable("MovimientoDespacho");
+            modelBuilder.Entity<Pallet>().ToTable("Pallet");
             #endregion
 
             #region Relaciones Clases
@@ -475,6 +487,11 @@ namespace Layer.DAO
                     .HasRequired(c => c.Estado)
                     .WithMany()
                     .HasForeignKey(t => t.id_estado).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Pallet>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
 
             //InfoCCExp
             modelBuilder.Entity<CentroCostoExperimento>()

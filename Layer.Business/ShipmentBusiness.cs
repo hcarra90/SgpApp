@@ -113,7 +113,11 @@ namespace Layer.Business
                             fechaEnvio = mc.fechaEnvio,
                             pesoBruto = mc.pesoBruto.ToString(),
                             pesoNeto = mc.pesoNeto.ToString(),
-                            shipTo = mc.shipTo
+                            shipTo = mc.shipTo,
+                            palletEnvio = mc.pallet,
+                            pesoPallet = mc.pesoPallet.ToString(),
+                            bultoEnvio = mc.bulto,
+                            pesoBulto = mc.pesoBulto.ToString()
                         }).ToList();
 
             return data;

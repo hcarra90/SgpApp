@@ -97,6 +97,7 @@
     <Compile Include="MovimientoSecadoBusiness.cs" />
     <Compile Include="MovimientoShippingBusiness.cs" />
     <Compile Include="NotaBusiness.cs" />
+    <Compile Include="PalletBusiness.cs" />
     <Compile Include="ParametroBusiness.cs" />
     <Compile Include="ProgramaExportBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -127,6 +127,7 @@
     <Compile Include="Maestros\InfoLoc.cs" />
     <Compile Include="Maestros\InfoShipping.cs" />
     <Compile Include="Maestros\Nota.cs" />
+    <Compile Include="Maestros\Pallet.cs" />
     <Compile Include="Maestros\Parametro.cs" />
     <Compile Include="Maestros\Project.cs" />
     <Compile Include="Maestros\Region.cs" />

@@ -35,7 +35,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>Publicacion.html</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>61</ApplicationRevision>
+    <ApplicationRevision>63</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -260,6 +260,18 @@
     <Compile Include="Shipping\FrmEnvioCaja.Designer.cs">
       <DependentUpon>FrmEnvioCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shipping\FrmPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmPallet.Designer.cs">
+      <DependentUpon>FrmPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipping\FrmPalletCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipping\FrmPalletCaja.Designer.cs">
+      <DependentUpon>FrmPalletCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shipping\FrmShipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +382,12 @@
     <EmbeddedResource Include="Shipping\FrmEnvioCaja.resx">
       <DependentUpon>FrmEnvioCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmPallet.resx">
+      <DependentUpon>FrmPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FrmPalletCaja.resx">
+      <DependentUpon>FrmPalletCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Shipping\FrmShipment.resx">
       <DependentUpon>FrmShipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +447,8 @@
     <Content Include="Encabezado_1.txt" />
     <Content Include="IconMdi.ico" />
     <Content Include="Images\bad.png" />
+    <None Include="Resources\caja_64.png" />
+    <None Include="Resources\pallet_64.png" />
     <None Include="Resources\camion_64.png" />
     <None Include="Resources\supermercado_641.png" />
     <None Include="Resources\cosecha.2_641.png" />

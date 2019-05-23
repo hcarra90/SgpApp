@@ -28,5 +28,13 @@ namespace Layer.Entity.Dto
         public string email { get; set; }
         public string phone { get; set; }
         public string client { get; set; }
+        public int NumeroCaja { get; set; }
+        public string Contenido { get; set; }
+        public string Gmo { get; set; }
+        public string Sag { get; set; }
+        public string MaterialPallet { get; set; }
+        public string MedidaPallet{ get; set; }
+        public string MaterialBulto { get; set; }
+        public string MedidaBulto { get; set; }
     }
 }

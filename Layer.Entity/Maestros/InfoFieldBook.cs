@@ -14,6 +14,8 @@ namespace Layer.Entity
     [Table("InfoFieldBook")]
     public class InfoFieldBook : BaseEntity
     {
+        private DateTime _FechaCarga = DateTime.Now;
+
         [Key]
         [ScaffoldColumn(false)]
         [Required]
@@ -154,7 +156,10 @@ namespace Layer.Entity
         public string LotId { get; set; }
 
         [Column("fecha_carga")]
-        public DateTime fechaCarga { get; set; }
+        public DateTime fechaCarga {
+            get => _FechaCarga;
+            set => this._FechaCarga = value;
+        }
 
         [Column("fecha_modificacion")]
         public DateTime? fechaModificacion { get; set; }

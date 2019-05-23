@@ -115,6 +115,10 @@ namespace Layer.Business
             return repository.ValidateIndEuids(data);
         }
 
+        public static bool ValidateEuids(List<InfoFieldBook> data)
+        {
+            return repository.ValidateIndEuid(data);
+        }
         public static void InsertBulk(List<InfoFieldBook> entities)
         {
             repository.InsertBulk(entities);
