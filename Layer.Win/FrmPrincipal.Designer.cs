@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chartPacking = new LiveCharts.WinForms.CartesianChart();
@@ -63,38 +62,30 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cboAnio = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnSplit = new System.Windows.Forms.Button();
-            this.btnInfoField = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnSiembra = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnPackingUva = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.btnFloracion = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.btnRogging = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnDesgrane = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnSecado = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnCosecha = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.btnEnvio = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnShipping = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.btnPacking = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnTracking = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnPlist = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape16 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape15 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape14 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape13 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape12 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape11 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape10 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape9 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape8 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape7 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape6 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -103,21 +94,40 @@
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape9 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape10 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape11 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape12 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape13 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape14 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rectangleShape17 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.btnGuia = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAereo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTracking = new System.Windows.Forms.Button();
+            this.btnPlist = new System.Windows.Forms.Button();
+            this.btnEnvio = new System.Windows.Forms.Button();
+            this.btnShipping = new System.Windows.Forms.Button();
+            this.btnPacking = new System.Windows.Forms.Button();
+            this.btnPackingUva = new System.Windows.Forms.Button();
+            this.btnFloracion = new System.Windows.Forms.Button();
+            this.btnRogging = new System.Windows.Forms.Button();
+            this.btnDesgrane = new System.Windows.Forms.Button();
+            this.btnSecado = new System.Windows.Forms.Button();
+            this.btnCosecha = new System.Windows.Forms.Button();
+            this.btnSplit = new System.Windows.Forms.Button();
+            this.btnInfoField = new System.Windows.Forms.Button();
+            this.btnSiembra = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdResumen)).BeginInit();
             this.pnlEmail.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -163,16 +173,6 @@
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 29;
             this.label6.Text = "Versión";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.logo_massai1;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // lblPerfil
             // 
@@ -235,14 +235,14 @@
             this.grdResumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdResumen.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdResumen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdResumen.ColumnHeadersHeight = 21;
             this.grdResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
@@ -251,33 +251,33 @@
             this.IndEuid,
             this.Packing,
             this.Porcentaje});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdResumen.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdResumen.DefaultCellStyle = dataGridViewCellStyle4;
             this.grdResumen.EnableHeadersVisualStyles = false;
             this.grdResumen.Location = new System.Drawing.Point(6, 6);
             this.grdResumen.Name = "grdResumen";
             this.grdResumen.ReadOnly = true;
             this.grdResumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdResumen.RowHeadersVisible = false;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            this.grdResumen.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.grdResumen.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.grdResumen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdResumen.Size = new System.Drawing.Size(472, 169);
             this.grdResumen.TabIndex = 50;
@@ -287,9 +287,9 @@
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Experimento";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn4.HeaderText = "Experimento";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -299,9 +299,9 @@
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "CountEuid";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn5.HeaderText = "Euid";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -452,113 +452,38 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Project Lead";
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ErrorImage")));
-            this.btnMinimizar.Image = global::Layer.Win.Properties.Resources.icon_minimizar;
-            this.btnMinimizar.Location = new System.Drawing.Point(888, 2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 9;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
-            this.btnCerrar.Image = global::Layer.Win.Properties.Resources.icon_cerrar2;
-            this.btnCerrar.Location = new System.Drawing.Point(913, 2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
-            this.label10.Location = new System.Drawing.Point(335, 110);
+            this.label10.Location = new System.Drawing.Point(664, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 18);
             this.label10.TabIndex = 54;
             this.label10.Text = "Split";
-            // 
-            // btnSplit
-            // 
-            this.btnSplit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnSplit.FlatAppearance.BorderSize = 0;
-            this.btnSplit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSplit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSplit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSplit.Image = global::Layer.Win.Properties.Resources.upload_64;
-            this.btnSplit.Location = new System.Drawing.Point(323, 29);
-            this.btnSplit.Name = "btnSplit";
-            this.btnSplit.Size = new System.Drawing.Size(69, 67);
-            this.btnSplit.TabIndex = 56;
-            this.btnSplit.UseVisualStyleBackColor = true;
-            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
-            this.btnSplit.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnSplit.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
-            // btnInfoField
-            // 
-            this.btnInfoField.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnInfoField.FlatAppearance.BorderSize = 0;
-            this.btnInfoField.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnInfoField.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnInfoField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfoField.Image = global::Layer.Win.Properties.Resources.nota_64;
-            this.btnInfoField.Location = new System.Drawing.Point(181, 29);
-            this.btnInfoField.Name = "btnInfoField";
-            this.btnInfoField.Size = new System.Drawing.Size(69, 67);
-            this.btnInfoField.TabIndex = 55;
-            this.btnInfoField.UseVisualStyleBackColor = true;
-            this.btnInfoField.Click += new System.EventHandler(this.btnUpload_Click);
-            this.btnInfoField.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnInfoField.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
-            this.label13.Location = new System.Drawing.Point(43, 110);
+            this.label13.Location = new System.Drawing.Point(17, 110);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 18);
+            this.label13.Size = new System.Drawing.Size(124, 18);
             this.label13.TabIndex = 53;
-            this.label13.Text = "Entry List";
+            this.label13.Text = "Crear Experimento";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
-            this.label12.Location = new System.Drawing.Point(179, 110);
+            this.label12.Location = new System.Drawing.Point(515, 98);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 18);
             this.label12.TabIndex = 52;
             this.label12.Text = "Field Book";
-            // 
-            // btnSiembra
-            // 
-            this.btnSiembra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnSiembra.FlatAppearance.BorderSize = 0;
-            this.btnSiembra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSiembra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSiembra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiembra.Image = global::Layer.Win.Properties.Resources.portapapeles_64;
-            this.btnSiembra.Location = new System.Drawing.Point(41, 27);
-            this.btnSiembra.Name = "btnSiembra";
-            this.btnSiembra.Size = new System.Drawing.Size(69, 67);
-            this.btnSiembra.TabIndex = 51;
-            this.btnSiembra.UseVisualStyleBackColor = true;
-            this.btnSiembra.Click += new System.EventHandler(this.btnSiembra_Click);
-            this.btnSiembra.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnSiembra.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label20
             // 
@@ -571,23 +496,6 @@
             this.label20.TabIndex = 71;
             this.label20.Text = "Packing Fruta";
             // 
-            // btnPackingUva
-            // 
-            this.btnPackingUva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnPackingUva.FlatAppearance.BorderSize = 0;
-            this.btnPackingUva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPackingUva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPackingUva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPackingUva.Image = global::Layer.Win.Properties.Resources.uva_64;
-            this.btnPackingUva.Location = new System.Drawing.Point(740, 156);
-            this.btnPackingUva.Name = "btnPackingUva";
-            this.btnPackingUva.Size = new System.Drawing.Size(69, 67);
-            this.btnPackingUva.TabIndex = 70;
-            this.btnPackingUva.UseVisualStyleBackColor = true;
-            this.btnPackingUva.Click += new System.EventHandler(this.btnPackingUva_Click);
-            this.btnPackingUva.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnPackingUva.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -598,24 +506,6 @@
             this.label19.Size = new System.Drawing.Size(65, 18);
             this.label19.TabIndex = 69;
             this.label19.Text = "Floración";
-            // 
-            // btnFloracion
-            // 
-            this.btnFloracion.Enabled = false;
-            this.btnFloracion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnFloracion.FlatAppearance.BorderSize = 0;
-            this.btnFloracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnFloracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnFloracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFloracion.Image = global::Layer.Win.Properties.Resources.girasol_64;
-            this.btnFloracion.Location = new System.Drawing.Point(598, 156);
-            this.btnFloracion.Name = "btnFloracion";
-            this.btnFloracion.Size = new System.Drawing.Size(69, 67);
-            this.btnFloracion.TabIndex = 68;
-            this.btnFloracion.UseVisualStyleBackColor = true;
-            this.btnFloracion.Click += new System.EventHandler(this.btnFloracion_Click);
-            this.btnFloracion.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnFloracion.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label18
             // 
@@ -628,23 +518,6 @@
             this.label18.TabIndex = 67;
             this.label18.Text = "Rogging";
             // 
-            // btnRogging
-            // 
-            this.btnRogging.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnRogging.FlatAppearance.BorderSize = 0;
-            this.btnRogging.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnRogging.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnRogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRogging.Image = global::Layer.Win.Properties.Resources.guadana_64;
-            this.btnRogging.Location = new System.Drawing.Point(456, 153);
-            this.btnRogging.Name = "btnRogging";
-            this.btnRogging.Size = new System.Drawing.Size(69, 67);
-            this.btnRogging.TabIndex = 66;
-            this.btnRogging.UseVisualStyleBackColor = true;
-            this.btnRogging.Click += new System.EventHandler(this.btnRogging_Click);
-            this.btnRogging.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnRogging.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -655,23 +528,6 @@
             this.label16.Size = new System.Drawing.Size(66, 18);
             this.label16.TabIndex = 65;
             this.label16.Text = "Desgrane";
-            // 
-            // btnDesgrane
-            // 
-            this.btnDesgrane.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnDesgrane.FlatAppearance.BorderSize = 0;
-            this.btnDesgrane.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnDesgrane.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnDesgrane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesgrane.Image = global::Layer.Win.Properties.Resources.Desgrane_64;
-            this.btnDesgrane.Location = new System.Drawing.Point(320, 153);
-            this.btnDesgrane.Name = "btnDesgrane";
-            this.btnDesgrane.Size = new System.Drawing.Size(69, 67);
-            this.btnDesgrane.TabIndex = 64;
-            this.btnDesgrane.UseVisualStyleBackColor = true;
-            this.btnDesgrane.Click += new System.EventHandler(this.btnDesgrane_Click);
-            this.btnDesgrane.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnDesgrane.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label14
             // 
@@ -684,23 +540,6 @@
             this.label14.TabIndex = 63;
             this.label14.Text = "Secado";
             // 
-            // btnSecado
-            // 
-            this.btnSecado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnSecado.FlatAppearance.BorderSize = 0;
-            this.btnSecado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSecado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnSecado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecado.Image = global::Layer.Win.Properties.Resources.secado_64;
-            this.btnSecado.Location = new System.Drawing.Point(181, 150);
-            this.btnSecado.Name = "btnSecado";
-            this.btnSecado.Size = new System.Drawing.Size(69, 67);
-            this.btnSecado.TabIndex = 62;
-            this.btnSecado.UseVisualStyleBackColor = true;
-            this.btnSecado.Click += new System.EventHandler(this.btnSecado_Click);
-            this.btnSecado.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnSecado.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -711,23 +550,6 @@
             this.label11.Size = new System.Drawing.Size(59, 18);
             this.label11.TabIndex = 61;
             this.label11.Text = "Cosecha";
-            // 
-            // btnCosecha
-            // 
-            this.btnCosecha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnCosecha.FlatAppearance.BorderSize = 0;
-            this.btnCosecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnCosecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnCosecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCosecha.Image = global::Layer.Win.Properties.Resources.cosecha_64;
-            this.btnCosecha.Location = new System.Drawing.Point(39, 150);
-            this.btnCosecha.Name = "btnCosecha";
-            this.btnCosecha.Size = new System.Drawing.Size(69, 67);
-            this.btnCosecha.TabIndex = 60;
-            this.btnCosecha.UseVisualStyleBackColor = true;
-            this.btnCosecha.Click += new System.EventHandler(this.btnCosecha_Click);
-            this.btnCosecha.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnCosecha.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label22
             // 
@@ -740,23 +562,6 @@
             this.label22.TabIndex = 77;
             this.label22.Text = "Envío";
             // 
-            // btnEnvio
-            // 
-            this.btnEnvio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnEnvio.FlatAppearance.BorderSize = 0;
-            this.btnEnvio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnEnvio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnvio.Image = global::Layer.Win.Properties.Resources.cosecha1;
-            this.btnEnvio.Location = new System.Drawing.Point(319, 285);
-            this.btnEnvio.Name = "btnEnvio";
-            this.btnEnvio.Size = new System.Drawing.Size(69, 67);
-            this.btnEnvio.TabIndex = 76;
-            this.btnEnvio.UseVisualStyleBackColor = true;
-            this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
-            this.btnEnvio.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnEnvio.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -767,23 +572,6 @@
             this.label23.Size = new System.Drawing.Size(62, 18);
             this.label23.TabIndex = 75;
             this.label23.Text = "Shipping";
-            // 
-            // btnShipping
-            // 
-            this.btnShipping.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnShipping.FlatAppearance.BorderSize = 0;
-            this.btnShipping.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnShipping.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnShipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShipping.Image = global::Layer.Win.Properties.Resources.planta_641;
-            this.btnShipping.Location = new System.Drawing.Point(180, 285);
-            this.btnShipping.Name = "btnShipping";
-            this.btnShipping.Size = new System.Drawing.Size(69, 67);
-            this.btnShipping.TabIndex = 74;
-            this.btnShipping.UseVisualStyleBackColor = true;
-            this.btnShipping.Click += new System.EventHandler(this.btnShipping_Click);
-            this.btnShipping.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnShipping.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // label24
             // 
@@ -796,23 +584,6 @@
             this.label24.TabIndex = 73;
             this.label24.Text = "Packing";
             // 
-            // btnPacking
-            // 
-            this.btnPacking.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnPacking.FlatAppearance.BorderSize = 0;
-            this.btnPacking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPacking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacking.Image = global::Layer.Win.Properties.Resources.almacen_64;
-            this.btnPacking.Location = new System.Drawing.Point(39, 285);
-            this.btnPacking.Name = "btnPacking";
-            this.btnPacking.Size = new System.Drawing.Size(69, 67);
-            this.btnPacking.TabIndex = 72;
-            this.btnPacking.UseVisualStyleBackColor = true;
-            this.btnPacking.Click += new System.EventHandler(this.btnPacking_Click);
-            this.btnPacking.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnPacking.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -824,23 +595,6 @@
             this.label7.TabIndex = 81;
             this.label7.Text = "Tracking List";
             // 
-            // btnTracking
-            // 
-            this.btnTracking.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnTracking.FlatAppearance.BorderSize = 0;
-            this.btnTracking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnTracking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTracking.Image = global::Layer.Win.Properties.Resources.camion_64;
-            this.btnTracking.Location = new System.Drawing.Point(177, 396);
-            this.btnTracking.Name = "btnTracking";
-            this.btnTracking.Size = new System.Drawing.Size(69, 67);
-            this.btnTracking.TabIndex = 80;
-            this.btnTracking.UseVisualStyleBackColor = true;
-            this.btnTracking.Click += new System.EventHandler(this.btnTracking_Click);
-            this.btnTracking.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnTracking.MouseHover += new System.EventHandler(this.btnMouseHover);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -851,23 +605,6 @@
             this.label21.Size = new System.Drawing.Size(79, 18);
             this.label21.TabIndex = 79;
             this.label21.Text = "Packing List";
-            // 
-            // btnPlist
-            // 
-            this.btnPlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
-            this.btnPlist.FlatAppearance.BorderSize = 0;
-            this.btnPlist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.btnPlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlist.Image = global::Layer.Win.Properties.Resources.supermercado_641;
-            this.btnPlist.Location = new System.Drawing.Point(40, 396);
-            this.btnPlist.Name = "btnPlist";
-            this.btnPlist.Size = new System.Drawing.Size(69, 67);
-            this.btnPlist.TabIndex = 78;
-            this.btnPlist.UseVisualStyleBackColor = true;
-            this.btnPlist.Click += new System.EventHandler(this.btnPlist_Click);
-            this.btnPlist.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            this.btnPlist.MouseHover += new System.EventHandler(this.btnMouseHover);
             // 
             // panel1
             // 
@@ -890,6 +627,9 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape17,
+            this.rectangleShape16,
+            this.rectangleShape15,
             this.rectangleShape14,
             this.rectangleShape13,
             this.rectangleShape12,
@@ -907,6 +647,70 @@
             this.shapeContainer1.Size = new System.Drawing.Size(933, 614);
             this.shapeContainer1.TabIndex = 83;
             this.shapeContainer1.TabStop = false;
+            // 
+            // rectangleShape16
+            // 
+            this.rectangleShape16.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape16.CornerRadius = 10;
+            this.rectangleShape16.Location = new System.Drawing.Point(152, 15);
+            this.rectangleShape16.Name = "rectangleShape16";
+            this.rectangleShape16.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape15
+            // 
+            this.rectangleShape15.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape15.CornerRadius = 10;
+            this.rectangleShape15.Location = new System.Drawing.Point(429, 260);
+            this.rectangleShape15.Name = "rectangleShape15";
+            this.rectangleShape15.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape14
+            // 
+            this.rectangleShape14.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape14.CornerRadius = 10;
+            this.rectangleShape14.Location = new System.Drawing.Point(709, 138);
+            this.rectangleShape14.Name = "rectangleShape14";
+            this.rectangleShape14.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape13
+            // 
+            this.rectangleShape13.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape13.CornerRadius = 10;
+            this.rectangleShape13.Location = new System.Drawing.Point(569, 138);
+            this.rectangleShape13.Name = "rectangleShape13";
+            this.rectangleShape13.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape12
+            // 
+            this.rectangleShape12.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape12.CornerRadius = 10;
+            this.rectangleShape12.Location = new System.Drawing.Point(13, 383);
+            this.rectangleShape12.Name = "rectangleShape12";
+            this.rectangleShape12.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape11
+            // 
+            this.rectangleShape11.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape11.CornerRadius = 10;
+            this.rectangleShape11.Location = new System.Drawing.Point(151, 383);
+            this.rectangleShape11.Name = "rectangleShape11";
+            this.rectangleShape11.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape10
+            // 
+            this.rectangleShape10.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape10.CornerRadius = 10;
+            this.rectangleShape10.Location = new System.Drawing.Point(429, 138);
+            this.rectangleShape10.Name = "rectangleShape10";
+            this.rectangleShape10.Size = new System.Drawing.Size(130, 113);
+            // 
+            // rectangleShape9
+            // 
+            this.rectangleShape9.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape9.CornerRadius = 10;
+            this.rectangleShape9.Location = new System.Drawing.Point(289, 260);
+            this.rectangleShape9.Name = "rectangleShape9";
+            this.rectangleShape9.Size = new System.Drawing.Size(130, 113);
             // 
             // rectangleShape8
             // 
@@ -936,7 +740,7 @@
             // 
             this.rectangleShape5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.rectangleShape5.CornerRadius = 10;
-            this.rectangleShape5.Location = new System.Drawing.Point(289, 15);
+            this.rectangleShape5.Location = new System.Drawing.Point(628, 9);
             this.rectangleShape5.Name = "rectangleShape5";
             this.rectangleShape5.Size = new System.Drawing.Size(130, 113);
             // 
@@ -944,7 +748,7 @@
             // 
             this.rectangleShape4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.rectangleShape4.CornerRadius = 10;
-            this.rectangleShape4.Location = new System.Drawing.Point(151, 15);
+            this.rectangleShape4.Location = new System.Drawing.Point(469, 7);
             this.rectangleShape4.Name = "rectangleShape4";
             this.rectangleShape4.Size = new System.Drawing.Size(130, 113);
             // 
@@ -972,53 +776,375 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(130, 113);
             // 
-            // rectangleShape9
+            // label3
             // 
-            this.rectangleShape9.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape9.CornerRadius = 10;
-            this.rectangleShape9.Location = new System.Drawing.Point(289, 260);
-            this.rectangleShape9.Name = "rectangleShape9";
-            this.rectangleShape9.Size = new System.Drawing.Size(130, 113);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
+            this.label3.Location = new System.Drawing.Point(442, 355);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 18);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Reserva Espacio";
             // 
-            // rectangleShape10
+            // button1
             // 
-            this.rectangleShape10.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape10.CornerRadius = 10;
-            this.rectangleShape10.Location = new System.Drawing.Point(429, 138);
-            this.rectangleShape10.Name = "rectangleShape10";
-            this.rectangleShape10.Size = new System.Drawing.Size(130, 113);
+            this.button1.Location = new System.Drawing.Point(855, 492);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 86;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // rectangleShape11
+            // label4
             // 
-            this.rectangleShape11.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape11.CornerRadius = 10;
-            this.rectangleShape11.Location = new System.Drawing.Point(151, 383);
-            this.rectangleShape11.Name = "rectangleShape11";
-            this.rectangleShape11.Size = new System.Drawing.Size(130, 113);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
+            this.label4.Location = new System.Drawing.Point(174, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 18);
+            this.label4.TabIndex = 88;
+            this.label4.Text = "Cargar EntryList";
             // 
-            // rectangleShape12
+            // rectangleShape17
             // 
-            this.rectangleShape12.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape12.CornerRadius = 10;
-            this.rectangleShape12.Location = new System.Drawing.Point(13, 383);
-            this.rectangleShape12.Name = "rectangleShape12";
-            this.rectangleShape12.Size = new System.Drawing.Size(130, 113);
+            this.rectangleShape17.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.rectangleShape17.CornerRadius = 10;
+            this.rectangleShape17.Location = new System.Drawing.Point(569, 260);
+            this.rectangleShape17.Name = "rectangleShape17";
+            this.rectangleShape17.Size = new System.Drawing.Size(130, 113);
             // 
-            // rectangleShape13
+            // btnGuia
             // 
-            this.rectangleShape13.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape13.CornerRadius = 10;
-            this.rectangleShape13.Location = new System.Drawing.Point(569, 138);
-            this.rectangleShape13.Name = "rectangleShape13";
-            this.rectangleShape13.Size = new System.Drawing.Size(130, 113);
+            this.btnGuia.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnGuia.FlatAppearance.BorderSize = 0;
+            this.btnGuia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnGuia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnGuia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuia.Image = global::Layer.Win.Properties.Resources.guia_64;
+            this.btnGuia.Location = new System.Drawing.Point(598, 285);
+            this.btnGuia.Name = "btnGuia";
+            this.btnGuia.Size = new System.Drawing.Size(69, 67);
+            this.btnGuia.TabIndex = 89;
+            this.btnGuia.UseVisualStyleBackColor = true;
+            this.btnGuia.Click += new System.EventHandler(this.btnGuia_Click);
             // 
-            // rectangleShape14
+            // button2
             // 
-            this.rectangleShape14.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.rectangleShape14.CornerRadius = 10;
-            this.rectangleShape14.Location = new System.Drawing.Point(709, 138);
-            this.rectangleShape14.Name = "rectangleShape14";
-            this.rectangleShape14.Size = new System.Drawing.Size(130, 113);
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Layer.Win.Properties.Resources.nota_64;
+            this.button2.Location = new System.Drawing.Point(180, 24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 67);
+            this.button2.TabIndex = 87;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnAereo
+            // 
+            this.btnAereo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnAereo.FlatAppearance.BorderSize = 0;
+            this.btnAereo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnAereo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnAereo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAereo.Image = global::Layer.Win.Properties.Resources.almacenar_64;
+            this.btnAereo.Location = new System.Drawing.Point(456, 285);
+            this.btnAereo.Name = "btnAereo";
+            this.btnAereo.Size = new System.Drawing.Size(69, 67);
+            this.btnAereo.TabIndex = 84;
+            this.btnAereo.UseVisualStyleBackColor = true;
+            this.btnAereo.Click += new System.EventHandler(this.btnAereo_Click);
+            this.btnAereo.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnAereo.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Layer.Win.Properties.Resources.logo_massai1;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnTracking
+            // 
+            this.btnTracking.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnTracking.FlatAppearance.BorderSize = 0;
+            this.btnTracking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnTracking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTracking.Image = global::Layer.Win.Properties.Resources.camion_64;
+            this.btnTracking.Location = new System.Drawing.Point(177, 396);
+            this.btnTracking.Name = "btnTracking";
+            this.btnTracking.Size = new System.Drawing.Size(69, 67);
+            this.btnTracking.TabIndex = 80;
+            this.btnTracking.UseVisualStyleBackColor = true;
+            this.btnTracking.Click += new System.EventHandler(this.btnTracking_Click);
+            this.btnTracking.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnTracking.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnPlist
+            // 
+            this.btnPlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnPlist.FlatAppearance.BorderSize = 0;
+            this.btnPlist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlist.Image = global::Layer.Win.Properties.Resources.supermercado_641;
+            this.btnPlist.Location = new System.Drawing.Point(40, 396);
+            this.btnPlist.Name = "btnPlist";
+            this.btnPlist.Size = new System.Drawing.Size(69, 67);
+            this.btnPlist.TabIndex = 78;
+            this.btnPlist.UseVisualStyleBackColor = true;
+            this.btnPlist.Click += new System.EventHandler(this.btnPlist_Click);
+            this.btnPlist.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnPlist.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnEnvio
+            // 
+            this.btnEnvio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnEnvio.FlatAppearance.BorderSize = 0;
+            this.btnEnvio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnEnvio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnvio.Image = global::Layer.Win.Properties.Resources.cosecha1;
+            this.btnEnvio.Location = new System.Drawing.Point(319, 285);
+            this.btnEnvio.Name = "btnEnvio";
+            this.btnEnvio.Size = new System.Drawing.Size(69, 67);
+            this.btnEnvio.TabIndex = 76;
+            this.btnEnvio.UseVisualStyleBackColor = true;
+            this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
+            this.btnEnvio.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnEnvio.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnShipping
+            // 
+            this.btnShipping.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnShipping.FlatAppearance.BorderSize = 0;
+            this.btnShipping.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnShipping.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnShipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShipping.Image = global::Layer.Win.Properties.Resources.planta_641;
+            this.btnShipping.Location = new System.Drawing.Point(180, 285);
+            this.btnShipping.Name = "btnShipping";
+            this.btnShipping.Size = new System.Drawing.Size(69, 67);
+            this.btnShipping.TabIndex = 74;
+            this.btnShipping.UseVisualStyleBackColor = true;
+            this.btnShipping.Click += new System.EventHandler(this.btnShipping_Click);
+            this.btnShipping.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnShipping.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnPacking
+            // 
+            this.btnPacking.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnPacking.FlatAppearance.BorderSize = 0;
+            this.btnPacking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPacking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPacking.Image = global::Layer.Win.Properties.Resources.almacen_64;
+            this.btnPacking.Location = new System.Drawing.Point(39, 285);
+            this.btnPacking.Name = "btnPacking";
+            this.btnPacking.Size = new System.Drawing.Size(69, 67);
+            this.btnPacking.TabIndex = 72;
+            this.btnPacking.UseVisualStyleBackColor = true;
+            this.btnPacking.Click += new System.EventHandler(this.btnPacking_Click);
+            this.btnPacking.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnPacking.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnPackingUva
+            // 
+            this.btnPackingUva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnPackingUva.FlatAppearance.BorderSize = 0;
+            this.btnPackingUva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPackingUva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnPackingUva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPackingUva.Image = global::Layer.Win.Properties.Resources.uva_64;
+            this.btnPackingUva.Location = new System.Drawing.Point(740, 156);
+            this.btnPackingUva.Name = "btnPackingUva";
+            this.btnPackingUva.Size = new System.Drawing.Size(69, 67);
+            this.btnPackingUva.TabIndex = 70;
+            this.btnPackingUva.UseVisualStyleBackColor = true;
+            this.btnPackingUva.Click += new System.EventHandler(this.btnPackingUva_Click);
+            this.btnPackingUva.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnPackingUva.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnFloracion
+            // 
+            this.btnFloracion.Enabled = false;
+            this.btnFloracion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnFloracion.FlatAppearance.BorderSize = 0;
+            this.btnFloracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnFloracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnFloracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFloracion.Image = global::Layer.Win.Properties.Resources.girasol_64;
+            this.btnFloracion.Location = new System.Drawing.Point(598, 156);
+            this.btnFloracion.Name = "btnFloracion";
+            this.btnFloracion.Size = new System.Drawing.Size(69, 67);
+            this.btnFloracion.TabIndex = 68;
+            this.btnFloracion.UseVisualStyleBackColor = true;
+            this.btnFloracion.Click += new System.EventHandler(this.btnFloracion_Click);
+            this.btnFloracion.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnFloracion.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnRogging
+            // 
+            this.btnRogging.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnRogging.FlatAppearance.BorderSize = 0;
+            this.btnRogging.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnRogging.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnRogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRogging.Image = global::Layer.Win.Properties.Resources.guadana_64;
+            this.btnRogging.Location = new System.Drawing.Point(456, 153);
+            this.btnRogging.Name = "btnRogging";
+            this.btnRogging.Size = new System.Drawing.Size(69, 67);
+            this.btnRogging.TabIndex = 66;
+            this.btnRogging.UseVisualStyleBackColor = true;
+            this.btnRogging.Click += new System.EventHandler(this.btnRogging_Click);
+            this.btnRogging.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnRogging.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnDesgrane
+            // 
+            this.btnDesgrane.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnDesgrane.FlatAppearance.BorderSize = 0;
+            this.btnDesgrane.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnDesgrane.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnDesgrane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesgrane.Image = global::Layer.Win.Properties.Resources.Desgrane_64;
+            this.btnDesgrane.Location = new System.Drawing.Point(320, 153);
+            this.btnDesgrane.Name = "btnDesgrane";
+            this.btnDesgrane.Size = new System.Drawing.Size(69, 67);
+            this.btnDesgrane.TabIndex = 64;
+            this.btnDesgrane.UseVisualStyleBackColor = true;
+            this.btnDesgrane.Click += new System.EventHandler(this.btnDesgrane_Click);
+            this.btnDesgrane.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnDesgrane.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnSecado
+            // 
+            this.btnSecado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnSecado.FlatAppearance.BorderSize = 0;
+            this.btnSecado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSecado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSecado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSecado.Image = global::Layer.Win.Properties.Resources.secado_64;
+            this.btnSecado.Location = new System.Drawing.Point(181, 150);
+            this.btnSecado.Name = "btnSecado";
+            this.btnSecado.Size = new System.Drawing.Size(69, 67);
+            this.btnSecado.TabIndex = 62;
+            this.btnSecado.UseVisualStyleBackColor = true;
+            this.btnSecado.Click += new System.EventHandler(this.btnSecado_Click);
+            this.btnSecado.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnSecado.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnCosecha
+            // 
+            this.btnCosecha.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnCosecha.FlatAppearance.BorderSize = 0;
+            this.btnCosecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnCosecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnCosecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCosecha.Image = global::Layer.Win.Properties.Resources.cosecha_64;
+            this.btnCosecha.Location = new System.Drawing.Point(39, 150);
+            this.btnCosecha.Name = "btnCosecha";
+            this.btnCosecha.Size = new System.Drawing.Size(69, 67);
+            this.btnCosecha.TabIndex = 60;
+            this.btnCosecha.UseVisualStyleBackColor = true;
+            this.btnCosecha.Click += new System.EventHandler(this.btnCosecha_Click);
+            this.btnCosecha.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnCosecha.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnSplit
+            // 
+            this.btnSplit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnSplit.FlatAppearance.BorderSize = 0;
+            this.btnSplit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSplit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSplit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSplit.Image = global::Layer.Win.Properties.Resources.upload_64;
+            this.btnSplit.Location = new System.Drawing.Point(652, 19);
+            this.btnSplit.Name = "btnSplit";
+            this.btnSplit.Size = new System.Drawing.Size(69, 67);
+            this.btnSplit.TabIndex = 56;
+            this.btnSplit.UseVisualStyleBackColor = true;
+            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
+            this.btnSplit.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnSplit.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnInfoField
+            // 
+            this.btnInfoField.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnInfoField.FlatAppearance.BorderSize = 0;
+            this.btnInfoField.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnInfoField.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnInfoField.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfoField.Image = global::Layer.Win.Properties.Resources.nota_64;
+            this.btnInfoField.Location = new System.Drawing.Point(518, 27);
+            this.btnInfoField.Name = "btnInfoField";
+            this.btnInfoField.Size = new System.Drawing.Size(69, 67);
+            this.btnInfoField.TabIndex = 55;
+            this.btnInfoField.UseVisualStyleBackColor = true;
+            this.btnInfoField.Click += new System.EventHandler(this.btnUpload_Click);
+            this.btnInfoField.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnInfoField.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnSiembra
+            // 
+            this.btnSiembra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(62)))));
+            this.btnSiembra.FlatAppearance.BorderSize = 0;
+            this.btnSiembra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSiembra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.btnSiembra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiembra.Image = global::Layer.Win.Properties.Resources.portapapeles_64;
+            this.btnSiembra.Location = new System.Drawing.Point(41, 27);
+            this.btnSiembra.Name = "btnSiembra";
+            this.btnSiembra.Size = new System.Drawing.Size(69, 67);
+            this.btnSiembra.TabIndex = 51;
+            this.btnSiembra.UseVisualStyleBackColor = true;
+            this.btnSiembra.Click += new System.EventHandler(this.btnSiembra_Click);
+            this.btnSiembra.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            this.btnSiembra.MouseHover += new System.EventHandler(this.btnMouseHover);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.ErrorImage")));
+            this.btnMinimizar.Image = global::Layer.Win.Properties.Resources.icon_minimizar;
+            this.btnMinimizar.Location = new System.Drawing.Point(888, 2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 9;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Image = global::Layer.Win.Properties.Resources.icon_cerrar2;
+            this.btnCerrar.Location = new System.Drawing.Point(913, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(174)))), ((int)(((byte)(79)))));
+            this.label5.Location = new System.Drawing.Point(584, 355);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 18);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Guía Despacho";
             // 
             // FrmPrincipal
             // 
@@ -1026,6 +1152,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.ClientSize = new System.Drawing.Size(933, 614);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnGuia);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnAereo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnTracking);
@@ -1068,7 +1201,6 @@
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmPrincipal_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdResumen)).EndInit();
@@ -1076,10 +1208,11 @@
             this.pnlEmail.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1160,5 +1293,15 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape9;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape14;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape13;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape15;
+        private System.Windows.Forms.Button btnAereo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape16;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape17;
+        private System.Windows.Forms.Button btnGuia;
+        private System.Windows.Forms.Label label5;
     }
 }

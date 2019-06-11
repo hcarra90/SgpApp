@@ -73,6 +73,16 @@ namespace Layer.Win.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aeroplano_64 {
+            get {
+                object obj = ResourceManager.GetObject("aeroplano_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap almacen_32 {
             get {
                 object obj = ResourceManager.GetObject("almacen_32", resourceCulture);
@@ -86,6 +96,16 @@ namespace Layer.Win.Properties {
         internal static System.Drawing.Bitmap almacen_64 {
             get {
                 object obj = ResourceManager.GetObject("almacen_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap almacenar_64 {
+            get {
+                object obj = ResourceManager.GetObject("almacenar_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,6 +496,16 @@ namespace Layer.Win.Properties {
         internal static System.Drawing.Bitmap guadana_64 {
             get {
                 object obj = ResourceManager.GetObject("guadana_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guia_64 {
+            get {
+                object obj = ResourceManager.GetObject("guia_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

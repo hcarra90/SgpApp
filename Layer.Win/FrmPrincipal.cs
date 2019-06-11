@@ -27,6 +27,7 @@ using System.Globalization;
 using System.Net;
 using Layer.Win.Siembra;
 using Layer.Win.Floracion;
+using Layer.Win.Reserva;
 
 namespace Layer.Win
 {
@@ -77,12 +78,14 @@ namespace Layer.Win
             toolTip1.SetToolTip(btnSplit, "Carga Split");
             toolTip1.SetToolTip(btnFloracion, "Registrar Nota De Floración");
             toolTip1.SetToolTip(btnPackingUva, "Packing Uva");
+            toolTip1.SetToolTip(btnAereo, "Reserva Espacio");
+            toolTip1.SetToolTip(btnGuia, "Datos Guía Despacho");
             //btnPackingUva
             try
             {
                 //using (var client = new WebClient())
                 //{
-                //    client.DownloadFile("http://www.massainursery.cl/Files/TrackingList.xlsx", "C:\\Templates\\TrackingList.xlsx");
+                //    client.DownloadFile("http://www.massainursery.cl/Files/PackingList.xlsx", "C:\\Templates\\PackingList.xlsx");
                 //}
                 lblVersion.Text = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
             }
@@ -381,6 +384,30 @@ namespace Layer.Win
         private void btnMouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
+        }
+
+        private void btnAereo_Click(object sender, EventArgs e)
+        {
+            FrmReservaEspacioAereo frm = new FrmReservaEspacioAereo
+            {
+                usuarioValido = this.usuarioValido
+            };
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmTemplate frm = new FrmTemplate();
+            frm.ShowDialog();
+        }
+
+        private void btnGuia_Click(object sender, EventArgs e)
+        {
+            FrmGuiaDespacho frm = new FrmGuiaDespacho
+            {
+                usuarioValido = this.usuarioValido
+            };
+            frm.ShowDialog();
         }
     }
 }

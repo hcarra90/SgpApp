@@ -284,6 +284,60 @@ namespace Layer.DAO
             }
         }
 
+        DbSet<TipoEnvase> tipoEnvase;
+        public DbSet<TipoEnvase> TipoEnvase
+        {
+            get
+            {
+                if (tipoEnvase == null)
+                    tipoEnvase = base.Set<TipoEnvase>();
+                return tipoEnvase;
+            }
+        }
+
+        DbSet<Pais> pais;
+        public DbSet<Pais> Pais
+        {
+            get
+            {
+                if (pais == null)
+                    pais = base.Set<Pais>();
+                return pais;
+            }
+        }
+
+        DbSet<Puerto> puerto;
+        public DbSet<Puerto> Puerto
+        {
+            get
+            {
+                if (puerto == null)
+                    puerto = base.Set<Puerto>();
+                return puerto;
+            }
+        }
+
+        DbSet<Conductor> conductor;
+        public DbSet<Conductor> Conductor
+        {
+            get
+            {
+                if (conductor == null)
+                    conductor = base.Set<Conductor>();
+                return conductor;
+            }
+        }
+
+        DbSet<Vehiculo> vehiculo;
+        public DbSet<Vehiculo> Vehiculo
+        {
+            get
+            {
+                if (vehiculo == null)
+                    vehiculo = base.Set<Vehiculo>();
+                return vehiculo;
+            }
+        }
         #endregion
 
         #region Clases de auditoria
@@ -401,8 +455,33 @@ namespace Layer.DAO
                 return movimientoDespacho;
             }
         }
+
+        DbSet<DatosGuia> datosGuia;
+        public DbSet<DatosGuia> DatosGuia
+        {
+            get
+            {
+                if (datosGuia == null)
+                    datosGuia = base.Set<DatosGuia>();
+                return datosGuia;
+            }
+        }
         #endregion
 
+        #region -----Reserva Espacio-----
+
+        DbSet<ReservaEspacio> reservaEspacio;
+        public DbSet<ReservaEspacio> ReservaEspacio
+        {
+            get
+            {
+                if (reservaEspacio == null)
+                    reservaEspacio = base.Set<ReservaEspacio>();
+                return reservaEspacio;
+            }
+        }
+
+        #endregion
         #endregion
 
         #region Métodos Sobreescritos
@@ -443,6 +522,13 @@ namespace Layer.DAO
             modelBuilder.Entity<ProgramaExport>().ToTable("ProgramaExport");
             modelBuilder.Entity<MovimientoDespacho>().ToTable("MovimientoDespacho");
             modelBuilder.Entity<Pallet>().ToTable("Pallet");
+            modelBuilder.Entity<TipoEnvase>().ToTable("TipoEnvase");
+            modelBuilder.Entity<Pais>().ToTable("Pais");
+            modelBuilder.Entity<Puerto>().ToTable("Puerto");
+            modelBuilder.Entity<ReservaEspacio>().ToTable("ReservaEspacio");
+            modelBuilder.Entity<DatosGuia>().ToTable("DatosGuia");
+            modelBuilder.Entity<Conductor>().ToTable("Conductor");
+            modelBuilder.Entity<Vehiculo>().ToTable("Vehiculo");
             #endregion
 
             #region Relaciones Clases
@@ -575,6 +661,68 @@ namespace Layer.DAO
                     .HasForeignKey(t => t.id_nota).WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProgramaExport>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            //TipoEnvase
+            modelBuilder.Entity<TipoEnvase>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            //Pais
+            modelBuilder.Entity<Pais>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            //Puerto
+            modelBuilder.Entity<Puerto>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Puerto>()
+                    .HasRequired(c => c.Pais)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_pais).WillCascadeOnDelete(false);
+
+            //Reserva Espacio
+            modelBuilder.Entity<ReservaEspacio>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ReservaEspacio>()
+                    .HasRequired(c => c.TipoEnvase)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_tipo_envase).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ReservaEspacio>()
+                    .HasRequired(c => c.Pais)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_pais).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ReservaEspacio>()
+                    .HasRequired(c => c.Puerto)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_puerto).WillCascadeOnDelete(false);
+
+            //Datos Guía
+            modelBuilder.Entity<DatosGuia>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            //Conductor
+            modelBuilder.Entity<Conductor>()
+                    .HasRequired(c => c.Empresa)
+                    .WithMany()
+                    .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);
+
+            //Vehículo
+            modelBuilder.Entity<Vehiculo>()
                     .HasRequired(c => c.Empresa)
                     .WithMany()
                     .HasForeignKey(t => t.id_empresa).WillCascadeOnDelete(false);

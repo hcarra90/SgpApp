@@ -668,7 +668,77 @@ namespace Layer.Functions
 
             return book;
         }
+        public static XLWorkbook ExportaGuiaDespacho(List<DatosGuia> data,string nombreHoja, List<string[]> titles)
+        {
+            int index = 2;
+            var wb = new XLWorkbook(); //create workbook
+            var hoja = wb.Worksheets.Add(nombreHoja);
 
+            hoja.Cell(1, 1).InsertData(titles);
+
+            foreach (var item in data)
+            {
+                hoja.Cell("A" + index).Value =item.FechaGuia;
+                hoja.Cell("B" + index).Value = item.Origen;
+                hoja.Cell("C" + index).Value = item.Destino;
+                hoja.Cell("D" + index).Value = item.Location;
+                hoja.Cell("E" + index).Value = item.Crop;
+                hoja.Cell("F" + index).Value = item.Experimento;
+                hoja.Cell("G" + index).Value = item.Evento;
+                hoja.Cell("H" + index).Value = item.Gmo;
+                hoja.Cell("I" + index).Value = item.Sag;
+                hoja.Cell("J" + index).Value = item.Cc;
+                hoja.Cell("K" + index).Value = item.CodInternacion;
+                hoja.Cell("L" + index).Value = item.NumeroEuid;
+                hoja.Cell("M" + index).Value = item.Kilos;
+                hoja.Cell("N" + index).Value = item.Conductor;
+                hoja.Cell("O" + index).Value = item.Rut;
+                hoja.Cell("P" + index).Value = item.Patente;
+                hoja.Cell("Q" + index).Value = item.FechaCreacion;
+                hoja.Cell("R" + index).Value = item.UsuarioCreacion;
+                index++;
+            }
+
+            return wb;
+        }
+        public static bool CreaTemplate(string nombre, List<string[]> titles)
+        {
+            bool result = false;
+            var wb = new XLWorkbook(); //create workbook
+            switch (nombre)
+            {
+                case "PackingList":
+                    result=CreaPackingList(wb, titles, nombre);
+                    break;
+            }
+
+            return result;
+        }
+
+        private static bool CreaPackingList(XLWorkbook wb, List<string[]> titles, string titulo)
+        {
+            try
+            {
+                var ws = wb.Worksheets.Add("Header Packing List"); //add worksheet to workbook
+                //var range = ws.Range(;
+                //range.Style.Fill.BackgroundColor = XLColor.Gray;
+                //range.Style.Font.Bold = true;
+                //hoja.Cell("C" + index).Value = item.Euid.Replace(".", "");
+                //hoja.Cell("C" + index).Style.NumberFormat.Format = "#,##0";
+                //hoja.Cell("D" + index).Value = item.IndEuid.Replace(".", "");
+                //hoja.Cell("D" + index).Style.NumberFormat.Format = "#,##0";
+
+                ws.Cell(5, 1).InsertData(titles);
+
+                var ms = new MemoryStream();
+                wb.SaveAs(@"C:\Templates\" + titulo + ".xlsx");
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         #endregion
 
         public static ResultadoCarga SaveExcelData(List<InfoFieldBook> data)

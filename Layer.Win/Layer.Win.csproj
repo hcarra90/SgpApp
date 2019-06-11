@@ -156,6 +156,7 @@
     <Compile Include="Administrador\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constantes\Mensajes.cs" />
     <Compile Include="Consulta\FrmConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +174,12 @@
     </Compile>
     <Compile Include="Consulta\FrmPackingList.Designer.cs">
       <DependentUpon>FrmPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmTemplate.Designer.cs">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
     </Compile>
     <Compile Include="Cosecha\FrmMovCosecha.cs">
       <SubType>Form</SubType>
@@ -236,6 +243,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserva\FrmReservaEspacioAereo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserva\FrmReservaEspacioAereo.Designer.cs">
+      <DependentUpon>FrmReservaEspacioAereo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rogging\FrmRogging.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +297,12 @@
     <Compile Include="Shipping\FrmShipping.Designer.cs">
       <DependentUpon>FrmShipping.cs</DependentUpon>
     </Compile>
+    <Compile Include="Siembra\FrmGuiaDespacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siembra\FrmGuiaDespacho.Designer.cs">
+      <DependentUpon>FrmGuiaDespacho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Siembra\FrmNuevaLocation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +349,9 @@
     <EmbeddedResource Include="Consulta\FrmPackingList.resx">
       <DependentUpon>FrmPackingList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmTemplate.resx">
+      <DependentUpon>FrmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cosecha\FrmMovCosecha.resx">
       <DependentUpon>FrmMovCosecha.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +392,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reserva\FrmReservaEspacioAereo.resx">
+      <DependentUpon>FrmReservaEspacioAereo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rogging\FrmRogging.resx">
       <DependentUpon>FrmRogging.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shipping\FrmShipping.resx">
       <DependentUpon>FrmShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siembra\FrmGuiaDespacho.resx">
+      <DependentUpon>FrmGuiaDespacho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Siembra\FrmNuevaLocation.resx">
       <DependentUpon>FrmNuevaLocation.cs</DependentUpon>
@@ -447,6 +475,9 @@
     <Content Include="Encabezado_1.txt" />
     <Content Include="IconMdi.ico" />
     <Content Include="Images\bad.png" />
+    <None Include="Resources\guia_64.png" />
+    <None Include="Resources\almacenar_64.png" />
+    <None Include="Resources\aeroplano_64.png" />
     <None Include="Resources\caja_64.png" />
     <None Include="Resources\pallet_64.png" />
     <None Include="Resources\camion_64.png" />

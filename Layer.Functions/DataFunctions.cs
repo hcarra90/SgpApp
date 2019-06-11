@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using Layer.Entity.Dto;
+using System.Collections.Generic;
+using System.Web;
 
 namespace Layer.Functions
 {
@@ -47,6 +49,40 @@ namespace Layer.Functions
             }
 
             return peso;
+        }
+
+        public static List<ListaComboDto> GetTipoReserva()
+        {
+            List<ListaComboDto> lista = new List<ListaComboDto>();
+            lista.Add(new ListaComboDto { Valor = 0, Nombre = "" });
+            lista.Add(new ListaComboDto { Valor = 1, Nombre = "Aéreo" });
+            lista.Add(new ListaComboDto { Valor = 2, Nombre = "Marítimo" });
+            return lista;
+        }
+
+        public static List<ListaComboDto> GetCantidad()
+        {
+            List<ListaComboDto> lista = new List<ListaComboDto>
+            {
+                new ListaComboDto { Valor = 0, Nombre = "" }
+            };
+
+            for (int i = 1; i < 101; i++)
+            {
+                lista.Add(new ListaComboDto { Valor = i, Nombre = i.ToString() });
+            }
+            
+            return lista;
+        }
+
+        public static List<ListaComboDto> GetTipoSag()
+        {
+            List<ListaComboDto> lista = new List<ListaComboDto>();
+            lista.Add(new ListaComboDto { Valor = 0, Nombre = "" });
+            lista.Add(new ListaComboDto { Valor = 1, Nombre = "CRD" });
+            lista.Add(new ListaComboDto { Valor = 2, Nombre = "CVN" });
+            lista.Add(new ListaComboDto { Valor = 3, Nombre = "SRD" });
+            return lista;
         }
     }
 }

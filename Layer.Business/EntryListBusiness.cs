@@ -1,6 +1,7 @@
 ﻿using Layer.DAO.Interface;
 using Layer.DAO.Repositories;
 using Layer.Entity;
+using Layer.Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace Layer.Business
         {
             return repository.GetEuid(cadena,opcion);
         }
+
+        public static List<CropDto> GetTipoConversion(int idEmpresa, string location)
+        {
+            return repository.GetTipoConversion(idEmpresa, location);
+        }
+
         public static string GetMaxEuid()
         {
             return repository.GetMaxEuid();
@@ -33,6 +40,11 @@ namespace Layer.Business
         public static bool ValidateEuids(List<EntryList> data)
         {
             return repository.ValidateEuids(data);
+        }
+
+        public static List<DataGuiaDespachoDto> GetDataGuiaDespacho(string location)
+        {
+            return repository.GetDataGuiaDespacho(location);
         }
 
         public static void InsertMasivo(List<EntryList> objs, EntryList obj)

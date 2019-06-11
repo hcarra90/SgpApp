@@ -30,6 +30,22 @@ namespace Layer.Business
             return data;
         }
 
+        public static List<InfoShipping> GetShipToByCountry(string pais)
+        {
+            var data = repository.GetAll().Where(p=>p.country == pais).ToList();
+
+            data.Insert(0, new InfoShipping { shipTo=""});
+            return data;
+        }
+
+        public static List<InfoShipping> GetAddressByCountry(string pais)
+        {
+            var data = repository.GetAll().Where(p => p.country == pais).ToList();
+
+            data.Insert(0, new InfoShipping { shipTo = "" });
+            return data;
+        }
+
         /// <summary>
         /// Función que obtiene información del ship to.
         /// </summary>
@@ -38,6 +54,14 @@ namespace Layer.Business
         public static InfoShipping GetInfoShipping(string shipTo)
         {
             return repository.GetInfoShipping(shipTo);
+        }
+
+        public static List<InfoShipping> GetAdressByShipTo(string shipTo)
+        {
+            var data = repository.GetAll().Where(p => p.shipTo == shipTo).ToList();
+            data.Insert(0, new InfoShipping { shipTo = "" });
+
+            return data;
         }
         #endregion
     }

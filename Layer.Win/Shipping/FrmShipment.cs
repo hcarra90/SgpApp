@@ -66,10 +66,19 @@ namespace Layer.Win.Shipping
             FrmEnvioCaja frm = (FrmEnvioCaja)Application.OpenForms["FrmEnvioCaja"];
             //GroupBox grp = (GroupBox)frm.Controls["grpLocation"];
             ComboBox cb = (ComboBox)frm.Controls["cboShipment"];
+            DataGridView dg = (DataGridView)frm.Controls["dataBox"];
             var data = ShipmentBusiness.GetShipmentCode();
             cb.ValueMember = "ShipmentCode";
             cb.DisplayMember = "ShipmentCode";
             cb.DataSource = data;
+            dg.DataSource = null;
+            frm.LimpiarFormulario(true);
+
+            //Lbl
+            Label lbl = (Label)frm.Controls["lblTotalKilosNeto"];
+            lbl.Text = "";
+            lbl = (Label)frm.Controls["lblTotalKilosBruto"];
+            lbl.Text = "";
         }
 
         private void CreateShipment()
@@ -203,6 +212,7 @@ namespace Layer.Win.Shipping
 
             CambioEstado(id,"C");
             LlenaGrilla(dtpFechaEnvio.Value.Date);
+            ActualizaShipments();
             dtpFechaEnvio.Focus();
         }
 
@@ -241,6 +251,7 @@ namespace Layer.Win.Shipping
 
             CambioEstado(id, "A");
             LlenaGrilla(dtpFechaEnvio.Value.Date);
+            ActualizaShipments();
             dtpFechaEnvio.Focus();
         }
     }

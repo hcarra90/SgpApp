@@ -76,7 +76,9 @@
   <ItemGroup>
     <Compile Include="CentroCostoBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
+    <Compile Include="ConductorBusiness.cs" />
     <Compile Include="CropBusiness.cs" />
+    <Compile Include="DatosGuiaBusiness.cs" />
     <Compile Include="DiscardReasonBusiness.cs" />
     <Compile Include="EmailBusiness.cs" />
     <Compile Include="EntryListBusiness.cs" />
@@ -97,13 +99,18 @@
     <Compile Include="MovimientoSecadoBusiness.cs" />
     <Compile Include="MovimientoShippingBusiness.cs" />
     <Compile Include="NotaBusiness.cs" />
+    <Compile Include="PaisBusiness.cs" />
     <Compile Include="PalletBusiness.cs" />
     <Compile Include="ParametroBusiness.cs" />
     <Compile Include="ProgramaExportBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuertoBusiness.cs" />
+    <Compile Include="ReservaEspacioBusiness.cs" />
     <Compile Include="ShipmentBusiness.cs" />
     <Compile Include="TipoAgroBusiness.cs" />
+    <Compile Include="TipoEnvaseBusiness.cs" />
     <Compile Include="UsuarioBusiness.cs" />
+    <Compile Include="VehiculoBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Layer.DAO\Layer.DAO.csproj">

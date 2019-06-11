@@ -59,6 +59,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboShipment = new System.Windows.Forms.ComboBox();
             this.pnlEmail = new System.Windows.Forms.Panel();
+            this.cboBulto = new System.Windows.Forms.ComboBox();
             this.cboPallet = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPesoBulto = new System.Windows.Forms.TextBox();
@@ -75,7 +76,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.cboBulto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             this.ctxCajaMenu.SuspendLayout();
             this.pnlEmail.SuspendLayout();
@@ -237,6 +237,7 @@
             this.txtBox.TabIndex = 3;
             this.txtBox.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             this.txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBox_KeyPress);
+            this.txtBox.Leave += new System.EventHandler(this.TxtBox_Leave);
             // 
             // label2
             // 
@@ -351,6 +352,16 @@
             this.pnlEmail.Name = "pnlEmail";
             this.pnlEmail.Size = new System.Drawing.Size(237, 56);
             this.pnlEmail.TabIndex = 63;
+            // 
+            // cboBulto
+            // 
+            this.cboBulto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboBulto.FormattingEnabled = true;
+            this.cboBulto.Location = new System.Drawing.Point(56, 30);
+            this.cboBulto.Name = "cboBulto";
+            this.cboBulto.Size = new System.Drawing.Size(97, 22);
+            this.cboBulto.TabIndex = 2;
+            this.cboBulto.SelectedValueChanged += new System.EventHandler(this.CboBulto_SelectedValueChanged);
             // 
             // cboPallet
             // 
@@ -522,16 +533,6 @@
             this.btnGrabar.TabIndex = 5;
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
-            // 
-            // cboBulto
-            // 
-            this.cboBulto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboBulto.FormattingEnabled = true;
-            this.cboBulto.Location = new System.Drawing.Point(56, 30);
-            this.cboBulto.Name = "cboBulto";
-            this.cboBulto.Size = new System.Drawing.Size(97, 22);
-            this.cboBulto.TabIndex = 2;
-            this.cboBulto.SelectedValueChanged += new System.EventHandler(this.CboBulto_SelectedValueChanged);
             // 
             // FrmEnvioCaja
             // 

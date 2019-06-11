@@ -47,7 +47,10 @@ namespace Layer.Functions
             mail.Subject = titulo;
             mail.Body = mensaje;
 
-            mail.Attachments.Add(new Attachment(filename));
+            if (filename !="")
+            {
+                mail.Attachments.Add(new Attachment(filename));
+            }
 
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new

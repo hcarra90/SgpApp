@@ -11,5 +11,5 @@ namespace Layer.DAO.Interface
         void Update(Estado obj);
         void Insert(Estado obj);
         #endregion
-}
+    }
 }

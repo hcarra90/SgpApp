@@ -45,6 +45,15 @@ namespace Layer.Business
             return repository.GetFarmsByEmpresa(idEmpresa);
         }
 
+        public static List<FarmDto> GetDirByEmpresa(int idEmpresa)
+        {
+            var data= repository.GetFarmsByEmpresa(idEmpresa);
+            data = data.FindAll(p => p.DireccionGd != null);
+           
+            data.Insert(0,new FarmDto {Id=0, DireccionGd=""});
+            return data;
+        }
+
         public static List<FarmDto> GetSubFarmsByFarm(string codFarm)
         {
             return repository.GetSubFarmsByFarm(codFarm);

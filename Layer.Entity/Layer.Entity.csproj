@@ -74,6 +74,7 @@
     <Compile Include="Dto\CentroCostoExperimentoDto.cs" />
     <Compile Include="Dto\CropDto.cs" />
     <Compile Include="Dto\DataGraficoDto.cs" />
+    <Compile Include="Dto\DataGuiaDespachoDto.cs" />
     <Compile Include="Dto\EficienciaPorDiaDto.cs" />
     <Compile Include="Dto\EmpresaDto.cs" />
     <Compile Include="Dto\EntryListDto.cs" />
@@ -83,12 +84,15 @@
     <Compile Include="Dto\InfoFarmDto.cs" />
     <Compile Include="Dto\InfoFieldBookDto.cs" />
     <Compile Include="Dto\InfoLocDto.cs" />
+    <Compile Include="Dto\ListaComboDto.cs" />
     <Compile Include="Dto\MovimientoCosechaDto.cs" />
     <Compile Include="Dto\MovimientoDespachoDto.cs" />
     <Compile Include="Dto\MovimientoNotaDto.cs" />
     <Compile Include="Dto\MovimientoRoggingDto.cs" />
     <Compile Include="Dto\PackingPorDiaDto.cs" />
+    <Compile Include="Dto\PuertoDto.cs" />
     <Compile Include="Dto\RegionDto.cs" />
+    <Compile Include="Dto\ReservaEspacioDto.cs" />
     <Compile Include="Dto\ResumenGraficoDto.cs" />
     <Compile Include="Dto\ResumenGraficoPackingDto.cs" />
     <Compile Include="Dto\SecadoDto.cs" />
@@ -115,6 +119,7 @@
     <Compile Include="Maestros\CentroCosto.cs" />
     <Compile Include="Maestros\CentroCostoExperimento.cs" />
     <Compile Include="Maestros\Cliente.cs" />
+    <Compile Include="Maestros\Conductor.cs" />
     <Compile Include="Maestros\Crop.cs" />
     <Compile Include="Maestros\DiscardReason.cs" />
     <Compile Include="Maestros\Email.cs" />
@@ -127,13 +132,17 @@
     <Compile Include="Maestros\InfoLoc.cs" />
     <Compile Include="Maestros\InfoShipping.cs" />
     <Compile Include="Maestros\Nota.cs" />
+    <Compile Include="Maestros\Pais.cs" />
     <Compile Include="Maestros\Pallet.cs" />
     <Compile Include="Maestros\Parametro.cs" />
     <Compile Include="Maestros\Project.cs" />
+    <Compile Include="Maestros\Puerto.cs" />
     <Compile Include="Maestros\Region.cs" />
     <Compile Include="Maestros\Shipment.cs" />
     <Compile Include="Maestros\TipoAgro.cs" />
     <Compile Include="Maestros\TipoContrato.cs" />
+    <Compile Include="Maestros\TipoEnvase.cs" />
+    <Compile Include="Maestros\Vehiculo.cs" />
     <Compile Include="Movimientos\MovimientoCaja.cs" />
     <Compile Include="Movimientos\MovimientoCosecha.cs" />
     <Compile Include="Movimientos\MovimientoDesgrane.cs" />
@@ -146,7 +155,9 @@
     <Compile Include="Packing\ProgramaExport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login\Usuario.cs" />
+    <Compile Include="Reserva\ReservaEspacio.cs" />
     <Compile Include="ResultadoCarga.cs" />
+    <Compile Include="Siembra\DatosGuia.cs" />
     <Compile Include="TransactionalInformation.cs" />
   </ItemGroup>
   <ItemGroup>

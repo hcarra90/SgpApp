@@ -29,6 +29,12 @@ namespace Layer.Business
             return repository.GetLocs();
         }
 
+        public static List<InfoLocDto> GetLocsByEmpresa(int idEmpresa)
+        {
+            var data = repository.GetLocsByEmpresa(idEmpresa);
+            return data;
+        }
+
         public static void Insert(InfoLoc obj)
         {
             repository.Insert(obj);

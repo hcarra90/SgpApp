@@ -1,11 +1,7 @@
 ﻿using Layer.DAO.Interface;
 using Layer.DAO.Repositories;
 using Layer.Entity;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Layer.Business
 {

@@ -106,21 +106,35 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Z.EntityFramework.Extensions, Version=3.17.8.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.EntityFramework.Extensions.3.17.8\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
+    <Reference Include="Z.EntityFramework.Extensions, Version=3.19.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Extensions.3.19.0\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IConductorRepository.cs" />
+    <Compile Include="Interface\IDatosGuiaRepository.cs" />
     <Compile Include="Interface\IMovimientoDespachoRepository.cs" />
     <Compile Include="Interface\IMovimientoFloracionRepository.cs" />
     <Compile Include="Interface\INotaRepository.cs" />
+    <Compile Include="Interface\IPaisRepository.cs" />
     <Compile Include="Interface\IPalletRepository.cs" />
     <Compile Include="Interface\IProgramaExportRepository.cs" />
+    <Compile Include="Interface\IPuertoRepository.cs" />
+    <Compile Include="Interface\IReservaEspacioRepository.cs" />
+    <Compile Include="Interface\ITipoEnvaseRepository.cs" />
+    <Compile Include="Interface\IVehiculoRepository.cs" />
+    <Compile Include="Repositories\DatosGuiaRepository.cs" />
+    <Compile Include="Repositories\ConductorRepository.cs" />
     <Compile Include="Repositories\MovimientoDespachoRepository.cs" />
     <Compile Include="Repositories\MovimientoFloracionRepository.cs" />
     <Compile Include="Repositories\NotaRepository.cs" />
+    <Compile Include="Repositories\PaisRepository.cs" />
     <Compile Include="Repositories\PalletRepository.cs" />
     <Compile Include="Repositories\ProgramaExportRepository.cs" />
+    <Compile Include="Repositories\PuertoRepository.cs" />
+    <Compile Include="Repositories\ReservaEspacioRepository.cs" />
+    <Compile Include="Repositories\TipoEnvaseRepository.cs" />
+    <Compile Include="Repositories\VehiculoRepository.cs" />
     <Compile Include="TypeExtensions.cs" />
     <Compile Include="Interface\ICentroCostoRepository.cs" />
     <Compile Include="Interface\IClienteRepository.cs" />

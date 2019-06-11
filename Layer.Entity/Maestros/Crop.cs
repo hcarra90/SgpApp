@@ -19,5 +19,14 @@ namespace Layer.Entity
         [Required]
         [Column("descripcion")]
         public string Descripcion { get; set; }
+
+        [Column("peso_conversion")]
+        public decimal? PesoConversion { get; set; }
+
+        [Column("tipo_conversion")]
+        public string TipoConversion { get; set; }
+
+        [Column("etapa_conversion")]
+        public string EtapaConversion { get; set; }
     }
 }

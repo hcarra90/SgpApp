@@ -76,7 +76,9 @@ namespace Layer.Win.Shipping
 
         private void BuscaInfoCaja(string box)
         {
-            if (ValidacionCajas(box))
+            var resultado = ValidacionCajas(box);
+
+            if (resultado == "")
             {
                 var weight = MovimientoShippingBusiness.GetBoxWeight(box);
                 if (weight == 0)
@@ -93,15 +95,23 @@ namespace Layer.Win.Shipping
             }
             else
             {
-                MessageBox.Show("Distintos Ship To, no pueden ir en un mismo Pallet", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show(resultado, "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                txtBox.Text = "";
                 txtBox.Focus();
             }
             
         }
 
-        private bool ValidacionCajas(string box)
+        private string ValidacionCajas(string box)
         {
-            bool resultado = true;
+            string resultado = "";
+            var existeCaja= BoxsShipment.Where(p => p.cajaEnvio == box.ToUpper()).ToList();
+            if (existeCaja.Count > 0)
+            {
+                resultado = "Caja Ya Existe, Si Desea Cargarla Nuevamente, Primero Debe Eliminarla Y Luego Volver A Cargarla";
+                return resultado;
+            }
+
             if (cboPallet.Text != "")
             {
                 var pallets = BoxsShipment.Where(p => p.palletEnvio == cboPallet.Text).ToList();
@@ -109,19 +119,21 @@ namespace Layer.Win.Shipping
                 {
                     if (item.shipTo != box.Substring(0, 2).ToUpper())
                     {
-                        resultado = false;
+                        resultado = "Distintos Ship To, no pueden ir en un mismo Pallet";
+                        return resultado;
                     }
                 }
             }
 
             if (cboBulto.Text != "")
             {
-                var bultos = BoxsShipment.Where(p => p.palletEnvio == cboBulto.Text).ToList();
+                var bultos = BoxsShipment.Where(p => p.bultoEnvio == cboBulto.Text).ToList();
                 foreach (var item in bultos)
                 {
-                    if (item.shipTo != box.Substring(0, 2))
+                    if (item.shipTo != box.Substring(0, 2).ToUpper())
                     {
-                        resultado = false;
+                        resultado = "Distintos Ship To, No Pueden Ir En Un Mismo Bulto";
+                        return resultado;
                     }
                 }
             }
@@ -131,7 +143,9 @@ namespace Layer.Win.Shipping
 
         private void GrabaInformacion()
         {
-            if (ValidacionCajas(txtBox.Text))
+            var resultado = ValidacionCajas(txtBox.Text);
+
+            if ( resultado =="")
             {
                 if (txtBox.Text.ToUpper() != "" && txtBruto.Text != "" && txtNeto.Text != "" & correlativoEnvio > 0 && shipmentCode != "" && shipmentSeleccionado != null)
                 {
@@ -147,21 +161,14 @@ namespace Layer.Win.Shipping
                         TransactionalInformation transaccion = new TransactionalInformation();
                         MovCaja.pesoNeto = decimal.Parse(txtNeto.Text);
                         MovCaja.pesoBruto = decimal.Parse(txtBruto.Text);
-                        MovCaja.fechaEnvio = shipmentSeleccionado.FechaEnvio;
+                        MovCaja.fechaEnvio = shipmentSeleccionado.FechaEnvio; 
                         MovCaja.shipmentCode = shipmentCode;
                         MovCaja.correlativoEnvio = correlativoEnvio;
-
-                        if (cboBulto.Text != "")
-                        {
-                            MovCaja.bulto = cboBulto.Text;
-                            MovCaja.pesoBulto = decimal.Parse(txtPesoBulto.Text);
-                        }
-
-                        if (cboPallet.Text != "")
-                        {
-                            MovCaja.pallet = cboPallet.Text;
-                            MovCaja.pesoPallet = decimal.Parse(txtPesoPallet.Text);
-                        }
+                        MovCaja.bulto = cboBulto.Text;
+                        MovCaja.pesoBulto = (txtPesoBulto.Text == "")?null: (decimal?)decimal.Parse(txtPesoBulto.Text);
+                        MovCaja.pallet = cboPallet.Text;
+                        MovCaja.pesoPallet = (txtPesoPallet.Text=="")?null:(decimal?)decimal.Parse(txtPesoPallet.Text);
+                        
 
                         MovimientoCajaBusiness.GrabaInformacion(MovCaja, out transaccion);
 
@@ -174,7 +181,7 @@ namespace Layer.Win.Shipping
                             lblTotalKilosBruto.Text = totalBrutoEnvio.ToString("N", culture);
 
                             GetEnviosByShipment(shipmentCode);
-                            LimpiarFormulario();
+                            LimpiarFormulario(true);
                             //MessageBox.Show("Envio Creado!", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         }
                     }
@@ -186,7 +193,9 @@ namespace Layer.Win.Shipping
             }
             else
             {
-                MessageBox.Show("Distintos Ship To, no pueden ir en un mismo Pallet", "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show(resultado, "Módulo Envio Caja", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                txtBox.Text = "";
+                txtBox.Focus();
             }
         }
 
@@ -199,18 +208,18 @@ namespace Layer.Win.Shipping
             }
         }
 
-        private void LimpiarFormulario()
+        public void LimpiarFormulario(bool foco=false)
         {
-            //lblShipmentCode.Text = "";
             txtBox.Text = "";
             txtBruto.Text = "";
             txtNeto.Text = "";
-            //txtPesoBulto.Text = "";
             txtPallet.Text = "";
-            //txtPesoPallet.Text = "";
-            txtBox.Focus();
-            //shipmentSeleccionado = null;
             estadoShipment = "";
+            if (foco)
+            {
+                txtBox.Focus();
+            }
+            
         }
 
         private void FrmEnvioCaja_Load(object sender, EventArgs e)
@@ -495,6 +504,18 @@ namespace Layer.Win.Shipping
             else
             {
                 txtPesoBulto.Text = "";
+            }
+        }
+
+        private void TxtBox_Leave(object sender, EventArgs e)
+        {
+            if (txtBox.Text !="")
+            {
+                BuscaInfoCaja(txtBox.Text.Trim());
+            }
+            else
+            {
+                LimpiarFormulario();
             }
         }
     }

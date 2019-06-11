@@ -55,11 +55,12 @@ namespace Layer.Win.Siembra
             LlenaOwner();
             LlenaComboEstado();
             LlenaComboCrop();
+            LlenaComboSag();
             cboTipo.Focus();
 
             lblInicio.Text = EntryListBusiness.GetMaxEuid();
 
-            ValidaTemplate();
+            //ValidaTemplate();
         }
 
         private void ValidaTemplate()
@@ -115,6 +116,15 @@ namespace Layer.Win.Siembra
             cboCrop.DisplayMember = "Descripcion";
             cboCrop.DataSource = data;
         }
+
+        private void LlenaComboSag()
+        {
+            var data = DataFunctions.GetTipoSag();
+            cboSag.ValueMember = "Valor";
+            cboSag.DisplayMember = "Nombre";
+            cboSag.DataSource = data;
+        }
+
         #endregion
 
         private void LlenaOwner()
@@ -123,7 +133,7 @@ namespace Layer.Win.Siembra
             lblOwner.Text = data[0].Valor;
         }
 
-        private void cboTipo_SelectedValueChanged(object sender, EventArgs e)
+        private void CboTipo_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cboTipo.SelectedItem !=null)
             {
@@ -137,10 +147,21 @@ namespace Layer.Win.Siembra
                 {
                     HabiltaControles(false);
                 }
-
+                txtcc.Focus();
             }
         }
-
+        private void BtnNuevaLoc_Click(object sender, EventArgs e)
+        {
+            FrmNuevaLocation frm = new FrmNuevaLocation();
+            frm.TipoAgro = (TipoAgro)cboTipo.SelectedItem;
+            frm.ShowDialog();
+        }
+        private void BtnProcesar_Click_1(object sender, EventArgs e)
+        {
+            FrmUploadEntryList frm = new FrmUploadEntryList();
+            //frm.usuarioValido = this.usuarioValido;
+            frm.ShowDialog();
+        }
         #region Configura Controles
         private void ConfiguraCampos(string tipo)
         {
@@ -173,7 +194,7 @@ namespace Layer.Win.Siembra
             this.txtcc.Enabled = estado;
 
             //Grupo Medidas
-            this.grpMedidas.Enabled = estado;
+            //this.grpMedidas.Enabled = estado;
             this.txtDistEntreHileras.Enabled = estado;
             this.txtDistSobreHilera.Enabled = estado;
             this.txtLargoHilera.Enabled = estado;
@@ -197,7 +218,7 @@ namespace Layer.Win.Siembra
             this.txtProjectCode.Enabled = estado;
             this.txtGmoEvent.Enabled = estado;
             this.txtResolucionImportacion.Enabled = estado;
-            this.txtSag.Enabled = estado;
+            this.cboSag.Enabled = estado;
             this.chkGmo.Enabled = estado;
             this.txtCodInternacion.Enabled = estado;
             this.txtCodRecepcion.Enabled = estado;
@@ -220,7 +241,7 @@ namespace Layer.Win.Siembra
             grpEuid.Enabled = true;
             txtNumEuid.Enabled = true;
 
-            grpMedidas.Enabled = true;
+            //grpMedidas.Enabled = true;
             txtDistEntreHileras.Enabled = true;
             txtDistSobreHilera.Enabled = true;
             txtTotalPlantas.Enabled = true;
@@ -250,7 +271,7 @@ namespace Layer.Win.Siembra
             btnProcesar.Enabled = false;
         }
 
-        private void cboLocation_SelectedValueChanged(object sender, EventArgs e)
+        private void CboLocation_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cboLocation.SelectedItem != null)
             {
@@ -258,15 +279,19 @@ namespace Layer.Win.Siembra
                 if (locationSelected.Id > 0)
                 {
                     LlenaValoresLocalidad(locationSelected);
+                    txtVariedad.Focus();
                     btnExportar.Enabled = true;
                 }
             }
         }
         private void LlenaValoresLocalidad(InfoLocDto obj)
         {
-            txtDistEntreHileras.Text = obj.DistEntreHileraM.ToString();
+            txtDistEntreHileras.Text = ((decimal)obj.DistEntreHileraM).ToString("0.00");
             chkGmo.Checked = (bool)obj.Gmo;
             cboCrop.SelectedValue = obj.id_crop;
+            txtDistEntreHileras.Enabled = false;
+            chkGmo.Enabled = false;
+            cboCrop.Enabled = false;
             txtDistEntreHileras.Focus();
         }
         private void btnProcesar_Click(object sender, EventArgs e)
@@ -314,7 +339,7 @@ namespace Layer.Win.Siembra
             {
                 mensaje.Append("- Ingrese Evento" + Environment.NewLine);
             }
-            if (txtSag.Text == "")
+            if (cboSag.Text == "")
             {
                 mensaje.Append("- Ingrese Sag" + Environment.NewLine);
             }
@@ -464,7 +489,7 @@ namespace Layer.Win.Siembra
             centroCosto.ProjectLead = txtProjectLead.Text;
             centroCosto.ProjectCode = txtProjectCode.Text.ToUpper();
             centroCosto.Event = txtGmoEvent.Text.ToUpper();
-            centroCosto.Sag = txtSag.Text.ToUpper();
+            centroCosto.Sag = cboSag.Text;
             centroCosto.CodInternacion = txtCodInternacion.Text.ToUpper();
             centroCosto.CodReception = txtCodRecepcion.Text.ToUpper();
             centroCosto.Cliente = txtCliente.Text.ToUpper();
@@ -536,18 +561,23 @@ namespace Layer.Win.Siembra
             }
         }
 
-        private void btnNuevaLoc_Click(object sender, EventArgs e)
+        private void CalculaTotalPlantasHa(object sender, EventArgs e)
         {
-            FrmNuevaLocation frm = new FrmNuevaLocation();
-            frm.TipoAgro = (TipoAgro)cboTipo.SelectedItem;
-            frm.ShowDialog();
+            decimal entre = 0;
+            decimal sobre = 0;
+            decimal total = 0;
+            if (txtDistEntreHileras.Text.IsNumeric() && txtDistSobreHilera.Text.IsNumeric())
+            {
+                entre = decimal.Parse(txtDistEntreHileras.Text);
+                sobre = decimal.Parse(txtDistSobreHilera.Text);
+                total = Math.Round((100 / entre) * (100 / sobre));
+                txtTotalPlantas.Text = total.ToString();
+            }
         }
 
-        private void btnProcesar_Click_1(object sender, EventArgs e)
+        private void CalculaTotalPlantasHa(object sender, KeyPressEventArgs e)
         {
-            FrmUploadEntryList frm = new FrmUploadEntryList();
-            //frm.usuarioValido = this.usuarioValido;
-            frm.ShowDialog();
+
         }
     }
 }

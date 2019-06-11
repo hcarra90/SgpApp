@@ -1,5 +1,6 @@
 ﻿using Layer.DAO.Interface;
 using Layer.Entity;
+using Layer.Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.SqlServer;
@@ -16,6 +17,7 @@ namespace Layer.DAO.Repositories
         private static UnitOfWork unitOfWork = new UnitOfWork();
         private static Repository<EntryList> repository;
         private static Repository<InfoLoc> repositoryL;
+        private static Repository<Crop> repositoryC;
         #endregion
 
         #region Constructores
@@ -100,6 +102,81 @@ namespace Layer.DAO.Repositories
                                     select ue).ToList();
             }
             return euidsEncontrados;
+        }
+
+        public List<CropDto> GetTipoConversion(int idEmpresa,string location)
+        {
+            List<CropDto> data = new List<CropDto>();
+            repository = unitOfWork.Repository<EntryList>();
+            repositoryC = unitOfWork.Repository<Crop>();
+
+            data = (from e in repository.Table
+                    join c in repositoryC.Table on new { Des = e.Crop } equals new { Des = c.Descripcion }
+                    where
+                      e.Location == location
+                    group new { e, c } by new
+                    {
+                        e.Crop,
+                        c.TipoConversion,
+                        c.EtapaConversion,
+                        c.PesoConversion
+                    } into g
+                    select new CropDto
+                    {
+                        Descripcion = g.Key.Crop,
+                        TipoConversion = g.Key.TipoConversion,
+                        EtapaConversion = g.Key.EtapaConversion,
+                        PesoConversion = g.Key.PesoConversion
+                    }).ToList();
+            data.Insert(0, new CropDto { });
+            return data;
+        }
+
+        public List<DataGuiaDespachoDto> GetDataGuiaDespacho(string location)
+        {
+            List<DataGuiaDespachoDto> data = new List<DataGuiaDespachoDto>();
+            repository = unitOfWork.Repository<EntryList>();
+
+            data = (from e in repository.Table
+                    where
+                      e.Location == location
+                    group e by new
+                    {
+                        e.GmoEvent,
+                        e.Location,
+                        e.Crop,
+                        e.Sag,
+                        e.ExpName,
+                        e.Cc,
+                        e.CodInternacion,
+                        e.GranosHilera
+                    } into g
+                    select new DataGuiaDespachoDto
+                    {
+                        Location = g.Key.Location,
+                        Event = g.Key.GmoEvent,
+                        Experiment = g.Key.ExpName,
+                        CentroCosto =  g.Key.Cc,
+                        CodInternacion = g.Key.CodInternacion,
+                        NumeroEuid = g.Count(p => p.Euid != null),
+                        GranosHilera = g.Key.GranosHilera,
+                        Peso = g.Count(p => p.Euid != null),
+                        Crop = g.Key.Crop,
+                        Sag = g.Key.Sag
+                    }).ToList()
+                    .Select(c=> new DataGuiaDespachoDto {
+                        Location = c.Location,
+                        Event = c.Event,
+                        Experiment = c.Experiment,
+                        CentroCosto =c.CentroCosto,
+                        CodInternacion = c.CodInternacion,
+                        NumeroEuid = c.NumeroEuid,
+                        Peso = (c.NumeroEuid * int.Parse(c.GranosHilera))/1000,
+                        Crop = c.Crop,
+                        Sag = c.Sag
+                    }).ToList();
+
+            return data;
         }
 
         public bool ValidateEuids(List<EntryList> data)

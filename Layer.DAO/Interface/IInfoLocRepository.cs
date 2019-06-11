@@ -11,6 +11,7 @@ namespace Layer.DAO.Interface
     {
         #region Declaración
         List<InfoLocDto> GetLocs();
+        List<InfoLocDto> GetLocsByEmpresa(int idEmpresa);
         InfoLoc GetLocById(int id);
         List<InfoLoc> GetLocByCuartel(string cuartel);
         void Update(InfoLoc obj);
