@@ -34,6 +34,17 @@ namespace Layer.Functions
             return rows;
         }
 
+        public static List<InfoFieldBook> GetInfoFieldBookFile(string pathToExcelFile)
+        {
+            ConnexionExcel ConxObject = new ConnexionExcel(pathToExcelFile);
+
+            //Query a worksheet with a header row  
+            var rows = (from a in ConxObject.UrlConnexion.Worksheet<InfoFieldBook>(0)
+                        select a).ToList();
+
+            return rows;
+        }
+
         public static List<SplitEuidDto> GetSplitFile(string pathToExcelFile)
         {
             ConnexionExcel ConxObject = new ConnexionExcel(pathToExcelFile);
@@ -739,6 +750,7 @@ namespace Layer.Functions
                 return false;
             }
         }
+        
         #endregion
 
         public static ResultadoCarga SaveExcelData(List<InfoFieldBook> data)
@@ -813,5 +825,153 @@ namespace Layer.Functions
 
             return status;
         }
+
+        #region -----Exporta Datos De Los Mantenedores-----
+        public static XLWorkbook ExportaEntryList(List<EntryList> items)
+        {
+            int index = 2;
+            XLWorkbook book = new XLWorkbook(@"C:\Templates\Entry_List.xlsx");
+            var hoja = book.Worksheet("Entry-List");
+
+            foreach (var item in items)
+            {
+                hoja.Cell("A" + index).Value = item.Euid;
+                hoja.Cell("B" + index).Value = item.Year;
+                hoja.Cell("C" + index).Value = item.Country;
+                hoja.Cell("D" + index).Value = item.Location;
+                hoja.Cell("E" + index).Value = item.Rng;
+                hoja.Cell("F" + index).Value = item.Plt;
+                hoja.Cell("G" + index).Value = item.Ent;
+                hoja.Cell("H" + index).Value = item.ExpName;
+                hoja.Cell("I" + index).Value = item.ProjectLead;
+                hoja.Cell("J" + index).Value = item.Cc;
+                hoja.Cell("K" + index).Value = item.Crop;
+                hoja.Cell("L" + index).Value = item.Obs;
+                hoja.Cell("M" + index).Value = item.ProjectCode;
+                hoja.Cell("N" + index).Value = item.GmoEvent;
+                hoja.Cell("O" + index).Value = item.Sag;
+                hoja.Cell("P" + index).Value = item.CodInternacion;
+                hoja.Cell("Q" + index).Value = item.CodReception;
+                hoja.Cell("R" + index).Value = item.Client;
+                hoja.Cell("S" + index).Value = item.EntName;
+                hoja.Cell("T" + index).Value = item.EntRole;
+                hoja.Cell("U" + index).Value = item.ResImportacion;
+                hoja.Cell("V" + index).Value = item.GranosHilera;
+                hoja.Cell("W" + index).Value = item.Bi1;
+                hoja.Cell("X" + index).Value = item.Bi2;
+                hoja.Cell("Y" + index).Value = item.Bi3;
+                hoja.Cell("Z" + index).Value = item.Bi4;
+                hoja.Cell("AA" + index).Value = item.Owner;
+                hoja.Cell("AB" + index).Value = item.CodPermanencia;
+                hoja.Cell("AC" + index).Value = item.LotId;
+
+                index++;
+            }
+
+            return book;
+        }
+
+        public static XLWorkbook ExportaInfoFieldBook(List<InfoFieldBook> data, List<string> titulos)
+        {
+            int index = 1;
+            var wb = new XLWorkbook(); //create workbook
+            var hoja = wb.Worksheets.Add("InfoFieldBook"); //add worksheet to workbook
+
+            var range = hoja.Range(1, 1, 1, titulos.Count);
+            range.Style.Fill.BackgroundColor = XLColor.Silver;
+            range.Style.Font.FontName = "Calibri";
+            range.Style.Font.Bold = true;
+            range.Style.Font.FontSize = 9;
+            range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+            range.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+            range.Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
+            foreach (var item in titulos)
+            {
+                hoja.Cell(1, index).Value = item;
+                index++;
+            }
+
+            range = hoja.Range(2, 1, data.Count + 1, titulos.Count);
+            range.Style.Font.FontName = "Calibri";
+            range.Style.Font.Bold = true;
+            range.Style.Font.FontSize = 9;
+
+            index = 2;
+            foreach (var item in data)
+            {
+                hoja.Cell("A" + index).Value = item.euid;
+                hoja.Cell("B" + index).Value = item.indEuid;
+                hoja.Cell("C" + index).Value = item.order;
+                hoja.Cell("D" + index).Value = item.breedersCode1;
+                hoja.Cell("E" + index).Value = item.breedersCode2;
+                hoja.Cell("F" + index).Value = item.breedersCode3;
+                hoja.Cell("G" + index).Value = item.breedersCode4;
+                hoja.Cell("H" + index).Value = item.shelling;
+                hoja.Cell("I" + index).Value = item.instructions;
+                hoja.Cell("J" + index).Value = item.targears;
+                hoja.Cell("K" + index).Value = item.targetKern;
+                hoja.Cell("L" + index).Value = item.targetWg;
+                hoja.Cell("M" + index).Value = item.shipTo;
+                index++;
+            }
+
+            hoja.Columns().AdjustToContents();
+
+            return wb;
+        }
+
+        #endregion
+
+        #region -----Reporte Rows Tags-----
+        public static XLWorkbook ExportaRowsTags(List<string> titulos,List<EntryList> data)
+        {
+            int index = 1;
+            var wb = new XLWorkbook(); //create workbook
+            var hoja=wb.Worksheets.Add("Rows Tags"); //add worksheet to workbook
+
+            var range= hoja.Range(1, 1, 1, titulos.Count);
+            range.Style.Fill.BackgroundColor = XLColor.Silver;
+            range.Style.Font.FontName = "Calibri";
+            range.Style.Font.Bold = true;
+            range.Style.Font.FontSize = 9;
+            range.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+            range.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+            range.Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
+            //hoja.Cell("C" + index).Value = item.Euid.Replace(".", "");
+            //hoja.Cell("C" + index).Style.NumberFormat.Format = "#,##0";
+            //hoja.Cell("D" + index).Value = item.IndEuid.Replace(".", "");
+            //hoja.Cell("D" + index).Style.NumberFormat.Format = "#,##0";
+
+            foreach (var item in titulos)
+            {
+                hoja.Cell(1,index).Value = item;
+                index++;
+            }
+
+            range = hoja.Range(2, 1, data.Count+1, titulos.Count);
+            range.Style.Font.FontName = "Calibri";
+            range.Style.Font.Bold = true;
+            range.Style.Font.FontSize = 9;
+
+            index = 2;
+            foreach (var item in data)
+            {
+                hoja.Cell("A" + index).Value = item.Euid;
+                hoja.Cell("B" + index).Value = item.Rng;
+                hoja.Cell("C" + index).Value = item.Plt;
+                hoja.Cell("D" + index).Value = item.Ent;
+                hoja.Cell("E" + index).Value = item.EntName;
+                hoja.Cell("F" + index).Value = item.Location;
+                hoja.Cell("G" + index).Value = item.ExpName;
+                index++;
+            }
+
+            hoja.Columns().AdjustToContents();
+
+            return wb;
+        }
+        #endregion
     }
 }

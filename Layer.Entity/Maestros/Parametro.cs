@@ -22,6 +22,10 @@ namespace Layer.Entity
         public virtual Empresa Empresa { get; set; }
 
         [Required]
+        [Column("nombre_parametro")]
+        public string Nombre { get; set; }
+
+        [Required]
         [Column("valor_parametro")]
         public string Valor { get; set; }
 

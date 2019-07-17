@@ -164,5 +164,8 @@ namespace Layer.Entity
         [Column("fecha_modificacion")]
         public DateTime? fechaModificacion { get; set; }
 
+        [Column("usuario_modificacion")]
+        public string UsuarioModificacion { get; set; }
+
     }
 }

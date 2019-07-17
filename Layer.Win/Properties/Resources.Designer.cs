@@ -83,9 +83,29 @@ namespace Layer.Win.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ajustes_64 {
+            get {
+                object obj = ResourceManager.GetObject("ajustes_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap almacen_32 {
             get {
                 object obj = ResourceManager.GetObject("almacen_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap almacen_321 {
+            get {
+                object obj = ResourceManager.GetObject("almacen_321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,16 @@ namespace Layer.Win.Properties {
         internal static System.Drawing.Bitmap carpeta_32 {
             get {
                 object obj = ResourceManager.GetObject("carpeta_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carta_64 {
+            get {
+                object obj = ResourceManager.GetObject("carta_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +406,16 @@ namespace Layer.Win.Properties {
         internal static System.Drawing.Bitmap entrar_massai {
             get {
                 object obj = ResourceManager.GetObject("entrar-massai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap entrylist_32 {
+            get {
+                object obj = ResourceManager.GetObject("entrylist_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -623,9 +663,29 @@ namespace Layer.Win.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap infofield_32 {
+            get {
+                object obj = ResourceManager.GetObject("infofield_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap invernadero {
             get {
                 object obj = ResourceManager.GetObject("invernadero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap label_64 {
+            get {
+                object obj = ResourceManager.GetObject("label_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

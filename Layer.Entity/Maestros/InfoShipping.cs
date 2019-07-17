@@ -18,6 +18,11 @@ namespace Layer.Entity
         public int Id { get; set; }
 
         [Required]
+        public int id_empresa { get; set; }
+        [ForeignKey("id_empresa")]
+        public virtual Empresa Empresa { get; set; }
+
+        [Required]
         [Column("ship_to")]
         public string shipTo { get; set; }
 

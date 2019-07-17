@@ -78,6 +78,7 @@
     <Compile Include="Dto\EficienciaPorDiaDto.cs" />
     <Compile Include="Dto\EmpresaDto.cs" />
     <Compile Include="Dto\EntryListDto.cs" />
+    <Compile Include="Dto\EnvaseSecuenciaDto.cs" />
     <Compile Include="Dto\EstadoDto.cs" />
     <Compile Include="Dto\ExpNameDto.cs" />
     <Compile Include="Dto\FarmDto.cs" />

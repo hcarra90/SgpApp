@@ -73,9 +73,10 @@
             this.lblTotalKilosNeto = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataBox)).BeginInit();
             this.ctxCajaMenu.SuspendLayout();
             this.pnlEmail.SuspendLayout();
@@ -340,6 +341,7 @@
             // pnlEmail
             // 
             this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(145)))), ((int)(((byte)(45)))));
+            this.pnlEmail.Controls.Add(this.btnCrear);
             this.pnlEmail.Controls.Add(this.cboBulto);
             this.pnlEmail.Controls.Add(this.cboPallet);
             this.pnlEmail.Controls.Add(this.label10);
@@ -350,7 +352,7 @@
             this.pnlEmail.Controls.Add(this.label9);
             this.pnlEmail.Location = new System.Drawing.Point(4, 75);
             this.pnlEmail.Name = "pnlEmail";
-            this.pnlEmail.Size = new System.Drawing.Size(237, 56);
+            this.pnlEmail.Size = new System.Drawing.Size(334, 56);
             this.pnlEmail.TabIndex = 63;
             // 
             // cboBulto
@@ -359,7 +361,7 @@
             this.cboBulto.FormattingEnabled = true;
             this.cboBulto.Location = new System.Drawing.Point(56, 30);
             this.cboBulto.Name = "cboBulto";
-            this.cboBulto.Size = new System.Drawing.Size(97, 22);
+            this.cboBulto.Size = new System.Drawing.Size(123, 22);
             this.cboBulto.TabIndex = 2;
             this.cboBulto.SelectedValueChanged += new System.EventHandler(this.CboBulto_SelectedValueChanged);
             // 
@@ -369,7 +371,7 @@
             this.cboPallet.FormattingEnabled = true;
             this.cboPallet.Location = new System.Drawing.Point(56, 4);
             this.cboPallet.Name = "cboPallet";
-            this.cboPallet.Size = new System.Drawing.Size(97, 22);
+            this.cboPallet.Size = new System.Drawing.Size(123, 22);
             this.cboPallet.TabIndex = 1;
             this.cboPallet.SelectedValueChanged += new System.EventHandler(this.CboPallet_SelectedValueChanged);
             // 
@@ -388,7 +390,7 @@
             // 
             this.txtPesoBulto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesoBulto.Enabled = false;
-            this.txtPesoBulto.Location = new System.Drawing.Point(195, 31);
+            this.txtPesoBulto.Location = new System.Drawing.Point(288, 31);
             this.txtPesoBulto.Name = "txtPesoBulto";
             this.txtPesoBulto.Size = new System.Drawing.Size(39, 22);
             this.txtPesoBulto.TabIndex = 4;
@@ -399,7 +401,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(159, 33);
+            this.label11.Location = new System.Drawing.Point(252, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 14);
             this.label11.TabIndex = 62;
@@ -409,7 +411,7 @@
             // 
             this.txtPesoPallet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesoPallet.Enabled = false;
-            this.txtPesoPallet.Location = new System.Drawing.Point(195, 4);
+            this.txtPesoPallet.Location = new System.Drawing.Point(288, 4);
             this.txtPesoPallet.Name = "txtPesoPallet";
             this.txtPesoPallet.Size = new System.Drawing.Size(39, 22);
             this.txtPesoPallet.TabIndex = 2;
@@ -431,7 +433,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(159, 7);
+            this.label9.Location = new System.Drawing.Point(252, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 14);
             this.label9.TabIndex = 58;
@@ -450,7 +452,7 @@
             // 
             this.lblTotalKilosBruto.AutoSize = true;
             this.lblTotalKilosBruto.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalKilosBruto.Location = new System.Drawing.Point(369, 109);
+            this.lblTotalKilosBruto.Location = new System.Drawing.Point(460, 109);
             this.lblTotalKilosBruto.Name = "lblTotalKilosBruto";
             this.lblTotalKilosBruto.Size = new System.Drawing.Size(10, 14);
             this.lblTotalKilosBruto.TabIndex = 62;
@@ -460,7 +462,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(253, 109);
+            this.label8.Location = new System.Drawing.Point(344, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 14);
             this.label8.TabIndex = 61;
@@ -470,7 +472,7 @@
             // 
             this.lblTotalKilosNeto.AutoSize = true;
             this.lblTotalKilosNeto.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalKilosNeto.Location = new System.Drawing.Point(369, 86);
+            this.lblTotalKilosNeto.Location = new System.Drawing.Point(460, 86);
             this.lblTotalKilosNeto.Name = "lblTotalKilosNeto";
             this.lblTotalKilosNeto.Size = new System.Drawing.Size(10, 14);
             this.lblTotalKilosNeto.TabIndex = 60;
@@ -480,7 +482,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(253, 86);
+            this.label7.Location = new System.Drawing.Point(344, 86);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 14);
             this.label7.TabIndex = 59;
@@ -499,6 +501,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(411, 56);
             this.panel1.TabIndex = 64;
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.FlatAppearance.BorderSize = 0;
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrabar.Image = global::Layer.Win.Properties.Resources.caja_64;
+            this.btnGrabar.Location = new System.Drawing.Point(420, 130);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(81, 63);
+            this.btnGrabar.TabIndex = 5;
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // pictureBox2
             // 
@@ -522,17 +536,16 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnGrabar
+            // btnCrear
             // 
-            this.btnGrabar.FlatAppearance.BorderSize = 0;
-            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabar.Image = global::Layer.Win.Properties.Resources.caja_64;
-            this.btnGrabar.Location = new System.Drawing.Point(420, 130);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(81, 63);
-            this.btnGrabar.TabIndex = 5;
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            this.btnCrear.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Location = new System.Drawing.Point(185, 13);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(61, 32);
+            this.btnCrear.TabIndex = 64;
+            this.btnCrear.Text = "Nuevos";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // FrmEnvioCaja
             // 
@@ -618,5 +631,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bulto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PesoBulto;
         private System.Windows.Forms.ComboBox cboBulto;
+        private System.Windows.Forms.Button btnCrear;
     }
 }

@@ -79,6 +79,11 @@ namespace Layer.DAO.Repositories
                                     where ue.year == anio
                                     select ue).ToList();
             }
+            else if (opcion == "Todo" && cadena =="")
+            {
+                euidsEncontrados = (from ue in db.InfoFieldBook
+                                    select ue).ToList();
+            }
             return euidsEncontrados;
         }
 

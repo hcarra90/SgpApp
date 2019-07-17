@@ -105,16 +105,19 @@
             this.grpEstado = new System.Windows.Forms.GroupBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpLocation = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnEntryList = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grpExperimento.SuspendLayout();
             this.grpInstrucciones.SuspendLayout();
             this.grpUbicacion.SuspendLayout();
             this.grpEuid.SuspendLayout();
             this.grpEstado.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpLocation.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -865,20 +868,20 @@
             this.label30.TabIndex = 1;
             this.label30.Text = "Estado";
             // 
-            // groupBox2
+            // grpLocation
             // 
-            this.groupBox2.Controls.Add(this.btnNuevaLoc);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cboLocation);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.cboCrop);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.chkGmo);
-            this.groupBox2.Location = new System.Drawing.Point(5, 46);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 71);
-            this.groupBox2.TabIndex = 34;
-            this.groupBox2.TabStop = false;
+            this.grpLocation.Controls.Add(this.btnNuevaLoc);
+            this.grpLocation.Controls.Add(this.label2);
+            this.grpLocation.Controls.Add(this.cboLocation);
+            this.grpLocation.Controls.Add(this.label31);
+            this.grpLocation.Controls.Add(this.cboCrop);
+            this.grpLocation.Controls.Add(this.label12);
+            this.grpLocation.Controls.Add(this.chkGmo);
+            this.grpLocation.Location = new System.Drawing.Point(5, 46);
+            this.grpLocation.Name = "grpLocation";
+            this.grpLocation.Size = new System.Drawing.Size(249, 71);
+            this.grpLocation.TabIndex = 34;
+            this.grpLocation.TabStop = false;
             // 
             // groupBox3
             // 
@@ -904,18 +907,39 @@
             this.groupBox3.TabIndex = 35;
             this.groupBox3.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnEntryList);
+            this.groupBox2.Location = new System.Drawing.Point(607, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(437, 45);
+            this.groupBox2.TabIndex = 36;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnEntryList
+            // 
+            this.btnEntryList.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntryList.Location = new System.Drawing.Point(6, 14);
+            this.btnEntryList.Name = "btnEntryList";
+            this.btnEntryList.Size = new System.Drawing.Size(94, 23);
+            this.btnEntryList.TabIndex = 35;
+            this.btnEntryList.Text = "Tabla EntryList";
+            this.btnEntryList.UseVisualStyleBackColor = true;
+            this.btnEntryList.Click += new System.EventHandler(this.BtnEntryList_Click);
+            // 
             // FrmTemplateEntryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 446);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.grpInstrucciones);
             this.Controls.Add(this.grpExperimento);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpLocation);
             this.Controls.Add(this.grpUbicacion);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.label30);
@@ -941,10 +965,11 @@
             this.grpEuid.PerformLayout();
             this.grpEstado.ResumeLayout(false);
             this.grpEstado.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpLocation.ResumeLayout(false);
+            this.grpLocation.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,8 +1053,10 @@
         private System.Windows.Forms.TextBox txtTotalHilera;
         private System.Windows.Forms.Button btnProcesar;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpLocation;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cboSag;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnEntryList;
     }
 }

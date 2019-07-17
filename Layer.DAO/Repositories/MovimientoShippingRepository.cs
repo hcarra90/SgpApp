@@ -132,7 +132,7 @@ namespace Layer.DAO.Repositories
         {
             var data = (from mp in db.MovimientoPacking
                         join ms in db.MovimientoShipping on mp.euid equals ms.euid 
-                        where ms.euid == mp.euid && ms.indEuid==mp.indEuid && ms.cajaEnvio == box
+                        where ms.euid == mp.euid && (ms.indEuid==mp.indEuid || ms.indEuid == "" || mp.indEuid=="") && ms.cajaEnvio == box
                         select new ContenidoCajaDto
                         {
                             box = ms.cajaEnvio,

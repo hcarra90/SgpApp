@@ -15,6 +15,8 @@ namespace Layer.DAO.Repositories
     {
         #region Declaración
         readonly DataContext db;
+        private static UnitOfWork unitOfWork = new UnitOfWork();
+        private static Repository<InfoShipping> repository;
         #endregion
 
         #region Constructores
@@ -36,7 +38,6 @@ namespace Layer.DAO.Repositories
 
             return data;
         }
-        
         #endregion
     }
 }

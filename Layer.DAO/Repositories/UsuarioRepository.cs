@@ -15,6 +15,8 @@ namespace Layer.DAO.Repositories
     {
         #region Declaración
         readonly DataContext db;
+        private static UnitOfWork unitOfWork = new UnitOfWork();
+        private static Repository<Parametro> repositoryP;
         #endregion
 
         #region Constructores
@@ -33,7 +35,27 @@ namespace Layer.DAO.Repositories
         /// <returns>Usuario</returns>
         public Usuario GetUsuario(string usuario, string password)
         {
+            
             var usuarioEncontrado = db.Usuario.Include("Perfil").Where(u => u.nombre_usuario == usuario && u.password == password).FirstOrDefault();
+            string ambiente = db.Database.Connection.DataSource;
+
+            string local = GetParametroBd(usuarioEncontrado.id_empresa, "Desa", "CNF");
+            string qa = GetParametroBd(usuarioEncontrado.id_empresa, "Prod", "CNF");
+            string prod = GetParametroBd(usuarioEncontrado.id_empresa, "Qa", "CNF");
+            usuarioEncontrado.Servidor = ambiente;
+
+            if (ambiente == local)
+            {
+                usuarioEncontrado.Ambiente = "DESARROLLO";
+            }
+            else if (ambiente == qa)
+            {
+                usuarioEncontrado.Ambiente = "QA";
+            }
+            else if (ambiente == prod)
+            {
+                usuarioEncontrado.Ambiente = "PRODUCCIÓN";
+            }
 
             return usuarioEncontrado;
         }
@@ -60,6 +82,19 @@ namespace Layer.DAO.Repositories
         public void BloqueaUsuario(string usuario)
         {
             
+        }
+        #endregion
+
+        #region -----Datos Parametros-----
+        private string GetParametroBd(int idEmpresa,string nombre,string tipo)
+        {
+            repositoryP = unitOfWork.Repository<Parametro>();
+            var item = (from ta in repositoryP.Table
+                             where ta.id_empresa == idEmpresa
+                             && ta.Tipo == tipo && ta.Nombre == nombre
+                             select ta).FirstOrDefault();
+
+            return item.Valor;
         }
         #endregion
     }

@@ -8,8 +8,10 @@ namespace Layer.DAO.Interface
     {
         #region Declaración
         List<Pallet> GetPallet(int idEmpresa);
+        EnvaseSecuenciaDto GetSecuenciaPallet(int idEmpresa, int idTipo);
         void Update(Pallet obj);
         void Insert(Pallet obj);
+        void Borrar(int id, out TransactionalInformation transaction);
         #endregion
     }
 }

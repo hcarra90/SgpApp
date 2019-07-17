@@ -1,4 +1,5 @@
-﻿using Layer.Business;
+﻿using ClosedXML.Excel;
+using Layer.Business;
 using Layer.Entity;
 using Layer.Entity.Dto;
 using Layer.Functions;
@@ -363,7 +364,7 @@ namespace Layer.Win.Siembra
                 "Experiment", "Evento","Gmo","Sag", "Cc",
                 "Internación", "N°Euid","Kilos","Conductor","Rut","Patente","Creación","Usuario" };
             titulos.Add(t1);
-            var archivo = FuncionesExcel.ExportaGuiaDespacho(datosGuia,"Detalle Guía Despacho", titulos);
+            XLWorkbook archivo = FuncionesExcel.ExportaGuiaDespacho(datosGuia,"Detalle Guía Despacho", titulos);
             archivo.SaveAs(@"C:\Template\Test.xlsx");
         }
 

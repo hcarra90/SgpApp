@@ -26,6 +26,13 @@ namespace Layer.Entity
         public int Tipo { get; set; }
 
         [Required]
+        [Column("secuencia")]
+        public int Secuencia { get; set; }
+
+        [NotMapped]
+        public string NombreTipo { get; set; }
+
+        [Required]
         [Column("codigo_pallet")]
         public string Codigo { get; set; }
 
@@ -33,9 +40,11 @@ namespace Layer.Entity
         [Column("peso_pallet")]
         public decimal Peso { get; set; }
 
+        [Required]
         [Column("material")]
         public string Material { get; set; }
 
+        [Required]
         [Column("medidas")]
         public string Medidas { get; set; }
 
@@ -43,7 +52,6 @@ namespace Layer.Entity
         [Column("fecha_carga")]
         public DateTime FechaCarga { get; set; }
 
-        [Required]
         [Column("fecha_modificacion")]
         public DateTime? FechaModificacion { get; set; }
     }

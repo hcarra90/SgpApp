@@ -16,6 +16,7 @@ using Layer.Entity;
 using Layer.Entity.Dto;
 using Layer.Functions;
 using Layer.Win.Administrador;
+using Layer.Win.Mantenedores;
 using Microsoft.Win32.SafeHandles;
 
 namespace Layer.Win.Siembra
@@ -578,6 +579,15 @@ namespace Layer.Win.Siembra
         private void CalculaTotalPlantasHa(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void BtnEntryList_Click(object sender, EventArgs e)
+        {
+            FrmEntryList frm = new FrmEntryList
+            {
+                usuarioValido = usuarioValido
+            };
+            frm.ShowDialog();
         }
     }
 }

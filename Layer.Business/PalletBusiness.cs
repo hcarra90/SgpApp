@@ -1,6 +1,7 @@
 ﻿using Layer.DAO.Interface;
 using Layer.DAO.Repositories;
 using Layer.Entity;
+using Layer.Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,20 @@ namespace Layer.Business
         #endregion
 
         #region Métodos Publicos
-        public static List<Pallet> GetPallet(int idEmpresa)
+        public static List<Pallet> GetPallet(int idEmpresa,bool grilla)
         {
-            return repository.GetPallet(idEmpresa);
+            var pallets= repository.GetPallet(idEmpresa);
+            if (!grilla)
+            {
+                pallets.Insert(0, new Pallet { });
+            }
+            
+            return pallets;
+        }
+
+        public static EnvaseSecuenciaDto GetSecuenciaPallet(int idEmpresa, int idTipo)
+        {
+            return repository.GetSecuenciaPallet(idEmpresa, idTipo);
         }
 
         public static void Insert(Pallet obj)
@@ -29,6 +41,14 @@ namespace Layer.Business
         public static void Update(Pallet obj)
         {
             repository.Update(obj);
+        }
+        public static void Delete(Pallet obj)
+        {
+            repository.Delete(obj);
+        }
+        public static void Borrar(int id, out TransactionalInformation transaction)
+        {
+            repository.Borrar(id, out transaction);
         }
         #endregion
     }

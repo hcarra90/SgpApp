@@ -19,6 +19,7 @@ namespace Layer.Win.Siembra
     public partial class FrmUploadEntryList : Form
     {
         #region -------Declaración-------
+        public Usuario usuarioValido = new Usuario();
         string pathFile = "";
         List<EntryList> datos = new List<EntryList>();
         List<SplitEuidDto> SplitEuid = new List<SplitEuidDto>();

@@ -279,7 +279,7 @@ namespace Layer.Win.Shipping
 
         public void FillPallets()
         {
-            var data = PalletBusiness.GetPallet(usuarioValido.id_empresa);
+            var data = PalletBusiness.GetPallet(usuarioValido.id_empresa,false);
             var pallets = data.Where(p => p.Tipo == 1).ToList();
             pallets.Insert(0, new Pallet { Codigo = "" });
 
@@ -517,6 +517,15 @@ namespace Layer.Win.Shipping
             {
                 LimpiarFormulario();
             }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            FrmPallet frm = new FrmPallet
+            {
+                usuarioValido = usuarioValido
+            };
+            frm.ShowDialog();
         }
     }
 }

@@ -27,6 +27,16 @@ namespace Layer.Business
             return repository.GetEuid(cadena,opcion);
         }
 
+        public static List<EntryList> GetDataByYearLoc(int year, string location)
+        {
+            return repository.GetDataByYearLoc(year, location);
+        }
+
+        public static EntryList GetEuidById(int id)
+        {
+            return repository.GetEuidById(id);
+        }
+
         public static List<CropDto> GetTipoConversion(int idEmpresa, string location)
         {
             return repository.GetTipoConversion(idEmpresa, location);
@@ -66,6 +76,59 @@ namespace Layer.Business
         {
             repository.InsertBulk(entities);
         }
+
+        public static List<ListaComboDto> GetAnio()
+        {
+            return repository.GetAnio();
+        }
+
+        public static List<ListaComboDto> GetCountry()
+        {
+            return repository.GetCountry();
+        }
+
+        public static List<ListaComboDto> GetLocation()
+        {
+            return repository.GetLocation();
+        }
+
+        public static List<ListaComboDto> GetExperiment()
+        {
+            return repository.GetExperiment();
+        }
+
+        public static List<ListaComboDto> GetProjectLead()
+        {
+            return repository.GetProjectLead();
+        }
+
+        public static List<ListaComboDto> GetCrop()
+        {
+            return repository.GetCrop();
+        }
+
+        public static List<ListaComboDto> GetClient()
+        {
+            return repository.GetClient();
+        }
+
+        public static List<ListaComboDto> GetCc()
+        {
+            return repository.GetCc();
+        }
+
+        public static void GrabaDatos(EntryList obj)
+        {
+            if (obj.Id > 0)
+            {
+                repository.Update(obj);
+            }
+            else
+            {
+                repository.Insert(obj);
+            }
+        }
+
         #endregion
     }
 }

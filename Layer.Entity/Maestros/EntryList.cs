@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Layer.Entity
@@ -98,6 +99,15 @@ namespace Layer.Entity
 
         [Column("lot_id")]
         public string LotId { get; set; }
+
+        [Column("fecha_carga")]
+        public DateTime? FechaCarga { get; set; }
+
+        [Column("fecha_modificacion")]
+        public DateTime? FechaModificacion{ get; set; }
+
+        [Column("usuario_modificacion")]
+        public string UsuarioModificacion { get; set; }
 
     }
 }

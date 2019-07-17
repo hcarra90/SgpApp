@@ -84,5 +84,14 @@ namespace Layer.Functions
             lista.Add(new ListaComboDto { Valor = 3, Nombre = "SRD" });
             return lista;
         }
+
+        public static List<ListaComboDto> GetTipoEnvase()
+        {
+            List<ListaComboDto> lista = new List<ListaComboDto>();
+            lista.Add(new ListaComboDto { Valor = 0, Nombre = "" });
+            lista.Add(new ListaComboDto { Valor = 1, Nombre = "PALLET" });
+            lista.Add(new ListaComboDto { Valor = 2, Nombre = "JUMBO" });
+            return lista;
+        }
     }
 }

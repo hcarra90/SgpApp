@@ -65,7 +65,13 @@ namespace Layer.DAO.Repositories
 
             List<EntryList> euidsEncontrados = new List<EntryList>();
 
-            if (opcion == "Euid" || opcion == "")
+            if (cadena == "" || opcion == "")
+            {
+
+                euidsEncontrados = (from ue in repository.Table
+                                    select ue).ToList();
+
+            }else if (opcion == "Euid" || opcion == "")
             {
 
                 euidsEncontrados = (from ue in repository.Table
@@ -102,6 +108,27 @@ namespace Layer.DAO.Repositories
                                     select ue).ToList();
             }
             return euidsEncontrados;
+        }
+
+        public List<EntryList> GetDataByYearLoc(int year,string location)
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            List<EntryList> euidsEncontrados = new List<EntryList>();
+
+            euidsEncontrados = (from ue in repository.Table
+                                where ue.Year == year && ue.Location == location
+                                select ue).ToList();
+            return euidsEncontrados;
+        }
+
+        public EntryList GetEuidById(int id)
+        {
+            repository = unitOfWork.Repository<EntryList>();
+            var item = (from ue in repository.Table
+                                where ue.Id == id
+                                select ue).FirstOrDefault();
+            return item;
         }
 
         public List<CropDto> GetTipoConversion(int idEmpresa,string location)
@@ -219,11 +246,178 @@ namespace Layer.DAO.Repositories
             repository.Insert(obj);
         }
 
+        public void Update(EntryList obj)
+        {
+            repository = unitOfWork.Repository<EntryList>();
+            repository.Update(obj);
+        }
+
         public void InsertBulk(List<EntryList> entities)
         {
             repository = unitOfWork.Repository<EntryList>();
             repository.InsertBulk(entities);
+
+            
         }
 
+        public List<ListaComboDto> GetAnio()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.Year != null
+                           orderby pl.Year
+                           group pl by pl.Year into g
+                           select new ListaComboDto
+                           {
+                               Valor = g.Key.Value,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto {Nombre="" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetCountry()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+            
+            var allData = (from pl in repository.Table
+                           where pl.Country != null
+                           orderby pl.Country
+                           group pl by pl.Country into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetLocation()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.Location != null
+                           orderby pl.Location
+                           group pl by pl.Location into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetExperiment()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.ExpName != null
+                           orderby pl.ExpName
+                           group pl by pl.ExpName into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetProjectLead()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.ProjectLead != null
+                           orderby pl.ProjectLead
+                           group pl by pl.ProjectLead into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetCrop()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.Crop != null
+                           orderby pl.Crop
+                           group pl by pl.Crop into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetClient()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.Client != null
+                           orderby pl.Client
+                           group pl by pl.Client into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
+
+        public List<ListaComboDto> GetCc()
+        {
+            repository = unitOfWork.Repository<EntryList>();
+
+            var allData = (from pl in repository.Table
+                           where pl.Cc != null
+                           orderby pl.Cc
+                           group pl by pl.Cc into g
+                           select new ListaComboDto
+                           {
+                               Valor = 0,
+                               Nombre = g.Key.ToString() ?? ""
+                           }).ToList();
+
+            allData = allData.OrderBy(d => d.Nombre).ToList();
+            allData.Insert(0, new ListaComboDto { Nombre = "" });
+
+            return allData;
+        }
     }
 }

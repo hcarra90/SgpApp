@@ -78,5 +78,11 @@ namespace Layer.Entity
         [Required]
         [Column("usuario_modificacion")]
         public string usuario_modificacion { get; set; }
+
+        [NotMapped]
+        public string Ambiente { get; set; }
+
+        [NotMapped]
+        public string Servidor { get; set; }
     }
 }

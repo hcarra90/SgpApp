@@ -35,14 +35,14 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>Publicacion.html</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>63</ApplicationRevision>
+    <ApplicationRevision>71</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -127,6 +127,9 @@
     <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
     </Reference>
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -175,6 +178,12 @@
     <Compile Include="Consulta\FrmPackingList.Designer.cs">
       <DependentUpon>FrmPackingList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\FrmTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +225,30 @@
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\FrmDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\FrmDireccion.Designer.cs">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\FrmEntryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\FrmEntryList.Designer.cs">
+      <DependentUpon>FrmEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\FrmInfoFieldBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\FrmInfoFieldBook.Designer.cs">
+      <DependentUpon>FrmInfoFieldBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\FrmMantenedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\FrmMantenedores.Designer.cs">
+      <DependentUpon>FrmMantenedores.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIMenu.cs">
       <SubType>Form</SubType>
@@ -349,6 +382,9 @@
     <EmbeddedResource Include="Consulta\FrmPackingList.resx">
       <DependentUpon>FrmPackingList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\FrmTemplate.resx">
       <DependentUpon>FrmTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +405,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\FrmDireccion.resx">
+      <DependentUpon>FrmDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\FrmEntryList.resx">
+      <DependentUpon>FrmEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\FrmInfoFieldBook.resx">
+      <DependentUpon>FrmInfoFieldBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\FrmMantenedores.resx">
+      <DependentUpon>FrmMantenedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIMenu.resx">
       <DependentUpon>MDIMenu.cs</DependentUpon>
@@ -458,6 +506,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdvancedDataGridView\AdvancedDataGridView.csproj">
+      <Project>{6eba0a55-b390-4479-a564-58d46094998d}</Project>
+      <Name>AdvancedDataGridView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Layer.Business\Layer.Business.csproj">
       <Project>{047e2d7e-2c0f-4146-b747-207a5c29e035}</Project>
       <Name>Layer.Business</Name>
@@ -475,6 +527,12 @@
     <Content Include="Encabezado_1.txt" />
     <Content Include="IconMdi.ico" />
     <Content Include="Images\bad.png" />
+    <None Include="Resources\label_64.png" />
+    <None Include="Resources\almacen_321.png" />
+    <None Include="Resources\infofield_32.png" />
+    <None Include="Resources\entrylist_32.png" />
+    <None Include="Resources\ajustes_64.png" />
+    <None Include="Resources\carta_64.png" />
     <None Include="Resources\guia_64.png" />
     <None Include="Resources\almacenar_64.png" />
     <None Include="Resources\aeroplano_64.png" />
